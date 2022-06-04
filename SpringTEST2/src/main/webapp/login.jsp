@@ -12,7 +12,7 @@
 @import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
 
 body{
-  background: #4d4d4d;
+  background: radial-gradient(#272727, #1b1b1b);
   margin:0;
 }
 
