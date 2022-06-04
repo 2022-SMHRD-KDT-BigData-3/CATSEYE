@@ -242,35 +242,39 @@ input{
     
     <!-- name 값 지정, 가입시 필요 해당 목록 추가 필요 -->
 <!-- 회원가입에 회원번호(?)  -->
-    <form action="">
     <div style="margin:-26px;">
+    <form action="join.do" method="post">
     <br>
     <p class="normal light">Register company information</p>
     <p class="normal light2">management store</p>
- 	<select class="normal name" name='managementstore'>
+ 	<select class="normal name" name='shop'>
   	<option value='' selected>-- 선택 --</option>
   	<option value='Gangnam'>강남점</option>
   	<option value='Cheongdam'>청담점</option>
   	<option value='sinsa'>신사점</option>
   	<option value='yeogsam'>역삼점</option>
-  	<option value='Myeongdong'>명동점</option><br>
+  	<option value='Myeongdong'>명동점</option>
+  	</select>
     <input type="text" placeholder="job position" class="normal name" name="position">
     <br>
 	<p class="normal light2">Register Privacy</p>
-    <input type="text" placeholder="Name" class="normal name" name="Name">
-    <input type="text" placeholder="ID" class="normal" name="ID">
-    <input type="password" placeholder="Password" class="normal"> @ <select name='detailemail'>
+    <input type="text" placeholder="Name" class="normal name" name="name">
+    <input type="text" placeholder="ID" class="normal" name="id">
+    <input type="password" placeholder="Password" class="normal" name="password">
+    <input type="email" placeholder="email" class="normal" name='email1'> @ <select name='detailemail' name='email2'>
   <option value='' selected>-- 선택 --</option>
   <option value=''>강남점</option>
   <option value='banana'>청담점</option>
   <option value='lemon'>신사점</option>
-  <option value='lemon'>신사점</option>강남
-  <option value='lemon'>신사점</option>
+  <option value='lemon'>역삼점</option>
+  <option value='lemon'>명동점</option>
 </select>
-    <input type="text" placeholder="Phone number" class="normal name" name="Phonenumber"><br>
+    <input type="text" placeholder="Phone number" class="normal name" name="phone"><br>
     
     <p class="normal forgot">Forgot your password?</p>
-    <button class="b-button normal">SIGN UP</button>
+    <button type="submit" class="b-button normal">SIGN UP</button>
+    
+  </form>
   </div>
   </div>
 </div>
@@ -279,7 +283,7 @@ input{
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
 <script src='https://kit.fontawesome.com/3eee069757.js'></script>
-<script  src="./script.js"></script>
+<!-- <script  src="./script.js"></script>  -->
 
 <script type="text/javascript">
 /*login*/
