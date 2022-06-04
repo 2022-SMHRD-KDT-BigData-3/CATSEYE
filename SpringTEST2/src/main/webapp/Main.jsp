@@ -18,6 +18,19 @@
 }
 
 /*  video 관련 css 추가 */
+<style>
+	#video {      
+		position: absolute;     
+		top: 0px;     
+		left: 0px;     
+		min-width: 100%;     
+		min-height: 100%;     
+		width: auto;     
+		height: auto;     
+		z-index: -1;     
+		overflow: hidden;
+	}
+
 
   .video {  
     max-width: 50%;
@@ -897,6 +910,11 @@ button:hover {
 </style>
 </head>
 <body>
+	<!-- 배경으로 사용되는 영상 -->
+	<video id="video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">  
+	<source src="./resources/RacingBike.mp4">
+	</video>
+
 	<!-- partial:index.partial.html -->
 	<div class="dark-light">
 		<svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"
