@@ -13,6 +13,8 @@
 	<select id="bookListAjax" resultType="kr.book.entity.Book">
         select * from book order by num desc
     </select>
+    
+	
    
 </mapper>
 
