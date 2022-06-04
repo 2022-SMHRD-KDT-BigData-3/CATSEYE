@@ -1,95 +1,70 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>intro</title>
-
+<title>Insert title here</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
 <style type="text/css">
-@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+* {
+  box-sizing: border-box;
+}
 
+:root {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+}
 body {
-	font-family: 'Amatic SC', cursive;
-    background-image: url(./resources/09.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #ffff;
-	/* background-color: #111111;
-	color: #cccccc; */
+  margin: 0;
 }
-
-p {
-	font-size: 3em;
-	display: table-cell; 
-	vertical-align: middle;
-	text-align: center;
-	opacity: 0;
-
+.wrapper {
+  background: radial-gradient(#272727, #1b1b1b);
+  display: grid;
+  grid-template-areas: 'overlap';
+  place-content: center;
+  text-transform: uppercase;
+  height: 100vh;
 }
-
-.text{
-	top: 0; 
-	left: 0; 
-	width: 100%; 
-	height: 100%;
-	position: fixed; 
-	display: table;
+.wrapper > div {
+  background-clip: text;  
+  -webkit-background-clip: text;
+  color: #363833;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: clamp( 3em, 18vw, 15rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
 }
-
-.t1{
-	animation: t-animation 6s;
+div.bg {
+  background-image: repeating-linear-gradient( 105deg, 
+    var(--gold) 0% , 
+    var(--dark-shadow) 5%,
+    var(--gold) 12%);
+  color: transparent;
+  filter: drop-shadow(5px 15px 15px black);
+  transform: scaleY(1.05);
+  transform-origin: top;
 }
-
-.t2{
-	animation: t-animation 6s;
-	animation-delay: 6s;
-}
-
-.end{
-	animation: end-animation 2s;
-	animation-delay: 12s;
-	animation-fill-mode: forwards; 
-}
-
-.flicker{
-	animation: flicker 10s infinite;
-}
-
-@keyframes t-animation {
-	0% {opacity: 0;}
-	30% {opacity: 1;}
-	70% {opacity: 1;}
-	100% {opacity: 0;}
-}
-
-@keyframes end-animation {
-	0% {opacity: 0;}
-	100% {opacity: 1;}
-}
-
-@keyframes flicker {
-	40.1% {left:0px;top:0px;}
-	40.2% {left:10px;top:8px;}
-	40.3% {left:0px;top:0px;}
-
-	90.1% {left:0px;top:0px;}
-	90.2% {left:-5px;top:3px;}
-	90.3% {left:0px;top:0px;}
+div.fg{
+  background-image: repeating-linear-gradient( 5deg,  
+    var(--gold) 0% , 
+    var(--light-shadow) 23%, 
+    var(--gold) 31%);
+  color: #1e2127;
+  transform: scale(1);
 }
 </style>
-
 </head>
 <body>
-<div>
-<a href="index.html" class="text flicker">
-<div class="text flicker"><p class="t1"></p></div>
-	<div class="text flicker"><p class="t2">CATSEYE</p></div>
-	<div class="text flicker"><p class="end">CATSEYE</p></div>
-</a>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+  <div class="bg"> CATSEYE </div>
+  <div class="fg"> CATSEYE </div>
 </div>
-
-
-
 </body>
 </html>

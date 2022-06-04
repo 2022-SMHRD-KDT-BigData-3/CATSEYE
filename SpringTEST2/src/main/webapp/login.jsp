@@ -259,7 +259,8 @@ input{
 	<p class="normal light2">Register Privacy</p>
     <input type="text" placeholder="Name" class="normal name" name="Name">
     <input type="text" placeholder="ID" class="normal" name="ID">
-    <input type="password" placeholder="Password" class="normal"> @ <select name='detailemail'>
+    <input type="password" placeholder="Password" class="normal"> 
+    <input type="text" placeholder="Emaile" class="normal name" name="Name"> <select class="normal" name='detailemail'>
   <option value='' selected>-- 선택 --</option>
   <option value=''>강남점</option>
   <option value='banana'>청담점</option>

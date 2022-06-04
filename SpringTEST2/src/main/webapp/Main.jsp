@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Main page</title>
+<title>Main</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://vjs.zencdn.net/5-unsafe/video-js.css'>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
@@ -72,7 +70,7 @@ html {
 
 body {
   font-family: var(--body-font);
-  background-image: url(./resources/09.jpg);
+  background-image: url(./resources/11.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -231,9 +229,6 @@ body.light-mode:before {
   max-width: 400px;
   padding-left: 16px;
   border-radius: 4px;
-  position: fixed;
-  right: 3%;
-  bottom: 85%;
 }
 .search-bar input {
   width: 100%;
@@ -918,6 +913,11 @@ button:hover {
 					href="#">Settings</a>
 			</div>
 			
+				<!-- 검색창 -->
+			<div class="search-bar">
+				<input type="text" placeholder="Search">
+			</div>
+			
 			<div class="header-profile">
 				<!-- <div class="notification">
 					<span class="notification-number">3</span>
@@ -926,9 +926,8 @@ button:hover {
 						class="feather feather-bell"></svg>
 				</div> -->
 				
-				<!-- 날짜,시간 선택 -->
-				<input type="text" name="datetimes" />
 				
+					
 			</div>
 		</div>
 		<div class="wrapper">
@@ -1037,20 +1036,19 @@ button:hover {
 							class="main-header-link" href="#">Mobile</a> <a
 							class="main-header-link" href="#">Web</a>
 					</div>
-					
-						<!-- 검색창 -->
-			<div class="search-bar">
-				<input type="text" placeholder="Search">
-			</div>
 				</div>
 				
+				<div>
+			<!-- 날짜,시간 선택-->
+				<input type="text" name="datetimes" /> 
+				</div>
 			
 			
 				<!-- video -->
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
-					<video class="video" controls muted poster="./resources/09.jpg">
+					<video class="video" controls muted poster="./resources/11.jpg">
 						<source src="./resources/dance_practice.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -1153,5 +1151,93 @@ button:hover {
 	<script src="./script.js"></script>
 	<script src='https://vjs.zencdn.net/5-unsafe/video.js'></script>
 	<script src="./script.js"></script>
+	<script type="text/javascript">
+
+	/*index html*/
+	$(function () {
+	 $(".menu-link").click(function () {
+	  $(".menu-link").removeClass("is-active");
+	  $(this).addClass("is-active");
+	 });
+	});
+
+	$(function () {
+	 $(".main-header-link").click(function () {
+	  $(".main-header-link").removeClass("is-active");
+	  $(this).addClass("is-active");
+	 });
+	});
+
+	const dropdowns = document.querySelectorAll(".dropdown");
+	dropdowns.forEach((dropdown) => {
+	 dropdown.addEventListener("click", (e) => {
+	  e.stopPropagation();
+	  dropdowns.forEach((c) => c.classList.remove("is-active"));
+	  dropdown.classList.add("is-active");
+	 });
+	});
+
+	$(".search-bar input")
+	 .focus(function () {
+	  $(".header").addClass("wide");
+	 })
+	 .blur(function () {
+	  $(".header").removeClass("wide");
+	 });
+
+	$(document).click(function (e) {
+	 var container = $(".status-button");
+	 var dd = $(".dropdown");
+	 if (!container.is(e.target) && container.has(e.target).length === 0) {
+	  dd.removeClass("is-active");
+	 }
+	});
+
+	$(function () {
+	 $(".dropdown").on("click", function (e) {
+	  $(".content-wrapper").addClass("overlay");
+	  e.stopPropagation();
+	 });
+
+	 $(document).on("click", function (e) {
+	  if ($(e.target).is(".dropdown") === false) {
+	   $(".content-wrapper").removeClass("overlay");
+	  }
+	 });
+
+	$(function () {
+	 $(".status-button:not(.open)").on("click", function (e) {
+	  $(".overlay-app").addClass("is-active");
+	 });
+	 $(".pop-up .close").click(function () {
+	  $(".overlay-app").removeClass("is-active");
+	 });
+	});
+
+	$(".status-button:not(.open)").click(function () {
+	 $(".pop-up").addClass("visible");
+	});
+
+	$(".pop-up .close").click(function () {
+	 $(".pop-up").removeClass("visible");
+	});
+
+	const toggleButton = document.querySelector('.dark-light');
+
+	toggleButton.addEventListener('click', () => {
+	  document.body.classList.toggle('light-mode');
+	});
+
+	/* 날짜,시간 선택 form */
+	$(function () {    $("#a").daterangepicker({        
+		timePicker: true,        
+		timePickerIncrement: 30,        
+		locale: {format: 'YYYY/MM/DD h:mm A'},
+		startDate : moment().add(14, 'days'),        
+		endDate : moment().add(14, 'days').add(2,'hours')   
+	});
+	});
+	});
+	</script>
 </body>
 </html>
