@@ -1,4 +1,4 @@
-create table members(
+create table member(
 	MBR_NBR number not null,      --회원번호
 	MBR_ID varchar2(50) not null,  --아이디	id
 	MBR_PW varchar2(30) not null,  --비번		password
@@ -10,4 +10,8 @@ create table members(
 	CONSTRAINT MEMBERS_MBR_NBR_PK PRIMARY KEY(MBR_NBR)
 )
 
+select 
 create sequence mem_seq
+select * from member
+
+insert into member values(mem_seq.nextval, 'id', 'password', 'name', 'phonem', 'shop', 'pos', 'email');
