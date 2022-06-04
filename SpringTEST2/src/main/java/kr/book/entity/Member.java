@@ -4,19 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Member {
-	@Data
-	@AllArgsConstructor
-	@NoArgsConstructor
-	public class Book {
-			private int num;
-			private String id;
-			private String password;
-			private String name;
-			private String phone;
-			private String shop;
-			private String position;
-			private String email;
+
+			private String MBR_ID;
+			private String MBR_PW;
+			private String MBR_NAME;
+			private String MBR_CNT;
+			private String MBR_SHOP;
+			private String MBR_POS;
+			private String MBR_MAIL;
+		
 	}
 
-}
+

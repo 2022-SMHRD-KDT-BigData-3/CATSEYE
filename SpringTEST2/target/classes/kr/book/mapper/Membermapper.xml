@@ -6,11 +6,5 @@
     	select * from board order by idx desc
     </select> -->
     
-    <insert id="join" parameterType="kr.book.entity.Member">
-	    insert into board(MBR_NBR,MBR_ID,MBR_PW,MBR_NAME,MBR_CNT,MBR_SHOP,MBR_POS,MBR_MAIL)
-		values(mem_seq.nextval,#{id},#{password},#{name},#{phone},#{shop},#{position},#{email})
-	</insert>
-    
-	
    
 </mapper>
