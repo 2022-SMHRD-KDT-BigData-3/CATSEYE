@@ -80,8 +80,8 @@ document.getElementById('btn').onclick=change();
   	</select><br>
     <p class="normal forgot">Forgot your password?</p>
    
-    <input type='submit' class="b-button normal" id='join' value="SIGN UP"></button>
-    <input type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' value="SUBMIT"  style='display:none'></button>
+    <button type='submit' class="b-button normal" id='join' value="SIGNUP" style="display: inline-block;">SIGNUP</button>
+    <button type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' value="SUBMIT">SUBMIT</button>
  
   </div>
   </form>
