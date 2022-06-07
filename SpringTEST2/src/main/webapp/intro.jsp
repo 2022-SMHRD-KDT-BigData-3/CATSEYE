@@ -63,8 +63,8 @@ div.fg{
 <body>
 <!-- partial:index.partial.html -->
 <div class="wrapper">
-  <div class="bg"> CATSEYE </div>
-  <div class="fg"> CATSEYE </div>
+  <div class="bg" onclick="location.href='login.jsp'">CATSEYE</div>
+  <div class="fg" onclick="location.href='login.jsp'">CATSEYE</div>
 </div>
 </body>
 </html>
