@@ -80,9 +80,9 @@ document.getElementById('btn').onclick=change();
   	</select><br>
     <p class="normal forgot">Forgot your password?</p>
    
-   	<input type='submit' class="b-button normal" id='join'>SIGN UP</button>
-    <input type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' style='display:none'>SUBMIT</button>
-  
+    <input type='submit' class="b-button normal" id='join' value="SIGN UP"></button>
+    <input type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' value="SUBMIT"  style='display:none'></button>
+ 
   </div>
   </form>
   </div>
@@ -93,114 +93,7 @@ document.getElementById('btn').onclick=change();
 <script src='https://kit.fontawesome.com/3eee069757.js'></script>
 <!-- <script  src="./script.js"></script> -->
 
-<!-- <script type="text/javascript">
-function submit2(frm) { 
-   alert("login hi");
-    frm.action='login.do'; 
-    frm.submit(); 
-    return true; 
-  } 
-/*login*/
-let flag = 0;
 
-$(".signin").on("click", function change(){
-  if(flag == 0){
-    $(".move").addClass("moving");
-    $(".move").removeClass("start");
-    
-    
-    $(".form").addClass("movingForm");
-    $(".form").removeClass("startForm");
-    
-    $(".hello").show();
-    $(".welcome").hide();
-    
-    
-    $(".move").css("background-position", "right");
-    
-    setTimeout(function(){
-      $(".title").text("Sign-in in to Pixmy");
-      $(".light").text("Or use your email account");
-      $(".name").hide();
-      $("#join").hide();
-      $("#login").show();
-      $(".forgot").show();
-      $(".form").css("border-radius","10px 0px 0px 10px");
-      $(".move").css("border-radius","0px 10px 10px 0px");
-    }, 200);
-    
-    flag=1;
-  }else{
-    $(".move").removeClass("moving");
-    $(".move").addClass("start");
-    
-    $(".form").removeClass("movingForm");
-    $(".form").addClass("startForm");
-    
-    
-    $(".hello").hide();
-    $(".welcome").show();
-    
-    $(".move").css("background-position", "left");
-    
-    setTimeout(function(){
-      $(".title").text("Create Account");
-      $(".light").text("Or use your email for registration");
-      $(".name").show();
-      $("#login").hide();
-      $("#join").show();
-      $(".forgot").hide();
-      $(".form").css("border-radius","0px 10px 10px 0px");
-      $(".move").css("border-radius","10px 0px 0px 10px");
-    }, 200);
-    
-    flag=0;
-  }
-
-/*비디오*/
-const allVideos = document.querySelectorAll(".video");
-
-allVideos.forEach((v) => {
- v.addEventListener("mouseover", () => {
-  const video = v.querySelector("video");
-  video.play();
- });
-
- v.addEventListener("mouseleave", () => {
-  const video = v.querySelector("video");
-  video.pause();
- });
-
-$(function () {
- $(".logo, .logo-expand, .discover").on("click", function (e) {
-  $(".main-container").removeClass("show");
-  $(".main-container").scrollTop(0);
- });
- $(".trending, .video").on("click", function (e) {
-  $(".main-container").addClass("show");
-  $(".main-container").scrollTop(0);
-  $(".sidebar-link").removeClass("is-active");
-  $(".trending").addClass("is-active");
- });
-
- $(".video").click(function () {
-  var source = $(this).find("source").attr("src");
-  var title = $(this).find(".video-name").text();
-  var person = $(this).find(".video-by").text();
-  var img = $(this).find(".author-img").attr("src");
-  $(".video-stream video").stop();
-  $(".video-stream source").attr("src", source);
-  $(".video-stream video").load();
-  $(".video-p-title").text(title);
-  $(".video-p-name").text(person);
-  $(".video-detail .author-img").attr("src", img);
- });
-});
-
-});
-});
-</script>
- -->
 <script src="./resources/JS/login.js"></script>
 </body>
 </html>
