@@ -44,5 +44,9 @@ public class MemberController {
 		}
 		return "Main";
 	}
-
+	   @PostMapping("/logout.do")
+	   public String logout(HttpSession session) {
+		   session.invalidate();
+		   return "join";
+	   }
 }
