@@ -62,7 +62,7 @@ document.getElementById('btn').onclick=change();
   	<option value='sinsa'>신사점</option>
   	<option value='yeogsam'>역삼점</option>
   	<option value='Myeongdong'>명동점</option>
-  	<input type="text" placeholder="job position" class="normal name" name="position" style=" width: 41%; margin: 11px;"><br>
+  	<input type="text" placeholder="job position" class="normal name" name="MBR_POS" style=" width: 41%; margin: 11px;"><br>
 	</div>
      
    <div>
@@ -80,8 +80,8 @@ document.getElementById('btn').onclick=change();
   	</select><br>
     <p class="normal forgot">Forgot your password?</p>
    
-   	<button type='submit' class="b-button normal" id='join'>SIGN UP</button>
-    <button type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' style='display:none'>SUBMIT</button>
+   	<input type='submit' class="b-button normal" id='join'>SIGN UP</button>
+    <input type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' style='display:none'>SUBMIT</button>
   
   </div>
   </form>
