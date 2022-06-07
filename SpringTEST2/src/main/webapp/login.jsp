@@ -53,45 +53,40 @@ document.getElementById('btn').onclick=change();
     <form action="join.do" method="post">
     <div style="margin:-26px;">
     <br>
-    <p class="normal light">Register company information</p>
-    <p class="normal light2">management store</p>
-    <select class="normal name" name="MBR_SHOP">
-     <option value='' selected>-- 선택 --</option>
-     <option value='Gangnam'>강남점</option>
-     <option value='Cheongdam'>청담점</option>
-     <option value='sinsa'>신사점</option>
-     <option value='yeogsam'>역삼점</option>
-     <option value='Myeongdong'>명동점</option>
-     </select>
-    <input type="text" placeholder="job position" class="normal name" name="MBR_POS">
-    <br>
-   <p class="normal light2">Register Privacy</p>
-    <input type="text" placeholder="Name" class="normal name" name="MBR_NAME" id="MBR_NAME">
-    <input type="text" placeholder="ID" class="normal" name="MBR_ID" id="MBR_ID">
-    <input type="password" placeholder="password" class="normal" name="MBR_PW"> 
-    <input type="text" placeholder="Emaile" class="normal name" name="MBR_MAIL"> @ <select class="normal">
-  <option value='' selected>-- 선택 --</option>
-  <option value=''>강남점</option>
-  <option value='banana'>청담점</option>
-  <option value='lemon'>신사점</option>
-  <option value='lemon'>역삼점</option>
-  <option value='lemon'>명동점</option>
-</select>
-    <input type="text" placeholder="Phone number" class="normal name" name="MBR_CNT"><br>
-    
+    <p class="normal light">Register information</p>
+    <div id ="mp">
+ 	<select class="normal name" name="MBR_SHOP">
+  	<option value='' selected>-- branch --</option>
+  	<option value='Gangnam'>강남점</option>
+  	<option value='Cheongdam'>청담점</option>
+  	<option value='sinsa'>신사점</option>
+  	<option value='yeogsam'>역삼점</option>
+  	<option value='Myeongdong'>명동점</option>
+  	<input type="text" placeholder="job position" class="normal name" name="position" style=" width: 41%; margin: 11px;"><br>
+	</div>
+     
+   <div>
+  	<input type="text" placeholder="ID" class="normal" name="MBR_ID" id="MBR_ID"><br>
+    <input type="password" placeholder="password" class="normal" name="MBR_PW"><br>
+    </div>
+   
+   <!-- <p class="normal light2">Register Privacy</p> -->
+   <input type="text" placeholder="Name" class="normal name" name="MBR_NAME" id="MBR_NAME"><br>
+    <input type="text" placeholder="Phone number" class="normal name" name="MBR_CNT"><br>    
+    <input type="text" placeholder="Email" class="normal name" name="MBR_MAIL" style=" width: 40%; "><select class="normal name" name='detailemail'>
+  	<option value='' selected>-- 선택 --</option>
+  	<option value=''>@naver.com</option>
+  	<option value='banana'>@daum.net</option>
+  	</select><br>
     <p class="normal forgot">Forgot your password?</p>
-    <script> 
-
-</script> 
-    <p>
-    <input type='submit' class="b-button normal" id='join' placeholder="SIGN UP" >
-    <input type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' style='display:none'>
-    </p>
+   
+   	<button type='submit' class="b-button normal" id='join'>SIGN UP</button>
+    <button type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' style='display:none'>SUBMIT</button>
+  
   </div>
   </form>
   </div>
 </div>
-</form>
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
