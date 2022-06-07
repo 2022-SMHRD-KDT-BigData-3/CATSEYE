@@ -1,11 +1,23 @@
+function submit2(frm) { 
+   alert("login hi");
+    frm.action='login.do'; 
+    frm.submit(); 
+    return true; 
+  } 
+window.onload = function(){
+alert("회원가입 성공")
+   
+document.getElementById('btn').onclick=change();
+};
+
 /*login*/
 let flag = 0;
 
-
-$(".signin").on("click", function(){
+$(".signin").on("click", function change(){
   if(flag == 0){
     $(".move").addClass("moving");
     $(".move").removeClass("start");
+    
     
     $(".form").addClass("movingForm");
     $(".form").removeClass("startForm");
@@ -20,8 +32,8 @@ $(".signin").on("click", function(){
       $(".title").text("Sign-in in to Pixmy");
       $(".light").text("Or use your email account");
       $(".name").hide();
-      $(".p-button").text("SIGN IN");
-      $(".b-button").text("SIGN UP");
+      $("#join").hide();
+      $("#login").show();
       $(".forgot").show();
       $(".form").css("border-radius","10px 0px 0px 10px");
       $(".move").css("border-radius","0px 10px 10px 0px");
@@ -45,8 +57,8 @@ $(".signin").on("click", function(){
       $(".title").text("Create Account");
       $(".light").text("Or use your email for registration");
       $(".name").show();
-      $(".p-button").text("SIGN UP");
-      $(".b-button").text("SIGN IN");
+      $("#login").hide();
+      $("#join").show();
       $(".forgot").hide();
       $(".form").css("border-radius","0px 10px 10px 0px");
       $(".move").css("border-radius","10px 0px 0px 10px");
