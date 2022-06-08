@@ -33,7 +33,7 @@
       <div class="header">
          <div class="menu-circle"></div>
          <div class="header-menu">
-            <a class="menu-link is-active" href="#">movement Analysis</a>
+            <a class="menu-link is-active" href="movement Analysis.jsp">movement Analysis</a>
             <a class="menu-link" href="posting.jsp">Posting</a> 
             <a class="menu-link notify" href="#">Settings</a>
          </div>
@@ -59,7 +59,7 @@
             </div>
 
    <!-- 유튜브처럼 history  -->
-   <div class="small-header anim" style="--delay: .3s;padding: inherit;">Most Watched</div>
+   <div class="small-header anim" style="--delay: .3s;padding: inherit;">HISTORY CCTV</div>
    <div class="videos">
     <div class="video anim" style="--delay: .4s">
      <div class="video-time">8 min</div>
