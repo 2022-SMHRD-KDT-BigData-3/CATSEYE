@@ -66,5 +66,4 @@ $(".status-button:not(.open)").click(function () {
 $(".pop-up .close").click(function () {
  $(".pop-up").removeClass("visible");
 });
-
 });
