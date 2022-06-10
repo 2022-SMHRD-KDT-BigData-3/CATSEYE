@@ -12,4 +12,9 @@
 
 <img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 25%);" src="http://172.30.1.24:5000/stream?src=0" width="640" height="360">
 <h1> 스프링 성공 ^-^</h1>
+
+	<video controls="controls" src="http://172.30.1.18:2222/bp_test.mp4" width="400" autoplay="autoplay"></video>
+	<img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 25%);" src="http://172.30.1.18:2222/bp_test.mp4" width="640" height="360">
 </html>
+
+
