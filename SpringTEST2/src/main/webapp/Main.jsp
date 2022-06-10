@@ -22,6 +22,7 @@
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css' />
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<link rel='stylesheet' type="text/css" href='./resources/CSS/acordian.css' />
 </head>
 <body style="--theme-bg-color: rgb(255 255 255/ 31%); --theme-color: #3c3a3a; --inactive-color: #333333; --button-inactive: #3c3a3a; --search-bg: rgb(255 255 255/ 31%); --dropdown-bg: lightgray 56%; --overlay-bg: rgb(255 255 255/ 30%); --dropdown-hover: rgb(255 255 255/ 100%); --border-color: rgb(255 255 255/ 35%); --popup-bg: rgb(255, 255, 255); --hover-menu-bg: rgba(255 255 255/ 35%); --scrollbar-bg: rgb(255 253 253/ 57%); --content-title-color: --theme-color;">
 
@@ -96,6 +97,59 @@
 				<!-- 게시물 list -->
 				<div class="content-section">
 					<div class="content-section-title">Posting</div>
+					<div id="Accordion_wrap">
+     <div class="que">
+      <span>This is first question.</span>
+     </div>
+     <div class="anw">
+      <span>This is hihi answer.</span>
+     </div>
+      <div class="que">
+      <span>This is second question.</span>
+     </div>
+     <div class="anw">
+      <span>This is second answer.</span>
+     </div>
+      <div class="que">
+      <span>This is third question.</span>
+     </div>
+     <div class="anw">
+      <form action="#" method="post">
+									<div class="form-group">
+										<label for="title">제목</label>
+										<input type="text" class="form-control" id="title"
+											placeholder="제목 입력(4-100)" name="title" maxlength="100"
+											required="required" pattern=".{4,100}">
+									</div>
+									
+									<div class="form-group">
+										<label for="writer">작성자</label> <input type="text"
+											class="form-control" id="writer" placeholder="작성자(2자-10자)"
+											name="writer">
+									</div>
+									
+									<div class="form-group">
+										<label for="writer"
+											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
+											type="datetime-local" name="datetime" class="form-control"
+											id="datetime" name="datetime">
+									</div>
+
+									<div class="form-group">
+										<label for="file">첨부파일</label>
+										<button class="form-control" id="file">불러오기</button>
+									</div>
+
+									<div class="form-group">
+										<label for="content">내용</label>
+										<textarea class="form-control" rows="5" id="content"
+											name="content" placeholder="내용 작성"></textarea>
+									</div>
+
+									<button type="submit" class="btn btn-default" style="background:#fff;">등록</button>
+								</form>
+     </div>
+</div>
 					<ul>
 						<li class="adobe-product">
 							<div class="products">Category</div> <span class="status">
@@ -224,4 +278,5 @@
 		<div class="overlay-app"></div>
 </body>
 <script src="./resources/JS/Main.js"></script>
+<script src="./resources/JS/acordian.js"></script>
 </html>
