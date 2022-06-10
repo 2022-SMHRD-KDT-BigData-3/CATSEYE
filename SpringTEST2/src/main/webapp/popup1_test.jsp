@@ -76,9 +76,9 @@ input[id*="popup"] + label + div > label {
 	<label for="popup">View</label> <!-- button -->
 	<div>
 		<div>
-			<label for="popup"></label>
+			<label for="popup">X</label>
 		</div>
-		<label for="popup"></label>
+		<label for="popup">로그인 성공</label>
 	</div>
 
 </body>

@@ -82,11 +82,11 @@ document.getElementById('btn').onclick=change();
    
     <button type='submit' class="b-button normal" id='join' value="SIGNUP" style="display: inline-block;">SIGNUP</button>
     <button type='button' class="b-button normal" id='login' onclick='return submit2(this.form);' value="SUBMIT">SUBMIT</button>
- 
   </div>
-  </form>
+  </form>  
   </div>
 </div>
+
 
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>

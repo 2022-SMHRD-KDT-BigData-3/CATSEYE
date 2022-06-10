@@ -66,4 +66,15 @@ $(".status-button:not(.open)").click(function () {
 $(".pop-up .close").click(function () {
  $(".pop-up").removeClass("visible");
 });
+
+
+function doDisplay(){
+	var con1 = document.getElementById("myDIV");
+	if(con1.style.display=='none'){
+		con1.style.display = 'block';
+	}else{
+		con.style.display = 'none';
+	}
+}
+
 });
