@@ -18,28 +18,25 @@
   
 .que::before{
   display: inline-block;
-  content: 'Q';
   font-size: 14px;
-  color: #006633;
+  color: black;
   margin-right: 5px;
 }
 
 .que.on>span{
   font-weight: bold;
-  color: #006633; 
+  color: black; 
 }
   
 .anw {
   display: none;
     overflow: hidden;
   font-size: 14px;
-  background-color: #f4f4f2;
   padding: 27px 0;
 }
   
 .anw::before {
   display: inline-block;
-  content: 'A';
   font-size: 14px;
   font-weight: bold;
   color: #666;

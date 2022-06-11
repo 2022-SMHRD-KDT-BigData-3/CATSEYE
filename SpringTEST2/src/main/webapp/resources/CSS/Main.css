@@ -285,6 +285,7 @@ img {
   color: var(--inactive-color);
   margin-bottom: 14px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .side-title:hover {
