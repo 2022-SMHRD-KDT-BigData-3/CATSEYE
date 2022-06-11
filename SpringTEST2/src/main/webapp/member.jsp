@@ -48,8 +48,6 @@
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<body class="antialiased sans-serif bg-gray-200">
 	<div class="container mx-auto py-6 px-4" x-data="datatables()" x-cloak>
 		<h1 class="text-3xl py-4 border-b mb-10">Datatable</h1>
 
