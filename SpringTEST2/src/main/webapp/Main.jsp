@@ -34,7 +34,7 @@
 				<a href="Main.jsp" style="text-decoration-line: none;"><img src="./resources/img/home.png" style="width: 20px; margin:2px;">Home</a>
 				<a class="menu-link is-active" href="movement Analysis.jsp" style="text-decoration-line: none;"><img src="./resources/img/Analysis.png" style="width: 20px; margin:2px;">movementAnalysis</a> 
 				<a class="menu-link" href="posting.jsp" style="text-decoration-line: none;"><img src="./resources/img/posting.png" style="width: 20px; margin:2px;">Emergency Record</a>
-				<a class="menu-link" href="intro.jsp" style="text-decoration-line: nones;"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
+				<a class="menu-link" href="intro.jsp" style="text-decoration-line: none;"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
 			</div>
 
 		</div>
@@ -61,8 +61,10 @@
 						<source src="./resources/video/dance_practice.mp4" type="video/mp4">
 					</video>
 					
-					<button class="btn btn-default"> 원본 영상 보기 </button>
-					<button class="btn btn-default"> yolov5 적용 영상 보기</button> 
+					<div style="align-self: center;">
+					<button class="btn btn-light" style="width: fit-content;margin: 20px 0 20px 0;"> 원본 영상 보기 </button>
+					<button class="btn btn-light" style="width: fit-content;margin: 20px 0 20px 15px;"> yolov5 적용 영상 보기</button>
+					</div> 
 				</div>
 				</div>
 

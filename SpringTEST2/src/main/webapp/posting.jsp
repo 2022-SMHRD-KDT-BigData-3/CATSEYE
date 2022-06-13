@@ -32,20 +32,28 @@
     --hover-menu-bg: rgba(255 255 255 / 35%);
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
-     
-   <div class="app">
-      <div class="header">
-         <div class="header-menu">
-            <a href="Main.jsp" style="text-decoration-line: none;"><img src="./resources/img/home.png" style="width: 20px; margin:2px;">Home</a>
-				<a class="menu-link is-active" href="movement Analysis.jsp" style="text-decoration-line: none;"><img src="./resources/img/Analysis.png" style="width: 20px; margin:2px;">movementAnalysis</a> 
-				<a class="menu-link" href="posting.jsp" style="text-decoration-line: none;"><img src="./resources/img/posting.png" style="width: 20px; margin:2px;">Emergency Record</a>
-				<a class="menu-link" href="intro.jsp" style="text-decoration-line: none;"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
-         </div>
-         
-            <!-- 검색창 없앰 -->
-         <div class="search-bar"></div>
-         <div class="header-profile"></div>
-      </div>
+
+	<div class="app">
+		<div class="header">
+			<div class="header-menu">
+				<a href="Main.jsp" style="text-decoration-line: none;"><img
+					src="./resources/img/home.png" style="width: 20px; margin: 2px;">Home</a>
+				<a class="menu-link is-active" href="movement Analysis.jsp"
+					style="text-decoration-line: none;"><img
+					src="./resources/img/Analysis.png"
+					style="width: 20px; margin: 2px;">movementAnalysis</a> <a
+					class="menu-link" href="posting.jsp" id="Record"
+					style="text-decoration-line: none;"><img
+					src="./resources/img/posting.png" style="width: 20px; margin: 2px;">Emergency
+					Record</a> <a class="menu-link" href="intro.jsp"
+					style="text-decoration-line: none;"><img
+					src="./resources/img/signout.png" style="width: 20px; margin: 2px;">SignOut</a>
+			</div>
+
+			<!-- 검색창 없앰 -->
+			<div class="search-bar"></div>
+			<div class="header-profile"></div>
+		</div>
 
 		<div class="wrapper">
 			<div class="left-side">
@@ -56,18 +64,20 @@
 					<div class="side-title" id="after">After</div>
 				</div>
 				<div class="side-wrapper">
-					<div class="side-title">Safety manual</div>
+					<div class="side-title" id="Safety">Safety manual</div>
 				</div>
 
 			</div>
 
-			<div class="main-container" >
+			<div class="main-container">
 
 				<!-- 유튜브처럼 history  -->
-				<div class="small-header anim"
-					style="-delay: .3s; padding: inherit;"><img src="./resources/img/posting.png" style="width: 20px; margin-right: 15px;">HISTORY CCTV</div>
+				<div class="small-header anim Re"
+					style="-delay: .3s; padding: inherit;">
+					<img src="./resources/img/posting.png"
+						style="width: 20px; margin-right: 15px;">History CCTV</div>
 				<div class="videos">
-					<div class="video anim" style="-delay: .4s">
+					<div class="video anim Re" style="-delay: .4s">
 						<div class="video-time">8 min</div>
 						<div class="video-wrapper">
 							<video muted="">
@@ -83,108 +93,134 @@
 							</div>
 						</section>
 					</div>
-
+				</div>
 				<!-- 게시물 list -->
-				<div class="content-section">
-					<div class="content-section-title"><img src="./resources/img/home.png" style="width: 20px;margin: 15px;">Emergency Record</div>
-					<div id="Accordion_wrap" style="background-color: var(--theme-bg-color); magin:2px;">
-						<div class="que">
-							<span>TITLE</span>
-						</div>
-						<div class="anw">
-							<span><form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> 
-											<input type="datetime-local" name="datetime" class="form-control" id="datetime" name="datetime">
-									</div>
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
-								</form></span>
-						</div>
-						<div class="que">
-							<span>TITLE</span>
-						</div>
-						<div class="anw">
-							<form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
-											type="datetime-local" name="datetime" class="form-control"
-											id="datetime" name="datetime">
-									</div>
-
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
-								</form>
-						</div>
-						<div class="que">
-							<span>TITLE</span>
-						</div>
-						<div class="anw">
-							<form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
-											type="datetime-local" name="datetime" class="form-control"
-											id="datetime" name="datetime">
-									</div>
-
-
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
-								</form> 
-						</div>
+				<div class="small-header anim Re"
+					style="-delay: .3s; padding: inherit;">
+					<img src="./resources/img/posting.png"
+						style="width: 20px; margin-right: 15px;">Emergency Record
+				</div>
+				<div id="Accordion_wrap" class="Re" style="background-color: var(- -theme-bg-color); magin: 2px;">
+					<div class="que">
+						<span>TITLE</span>
 					</div>
-
-					<!-- 응급처치 메뉴얼 -->
-					<div class="content-section">
-						<div class="content-section-title Em"><img src="./resources/img/posting.png" style="width: 20px; margin-right: 15px;">Emergency Response Manual</div>
-						<div class="apps-card">
-							<div class="app-card Em">
-								<span> After Effects</span>
-								<div class="app-card__subtext">Industry Standart motion
-									graphics & visual effects</div>
-								<div class="app-card-buttons">
-									<button class="content-button status-button open">Open</button>
+					<div class="anw">
+						<span><form action="#" method="post">
+								<div class="form-group">
+									<label for="datetime"
+										style="font-family: 'Poppins', sans-serif;">날짜</label> <input
+										type="datetime-local" name="datetime" class="form-control"
+										id="datetime" name="datetime">
 								</div>
+								<div class="form-group">
+									<label for="content">내용</label>
+									<textarea class="form-control" rows="5" id="content"
+										name="content" placeholder="내용 작성"></textarea>
+								</div>
+								<button type="submit" class="btn btn-default"
+									style="background: #fff;">수정</button>
+								<button type="submit" class="btn btn-default"
+									style="background: #fff;">삭제</button>
+							</form></span>
+					</div>
+					<div class="que">
+						<span>TITLE</span>
+					</div>
+					<div class="anw">
+						<form action="#" method="post">
+							<div class="form-group">
+								<label for="datetime"
+									style="font-family: 'Poppins', sans-serif;">날짜</label> <input
+									type="datetime-local" name="datetime" class="form-control"
+									id="datetime" name="datetime">
+							</div>
+
+							<div class="form-group">
+								<label for="content">내용</label>
+								<textarea class="form-control" rows="5" id="content"
+									name="content" placeholder="내용 작성"></textarea>
+							</div>
+							<button type="submit" class="btn btn-default"
+								style="background: #fff;">수정</button>
+							<button type="submit" class="btn btn-default"
+								style="background: #fff;">삭제</button>
+						</form>
+					</div>
+					<div class="que">
+						<span>TITLE</span>
+					</div>
+					<div class="anw">
+						<form action="#" method="post">
+							<div class="form-group">
+								<label for="datetime"
+									style="font-family: 'Poppins', sans-serif;">날짜</label> <input
+									type="datetime-local" name="datetime" class="form-control"
+									id="datetime" name="datetime">
+							</div>
+
+
+							<div class="form-group">
+								<label for="content">내용</label>
+								<textarea class="form-control" rows="5" id="content"
+									name="content" placeholder="내용 작성"></textarea>
+							</div>
+							<button type="submit" class="btn btn-default"
+								style="background: #fff;">수정</button>
+							<button type="submit" class="btn btn-default"
+								style="background: #fff;">삭제</button>
+						</form>
+					</div>
+				</div>
+
+				<!-- 응급처치 메뉴얼 -->
+				<div class="small-header anim Em"
+					style="-delay: .3s; padding: inherit;">
+					<img src="./resources/img/posting.png"
+						style="width: 20px; margin-right: 15px;">Safety manual</div>
+				<div id="Em" style="background-color: var(- -theme-bg-color); magin: 2px;">
+					<div class="apps-card">
+						<div class="app-card Em">
+							<span> After Effects</span>
+							<div class="app-card__subtext">Industry Standart motion
+								graphics & visual effects</div>
+							<div class="app-card-buttons">
+								<button class="content-button status-button open">Open</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-				<div class="overlay-app"></div></body>
+		</div>
+
+
+	</div>
+
+
+
+</body>
 <script src="./resources/JS/posting.js"></script>
 <script src="./resources/JS/Main.js"></script>
 <script src="./resources/JS/acordian.js"></script>
 <script type="text/javascript">
-$('#before').click(function() {
-    $(".Em").hide();
+
+$('#Record').click(function() {
+    $(".Em").show();
+    $(".Re").show();
 })
 
-$('#After').click(function() {
+$('#before').click(function() {
     $(".Em").hide();
+    $(".Re").show();
+})
+
+$('#after').click(function() {
+    $(".Em").hide();
+    $(".Re").show();
+})
+
+$('#Safety').click(function() {
+    $(".Em").show();
+    $(".Re").hide();
 })
 </script>
 </html>

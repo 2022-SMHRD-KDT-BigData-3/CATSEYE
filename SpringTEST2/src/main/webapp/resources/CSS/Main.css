@@ -286,6 +286,7 @@ img {
   margin-bottom: 14px;
   text-decoration: none;
   cursor: pointer;
+  font-size: 19px;
 }
 
 .side-title:hover {
@@ -478,7 +479,7 @@ button:hover {
 .content-section-title {
   color: var(--content-title-color);
   margin-bottom: 14px;
-  font-size: larger;
+  font-size: 19px;
 }
 .content-section ul {
   display: flex;

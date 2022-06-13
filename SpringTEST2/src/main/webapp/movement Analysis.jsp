@@ -43,6 +43,7 @@ function goUpdate(idx){
 </script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel='stylesheet' href='https://vjs.zencdn.net/5-unsafe/video-js.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
 
@@ -77,46 +78,83 @@ function goUpdate(idx){
       	<div class="wrapper">
 			<div class="left-side">
 				<div class="side-wrapper">
-					<div class="side-title">Analysis</div>
+					<div class="side-title" id="Analysis">Analysis</div>
 				</div>
 				<div class="side-wrapper">
-					<div class="side-title">visualization</div>
+					<div class="side-title" id="visual">visualization</div>
 				</div>
 			</div>
 			
          <div class="main-container">
          
             <!-- 분석 -->
-            <div class="content-section">
-            <div class="content-section-title"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">Analysis</div>
-          	<select class="normal name" name="MBR_SHOP">
+            <div class="content-section An">
+            <div class="content-section-title An"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">Analysis</div>
+<!--           	<select class="normal name" name="MBR_SHOP">
   	<option value='' selected>-- select time --</option>
   	<option value='1' id="1">2022-06-05 21:00 ~ 21:01</option>
   	<option value='2' id="2">2022-06-05 21:01 ~ 21:02</option>
   	<option value='3' id="3">2022-06-05 21:02 ~ 21:03</option>
   	<option value='4' id="1">2022-06-05 21:03 ~ 21:04</option>
   	<option value='5' id="1">2022-06-05 21:04 ~ 21:05</option>
-  	</select>
+  	</select> -->
 
-              	<button class="btn btn-default" onclick='ff()'>영상 보기</button>
-            <div class="content-wrapper" id='f'>
-            <!-- 시간 보일곳 -->
-            </div>
-            <div class="content-wrapper" id='showvideo'>
-            <!-- 영상 보일곳 -->
-            </div>
-			<div class="content-wrapper">contents</div>
-			</div>
+					<div class="form-group An  content-wrapper">
+						<div style="text-align: center; align-items: center;">
+							<label for="date"
+								style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">날짜 설정</label> 
+								<input style="width: 30%;text-align: center;position: relative;left: 36%;" type="date" name="date" class="form-control" id="date" name="date">
+
+
+				
+								<label for="first-time"
+									style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">시간
+									설정</label> 
+									
+									<input style="width: 25%;text-align: center;position: relative;left: 223px;"
+									type="time" name="first-time" class="form-control" id="time"
+									name="time"> <label for="last-time"></label> <input
+									style="width: 25%;text-align: center;position: relative;left: 479px;bottom: 61px;"
+									type="time" name="last-time" class="form-control"
+									id="last-time">
+						</div>
+						<div style="align-self: center; position: relative; bottom: 25px;">
+						<button class="btn btn-light An" style="width: fit-content;margin-right: 20px;">결과 보기</button>
+
+						<button class="btn btn-light An" onclick='ff()' style="width: fit-content;">영상 보기</button>
+						<div class="content-wrapper An" id='f' style="visibility: hidden;">
+							<!-- 시간 보일곳 -->
+						</div>
+						<div class="content-wrapper An" id='showvideo' style="visibility: hidden;">
+							<!-- 영상 보일곳 -->
+						</div>
+						</div>
+					</div>
+
+				</div>
+
+			
 			
 			<!-- 결과 -->
-            <div class="content-section">
-            <div class="content-section-title"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">visualization</div>
-            <div class="content-wrapper">contents</div>
-			<div class="content-wrapper">contents</div>
+            <div class="content-section result">
+            <div class="content-section-title result"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">visualization</div>
+            <div class="content-wrapper result"></div>
+			<div class="content-wrapper result"></div>
 			</div>
               
             
 
 </body>
 <script src="./resources/JS/Main.js"></script>
+<script type="text/javascript">
+$('#Analysis').click(function() {
+	$(".An").show();
+    $(".result").hide();
+})
+
+$('#visual').click(function() {
+    $(".An").hide();
+    $(".result").show();
+})
+</script>
 </html>
