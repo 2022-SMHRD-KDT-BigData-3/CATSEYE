@@ -142,23 +142,12 @@ a.solid-gold-button {
 		<!-- <img src="./resources/img/arrows-to-eye-solid.svg"> -->
 		CATSEYE
 	<P>
-	<div class="am text"
-		style="position: relative; top: 150px; left: 100px;">
-		<section>
+	<div class="am text" style="position: relative; top: 150px; left: 100px;">
 			<h1 id="w1">Digital Analytics Management</h1>
-		</section>
-
-		<section>
 			<span id="w2">With Proven Results</span>
-		</section>
-
-		<section>
 			<p id="w3">Introducing CatsEye.</p>
-		</section>
-
-		<section>
 			<a class="solid-gold-button">Signin and use the website</a>
-		</section>
+
 	</div>
 
 
