@@ -1,3 +1,5 @@
+<%@page import="kr.book.entity.detection"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -94,6 +96,12 @@
 						</section>
 					</div>
 				</div>
+				
+				<%
+				 List<detection> list = (List<detection>)request.getAttribute("detection");
+				 System.out.println("jsp로 왔나요? " +list.size());
+				 
+				%>
 				<!-- 게시물 list -->
 				<div class="small-header anim Re"
 					style="-delay: .3s; padding: inherit;">
@@ -124,7 +132,7 @@
 							</form></span>
 					</div>
 					<div class="que">
-						<span>TITLE</span>
+						<span><%= list.get(0).getContent() %></span>
 					</div>
 					<div class="anw">
 						<form action="#" method="post">
