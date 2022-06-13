@@ -63,39 +63,32 @@ function goUpdate(idx){
    
    <div class="app">
       <div class="header" >
-         <div class="menu-circle"></div>
          <div class="header-menu">
-            <a class="menu-link is-active" href="movement Analysis.jsp">movement Analysis</a>
-            <a class="menu-link" href="posting.jsp">Posting</a> 
-            <a class="menu-link notify" href="#">Settings</a>
+            <a href="Main.jsp" style="text-decoration-line: none;"><img src="./resources/img/home.png" style="width: 20px; margin:2px;">Home</a>
+				<a class="menu-link is-active" href="movement Analysis.jsp" style="text-decoration-line: none;"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">movementAnalysis</a> 
+				<a class="menu-link" href="posting.jsp" style="text-decoration-line: none;"><img src="./resources/img/posting.png" style="width: 20px; margin:2px;">Emergency Record</a>
+				<a class="menu-link" href="intro.jsp" style="text-decoration-line: none;"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
          </div>
-         
-         <div class="search-bar"></div>
-         <div class="header-profile"> </div>
+
       
       </div>
-      <div class="wrapper">
-         <div class="left-side">
-            <div class="side-wrapper">
-               <div class="side-title"></div>
-               <div class="side-menu"></div>
-            </div>
-            <div class="side-wrapper">
-               <div class="side-title"></div>
-               <div class="side-menu"></div>
-            </div>
-         </div>
+      
+      
+      	<div class="wrapper">
+			<div class="left-side">
+				<div class="side-wrapper">
+					<div class="side-title">Analysis</div>
+				</div>
+				<div class="side-wrapper">
+					<div class="side-title">visualization</div>
+				</div>
+			</div>
+			
          <div class="main-container">
-            <div class="main-header">
-               <a class="menu-link-main" href="Main.jsp">HOME</a>
-               <div class="header-menu">
-               <a class="main-header-link is-active" href="#">Analysis</a>
-               <a class="main-header-link is-active" href="#">visualization</a> 
-            </div>
-         </div>
+         
             <!-- 분석 -->
             <div class="content-section">
-            <div class="content-section-title">Analysis</div>
+            <div class="content-section-title"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">Analysis</div>
           	<select class="normal name" name="MBR_SHOP">
   	<option value='' selected>-- select time --</option>
   	<option value='1' id="1">2022-06-05 21:00 ~ 21:01</option>
@@ -105,7 +98,7 @@ function goUpdate(idx){
   	<option value='5' id="1">2022-06-05 21:04 ~ 21:05</option>
   	</select>
 
-              	<button onclick='ff()'>영상 보기</button>
+              	<button class="btn btn-default" onclick='ff()'>영상 보기</button>
             <div class="content-wrapper" id='f'>
             <!-- 시간 보일곳 -->
             </div>
@@ -117,7 +110,7 @@ function goUpdate(idx){
 			
 			<!-- 결과 -->
             <div class="content-section">
-            <div class="content-section-title">visualization</div>
+            <div class="content-section-title"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">visualization</div>
             <div class="content-wrapper">contents</div>
 			<div class="content-wrapper">contents</div>
 			</div>

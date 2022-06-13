@@ -327,13 +327,7 @@ img {
   font-size: 11px;
 }
 
-.main-header {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid var(--border-color);
-  height: 58px;
-  flex-shrink: 0;
-}
+
 .main-header .header-menu {
   margin-left: 150px;
 }

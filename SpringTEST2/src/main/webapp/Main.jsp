@@ -34,7 +34,7 @@
 				<a href="Main.jsp" style="text-decoration-line: none;"><img src="./resources/img/home.png" style="width: 20px; margin:2px;">Home</a>
 				<a class="menu-link is-active" href="movement Analysis.jsp" style="text-decoration-line: none;"><img src="./resources/img/Analysis.png" style="width: 20px; margin:2px;">movementAnalysis</a> 
 				<a class="menu-link" href="posting.jsp" style="text-decoration-line: none;"><img src="./resources/img/posting.png" style="width: 20px; margin:2px;">Emergency Record</a>
-				<a class="menu-link" href="posting.jsp" style="text-decoration-line: none;"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
+				<a class="menu-link" href="intro.jsp" style="text-decoration-line: nones;"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
 			</div>
 
 		</div>
@@ -52,6 +52,8 @@
 
 
 				<!-- video -->
+				<div class="content-section">
+				<div class="content-section-title"><img src="./resources/img/home.png" style="width: 20px;margin: 15px;">Real-time Monitoring</div>
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
@@ -62,12 +64,13 @@
 					<button class="btn btn-default"> 원본 영상 보기 </button>
 					<button class="btn btn-default"> yolov5 적용 영상 보기</button> 
 				</div>
+				</div>
 
 
 				<!-- 게시물 list -->
 				<div class="content-section">
-					<div class="content-section-title">Emergency Record</div>
-					<div id="Accordion_wrap">
+					<div class="content-section-title"><img src="./resources/img/home.png" style="width: 20px;margin: 15px;">Emergency Record</div>
+					<div id="Accordion_wrap" style="background-color: var(--theme-bg-color); magin:2px;">
 						<div class="que">
 							<span>TITLE</span>
 						</div>
@@ -93,7 +96,7 @@
 							<span>TITLE</span>
 						</div>
 						<div class="anw">
-							<span><form action="#" method="post">
+							<form action="#" method="post">
 									<div class="form-group">
 										<label for="datetime"
 											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
@@ -110,13 +113,13 @@
 										style="background: #fff;">수정</button>
 									<button type="submit" class="btn btn-default"
 										style="background: #fff;">삭제</button>
-								</form></span>
+								</form>
 						</div>
 						<div class="que">
 							<span>TITLE</span>
 						</div>
 						<div class="anw">
-							<span><form action="#" method="post">
+							<form action="#" method="post">
 									<div class="form-group">
 										<label for="datetime"
 											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
@@ -134,19 +137,20 @@
 										style="background: #fff;">수정</button>
 									<button type="submit" class="btn btn-default"
 										style="background: #fff;">삭제</button>
-								</form> </span>
+								</form> 
 						</div>
 					</div>
 					
                      
 					<div class="content-section">
-					<div class="content-section-title">additional information</div>
+					<div class="content-section-title"><img src="./resources/img/home.png" style="width: 20px;margin: 15px;">additional information</div>
+					
 					</div>
 
 					<!-- 응급처치 메뉴얼 -->
 					<div class="content-section">
-						<div class="content-section-title">Emergency Response Manual</div>
-						<div class="apps-card">
+						<div class="content-section-title"><img src="./resources/img/home.png" style="width: 20px;margin: 15px;">Emergency Response Manual</div>
+						<div class="apps-card" >
 							<div class="app-card">
 								<span> After Effects</span>
 								<div class="app-card__subtext">Industry Standart motion
