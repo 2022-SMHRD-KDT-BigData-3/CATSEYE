@@ -15,3 +15,30 @@ create sequence mem_seq
 select * from member
 
 insert into member values(mem_seq.nextval, 'id', 'password', 'name', 'phonem', 'shop', 'pos', 'email');
+
+
+
+
+CREATE TABLE DETECTION_BOARD (
+	NUM NUMBER NOT NULL,
+	PHOTO VARCHAR2(100) NOT NULL,
+	CONTENT VARCHAR2(500) NOT NULL,
+	INDATE DATE DEFAULT SYSDATE NOT NULL,
+	CCTV NUMBER NOT NULL,
+	SITUATION NUMBER NOT NULL,
+ CONSTRAINT DETECTION_NUM_PK PRIMARY KEY(NUM)
+ )
+ 
+ update DETECTION_BOARD 
+ set INDATE=TO_DATE( '2009/06/01 11:00:00', 'YYYY/MM/DD HH:MI:SS') where num=1
+ 
+ create sequence dect_seq
+ 
+ drop table DETECTION_BOARD
+ select * from DETECTION_BOARD
+ 
+ insert into DETECTION_BOARD values(dect_seq.nextval, 'photo', 'content', sysdate, 2, 0)
+ insert into DETECTION_BOARD values(dect_seq.nextval, 'photo2', 'content2', sysdate, 1, 1)
+  insert into DETECTION_BOARD values(dect_seq.nextval, 'photo2', ' ', sysdate, 1, 1)
+ 
+ 
