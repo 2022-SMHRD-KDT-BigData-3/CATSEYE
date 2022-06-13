@@ -1,70 +1,171 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
-<style type="text/css">
-* {
-  box-sizing: border-box;
+<meta charset="utf-8">
+<title>CSS</title>
+
+<style>
+body {
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+    height: 100vh;
+    overflow: hidden;
+    line-height: 1.42857143;
 }
 
-:root {
-  --gold: #ffb338;
-  --light-shadow: #77571d;
-  --dark-shadow: #3e2904;
+.jb-box {
+	width: 100%;
+	height: 500px;
+	margin: 0px auto;
+	position: relative;
 }
-body {
-  margin: 0;
+
+video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	background-size: cover;
+	display: inline-block;
+    vertical-align: baseline;
+    object-fit: cover;
 }
-.wrapper {
-  background: radial-gradient(#272727, #1b1b1b);
-  display: grid;
-  grid-template-areas: 'overlap';
-  place-content: center;
-  text-transform: uppercase;
-  height: 100vh;
+
+
+#logo {
+	font-family: brandon-grotesque,sans-serif;
+	letter-spacing: 2px;
+	color: white;
+	font-size: 20px;
+	margin-left: 44px;
+	font-weight: 800;
+	z-index: 0;
 }
-.wrapper > div {
-  background-clip: text;  
-  -webkit-background-clip: text;
-  color: #363833;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-size: clamp( 3em, 18vw, 15rem);
-  grid-area: overlap;
-  letter-spacing: 1px;
-  -webkit-text-stroke: 4px transparent;
+
+#w1 {
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    margin: 20px 0 0;
+    color: #e0bc75;
+    font-family: brandon-grotesque,sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px!important;
+    max-width: 650px;
+    margin-bottom: 0!important;
+    line-height: 45px!important;
 }
-div.bg {
-  background-image: repeating-linear-gradient( 105deg, 
-    var(--gold) 0% , 
-    var(--dark-shadow) 5%,
-    var(--gold) 12%);
-  color: transparent;
-  filter: drop-shadow(5px 15px 15px black);
-  transform: scaleY(1.05);
-  transform-origin: top;
+
+#w2 {
+    line-height: 1.42857143;
+    box-sizing: border-box;
+    font-family: essonnes-display,sans-serif;
+    color: #fff!important;
+    font-size: 42px;
+    display: block;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: none;
 }
-div.fg{
-  background-image: repeating-linear-gradient( 5deg,  
-    var(--gold) 0% , 
-    var(--light-shadow) 23%, 
-    var(--gold) 31%);
-  color: #1e2127;
-  transform: scale(1);
+
+#w3 {
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    -webkit-font-smoothing: auto;
+    font-size: 20px!important;
+    line-height: 25px;
+    font-weight: 300;
+    font-family: brandon-grotesque,sans-serif;
+    margin: 0 0 10px;
+    color: #fff!important;
+}
+
+a.solid-gold-button {
+    line-height: 1.42857143;
+    box-sizing: border-box;
+    text-decoration: none;
+    position: relative;
+    background-color: #e0bc75;
+    border: 2px solid #e0bc75;
+    color: #fff;
+    margin-top: 5px;
+    padding: 9px 18px;
+    max-width: 355px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: brandon-grotesque,sans-serif;
+    text-align: center;
+    float: left;
+    display: block;
+    transition: all .2s ease-in-out;
+    
+   }
+   
+   .am{    
+    font-family: helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 75%;
+    }
+    
+    .text{
+    opacity: 0;
+    animation: fadeInText 3s 2s ease-out forwards;
+    }
+    
+    @keyframes fadeInText {
+    100% {
+        opacity: 1;
+    }
 }
 </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="wrapper">
-  <div class="bg" onclick="location.href='login.jsp'">CATSEYE</div>
-  <div class="fg" onclick="location.href='login.jsp'">CATSEYE</div>
-</div>
+
+	<p id="logo">
+		<!-- <img src="./resources/img/arrows-to-eye-solid.svg"> -->
+		CATSEYE
+	<P>
+	<div class="am text"
+		style="position: relative; top: 150px; left: 100px;">
+		<section>
+			<h1 id="w1">Digital Analytics Management</h1>
+		</section>
+
+		<section>
+			<span id="w2">With Proven Results</span>
+		</section>
+
+		<section>
+			<p id="w3">Introducing CatsEye.</p>
+		</section>
+
+		<section>
+			<a class="solid-gold-button">Signin and use the website</a>
+		</section>
+	</div>
+
+
+	<div class="jb-box">
+		<video muted autoplay loop>
+			<source src="./resources/video/RacingBike.mp4" type="video/mp4">
+		</video>
+	</div>
 </body>
 </html>
