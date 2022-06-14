@@ -74,7 +74,7 @@
 			<div class="main-container">
 
 				<!-- 유튜브처럼 history  -->
-				<div class="small-header anim Re"
+				<!-- <div class="small-header anim Re"
 					style="-delay: .3s; padding: inherit;">
 					<img src="./resources/img/posting.png"
 						style="width: 20px; margin-right: 15px;">History CCTV</div>
@@ -95,6 +95,19 @@
 							</div>
 						</section>
 					</div>
+				</div> -->
+				
+				<!-- video -->
+				<div class="content-section">
+				<div class="content-section-title"><img src="./resources/img/posting.png"
+						style="width: 20px; margin-right: 15px;">History CCTV</div>
+				<div class="content-wrapper">
+					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
+
+					<video class="video" controls muted poster="./resources/img/11.jpg">
+						<source src="./resources/video/dance_practice.mp4" type="video/mp4">
+					</video>
+				</div>
 				</div>
 				
 				<%
@@ -103,7 +116,7 @@
 				 
 				%>
 				<!-- 게시물 list -->
-				<div class="small-header anim Re"
+				<div class="content-section-title Re" id="changetext"
 					style="-delay: .3s; padding: inherit;">
 					<img src="./resources/img/posting.png"
 						style="width: 20px; margin-right: 15px;">Emergency Record
@@ -181,7 +194,7 @@
 				</div>
 
 				<!-- 응급처치 메뉴얼 -->
-				<div class="small-header anim Em"
+				<div class="content-section-title Em"
 					style="-delay: .3s; padding: inherit;">
 					<img src="./resources/img/posting.png"
 						style="width: 20px; margin-right: 15px;">Safety manual</div>
@@ -217,11 +230,14 @@ $('#Record').click(function() {
 })
 
 $('#before').click(function() {
+	$("#changetext").text("Before");
     $(".Em").hide();
     $(".Re").show();
 })
 
 $('#after').click(function() {
+	/* document.getElementById("#changetext").textContent="after"; */
+	$("#changetext").text("After");
     $(".Em").hide();
     $(".Re").show();
 })

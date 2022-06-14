@@ -74,7 +74,7 @@
 					<div class="content-section-title"><img src="./resources/img/home.png" style="width: 20px;margin: 15px;">Emergency Record</div>
 					<div id="Accordion_wrap" style="background-color: var(--theme-bg-color); magin:2px;">
 						<div class="que">
-							<span>TITLE</span>
+							<span>TITLE </span> <span class="badge badge-primary">New</span>
 						</div>
 						<div class="anw">
 							<span><form action="#" method="post">
@@ -95,7 +95,7 @@
 								</form></span>
 						</div>
 						<div class="que">
-							<span>TITLE</span>
+							<span>TITLE </span><span class="badge badge-primary">New</span>
 						</div>
 						<div class="anw">
 							<form action="#" method="post">
@@ -118,7 +118,7 @@
 								</form>
 						</div>
 						<div class="que">
-							<span>TITLE</span>
+							<span>TITLE </span><span class="badge badge-primary">New</span>
 						</div>
 						<div class="anw">
 							<form action="#" method="post">

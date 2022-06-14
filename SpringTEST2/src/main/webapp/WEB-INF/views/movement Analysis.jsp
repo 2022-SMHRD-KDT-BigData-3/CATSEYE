@@ -107,16 +107,16 @@ function goUpdate(idx){
 
 
 				
-								<label for="first-time"
+								<label for="first_time"
 									style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">시간
 									설정</label> 
 									
 									<input style="width: 25%;text-align: center;position: relative;left: 223px;"
-									type="time" name="first-time" class="form-control" id="time"
-									name="time"> <label for="last-time"></label> <input
+									type="time" name="first_time" class="form-control" id="first_time"> 
+									<label for="last-time"></label> <input
 									style="width: 25%;text-align: center;position: relative;left: 479px;bottom: 61px;"
-									type="time" name="last-time" class="form-control"
-									id="last-time">
+									type="time" name="last_time" class="form-control"
+									id="last_time">
 						</div>
 						<div style="align-self: center; position: relative; bottom: 25px;">
 						<button class="btn btn-light An" style="width: fit-content;margin-right: 20px;">결과 보기</button>

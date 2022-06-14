@@ -45,6 +45,8 @@ video {
 	margin-left: 44px;
 	font-weight: 800;
 	z-index: 0;
+	text-align: end;
+    margin-right: 30px;
 }
 
 #w1 {
@@ -142,7 +144,7 @@ a.solid-gold-button {
 		<!-- <img src="./resources/img/arrows-to-eye-solid.svg"> -->
 		CATSEYE
 	<P>
-	<div class="am text" style="position: relative; top: 150px; left: 100px;">
+	<div class="am text" style="position: relative;top: 200px;left: 135px;">
 			<h1 id="w1">Digital Analytics Management</h1>
 			<span id="w2">With Proven Results</span>
 			<p id="w3">Introducing CatsEye.</p>
@@ -153,7 +155,7 @@ a.solid-gold-button {
 
 	<div class="jb-box">
 		<video muted autoplay loop>
-			<source src="./resources/video/RacingBike.mp4" type="video/mp4">
+			<source src="./resources/video/mosaic_put.mp4" type="video/mp4">
 		</video>
 	</div>
 </body>
