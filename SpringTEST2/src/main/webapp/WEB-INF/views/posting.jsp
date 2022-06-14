@@ -145,7 +145,7 @@ function resultHtml(data){
 				</div> -->
 				
 				<!-- video -->
-				<div class="content-section">
+				<div class="content-section Re">
 				<div class="content-section-title"><img src="./resources/img/posting.png"
 						style="width: 20px; margin-right: 15px;">History CCTV</div>
 				<div class="content-wrapper">

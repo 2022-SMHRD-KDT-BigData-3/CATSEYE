@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>CSS</title>
-
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,400;1,700&display=swap');
+
 body {
 	padding: 0px;
 	margin: 0px;
@@ -136,6 +137,7 @@ a.solid-gold-button {
         opacity: 1;
     }
 }
+
 </style>
 </head>
 <body>
