@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.book.entity.Member;
 import kr.book.entity.detection;
@@ -56,16 +57,23 @@ public class MemberController {
 		session.invalidate();
 		return "intro";
 	}
+
 	@RequestMapping("/Analysis.do")
 	public String Analysis() {
 		return "movement Analysis";
 	}
-	@RequestMapping("/posting.do")
-	public String posting(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("게시물을 불러와야한다");
-		List<detection> detection = MemberMapper.detection();
-		request.setAttribute("detection", detection);
-		System.out.println("리스트가 가져와졌나요?" + detection.size());
+
+	@RequestMapping("/posting.do") // posting.do 여는 메소드
+	public String posting() {
 		return "posting";
 	}
+
+	@RequestMapping("/loadposting.do")
+	public @ResponseBody List<detection> loadposting() {
+		List<detection> list = MemberMapper.detection();
+		// 1. list->JSON 변환(API)
+		// 2. JSON 포멧으로 응답
+		return list;
+	}
+
 }

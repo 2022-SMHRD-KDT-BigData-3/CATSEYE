@@ -28,41 +28,37 @@ function loadposting(){
 	$.ajax({
 		url : "loadposting.do",
 		type : "GET",
-		async:false,
-		data : "data",
 		dataType : "json",
 		success : resultHtml,
 		error : function(){alert("error");  }
 	});
-	
 }
 function resultHtml(data){
-	var view=""
 	$.each(data, function(index, obj){
-		view+="<div class='que'>"
-		view+="<span>"+obj.indate
-		if("${ibj.situation}"==0) view+=" 서성이는사람 발견</span></div>"
-		else view+="</span></div>"
+		var view+="<tr>"
+	    	view+="<td>"+obj.idx+"</td>"
+	    	view+="<td id='t"+obj.idx+"'><a href='javascript:cview("+obj.idx+")'>"+obj.title+"</a></td>"
+	    	view+="<td>"+obj.writer+"</td>"
+	    	view+="<td>"+obj.indate+"</td>"
+	    	view+="<td>"+obj.count+"</td>"
+	    	view+="</tr>"
+		view+="<tr id='cv"+obj.idx+"' style='display:none'>"
+	    	view+="<td>내용</td>"
+	    	view+="<td colspan='4'>"
+	    	view+="<textarea rows='7' class='form-control' readonly id='ta"+obj.idx+"'>"+obj.content+"</textarea>"
+	    	view+="<br>"
+	    	if("${mvo.userId}"==obj.userId){
+	    		view+="<span id='u"+obj.idx+"'><button class='btn btn-sm btn-info' onclick='goForm("+obj.idx+")'>수정</button></span>&nbsp"
+	    		view+="<button class='btn btn-sm btn-warning' onclick='goDel("+obj.idx+")'>삭제</button>"
+	    	}else{
+	    		view+="<span id='u"+obj.idx+"'><button disabled class='btn btn-sm btn-info' onclick='goForm("+obj.idx+")'>수정</button></span>&nbsp"
+	    		view+="<button disabled class='btn btn-sm btn-warning' onclick='goDel("+obj.idx+")'>삭제</button>"
+	    		
+	    	}
+	    	view+="</td>"
+	    	view+="</tr>"
 		
-	view+="<div class='anw'>"
-	view+="<div class='form-group'>"
-	view+="<label for=\"datetime\" style=\"font-family: 'Poppins', sans-serif;\">날짜</label>"
-	view+="<input type=\"datetime-local\" name=\"datetime\" class=\"form-control\" id=\"datetime\" name=\"datetime\">"
-	view+="</div>"
-	view+="<div class=\"form-group\">"
-	view+="<label for=\"content\">내용</label>"
-	view+="<textarea class='form-control' rows='5' id='content' "
-	view+="name='content' placeholder='내용 작성'></textarea>"
-	view+="</div>"
-	view+="<button type='submit' class='btn btn-default' "
-	view+="style='background: #fff;'>수정</button>"
-	view+="<button type='submit' class='btn btn-default' "
-	view+="style='background: #fff;'>삭제</button>"
-	view+="</div>"
-	// view+=""
-	
 	});
-	$("#Accordion_wrap").html(view)
 }
 
 </script>
@@ -163,31 +159,25 @@ function resultHtml(data){
 					<img src="./resources/img/posting.png"
 						style="width: 20px; margin-right: 15px;">Emergency Record
 				</div>
-				<div id='test'></div>
 				<div id="Accordion_wrap" class="Re" style="background-color: var(- -theme-bg-color); magin: 2px;">
 				
-
 					<div class="que">
 						<span>TITLE</span>
 					</div>
 					<div class="anw">
-						<span><form action="#" method="post">
 								<div class="form-group">
-									<label for="datetime"
-										style="font-family: 'Poppins', sans-serif;">날짜</label> <input
-										type="datetime-local" name="datetime" class="form-control"
-										id="datetime" name="datetime">
+									<label for="datetime" style="font-family: 'Poppins', sans-serif;">날짜</label>
+									<input type="datetime-local" name="datetime" class="form-control" id="datetime" name="datetime">
 								</div>
 								<div class="form-group">
 									<label for="content">내용</label>
-									<textarea class="form-control" rows="5" id="content"
-										name="content" placeholder="내용 작성"></textarea>
+									<textarea class="form-control" rows="5" id="content" 
+									name="content" placeholder="내용 작성"></textarea>
 								</div>
 								<button type="submit" class="btn btn-default"
 									style="background: #fff;">수정</button>
 								<button type="submit" class="btn btn-default"
 									style="background: #fff;">삭제</button>
-							</form></span>
 					</div>
 				</div>
 
