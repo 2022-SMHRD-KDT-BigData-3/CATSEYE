@@ -82,7 +82,7 @@ function goUpdate(num){
 	      error : function(){alert("error")}
 	   })
 	}
-	function goDelete(){
+	function goDelete(num){
 	   var result = confirm('이 기록을 삭제하시겠습니까?');
 	   if(result==true){
 	   $.ajax({
