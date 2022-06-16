@@ -54,10 +54,10 @@ function resultHtml(data){
 	view+="<textarea class='form-control' rows='5' id='content' "
 	view+="name='content' placeholder='내용 작성'></textarea>"
 	view+="</div>"
-	view+="<button type='submit' class='btn btn-default' "
-	view+="style='background: #fff;'>수정</button>"
-	view+="<button type='submit' class='btn btn-default' "
-	view+="style='background: #fff;'>삭제</button>"
+	view+="<button type='submit' class='btn btn-light' "
+	view+="style='margin-right: 5px;'>수정</button>"
+	view+="<button type='submit' class='btn btn-light' "
+	view+="style='margin-right: 5px;'>삭제</button>"
 	view+="</div>"
 	// view+=""
 	
@@ -87,21 +87,13 @@ function resultHtml(data){
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
 
-	<div class="app">
+		<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a href="Main.jsp" style="text-decoration-line: none;"><img
-					src="./resources/img/home.png" style="width: 20px; margin: 2px;">Home</a>
-				<a class="menu-link is-active" href="movement Analysis.jsp"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/Analysis.png"
-					style="width: 20px; margin: 2px;">movementAnalysis</a> <a
-					class="menu-link" href="posting.jsp" id="Record"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/posting.png" style="width: 20px; margin: 2px;">Emergency
-					Record</a> <a class="menu-link" href="intro.jsp"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/signout.png" style="width: 20px; margin: 2px;">SignOut</a>
+				<a class="menu-link" href="Main.jsp">Home</a>
+				<a class="menu-link is-active" href="Analysis.do" >movementAnalysis</a> 
+				<a class="menu-link" href="posting.do">Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">SignOut</a>
 			</div>
 
 			<!-- 검색창 없앰 -->
@@ -151,8 +143,7 @@ function resultHtml(data){
 				
 				<!-- video -->
 				<div class="content-section Re">
-				<div class="content-section-title"><img src="./resources/img/posting.png"
-						style="width: 20px; margin-right: 15px;">History CCTV</div>
+				<div class="content-section-title"><img src="./resources/img/posting.png" style="width: 20px; margin-right: 15px;">History CCTV</div>
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
@@ -188,10 +179,8 @@ function resultHtml(data){
 									<textarea class="form-control" rows="5" id="content"
 										name="content" placeholder="내용 작성"></textarea>
 								</div>
-								<button type="submit" class="btn btn-default"
-									style="background: #fff;">수정</button>
-								<button type="submit" class="btn btn-default"
-									style="background: #fff;">삭제</button>
+								<button type="submit" class='btn btn-light' style="margin-right: 5px;">수정</button>
+								<button type="submit" class='btn btn-light' style="margin-right: 5px;">삭제</button>
 							</form></span>
 					</div>
 				</div>

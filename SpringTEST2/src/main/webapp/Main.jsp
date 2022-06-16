@@ -31,10 +31,10 @@
 	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a href="Main.jsp" style="text-decoration-line: none;"><img src="./resources/img/home.png" style="width: 20px; margin:2px;">Home</a>
-				<a class="menu-link is-active" href="Analysis.do" style="text-decoration-line: none;"><img src="./resources/img/Analysis.png" style="width: 20px; margin:2px;">movementAnalysis</a> 
-				<a class="menu-link" href="posting.do" style="text-decoration-line: none;"><img src="./resources/img/posting.png" style="width: 20px; margin:2px;">Emergency Record</a>
-				<a class="menu-link" href="logout.jsp" style="text-decoration-line: none;"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
+				<a class="menu-link" href="Main.jsp"><!-- <img src="./resources/img/home.png" style="width: 20px; margin:2px;"> -->Home</a>
+				<a class="menu-link is-active" href="Analysis.do" >movementAnalysis</a> 
+				<a class="menu-link" href="posting.do">Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">SignOut</a>
 			</div>
 
 		</div>
@@ -62,8 +62,8 @@
 					</video>
 					
 					<div style="align-self: center;">
-					<button class="btn btn-light" style="width: fit-content;margin: 20px 0 20px 0;"> 원본 영상 보기 </button>
-					<button class="btn btn-light" style="width: fit-content;margin: 20px 0 20px 15px;"> yolov5 적용 영상 보기</button>
+					<button type="button" class="btn btn-light"> 원본 영상 보기 </button>
+					<button type="button" class="btn btn-light"> yolov5 적용 영상 보기</button>
 					</div> 
 				</div>
 				</div>
@@ -88,10 +88,8 @@
 										<textarea class="form-control" rows="5" id="content"
 											name="content" placeholder="내용 작성"></textarea>
 									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
+									<button type="submit" class="btn btn-light">수정</button>
+									<button type="submit" class="btn btn-light">삭제</button>
 								</form></span>
 						</div>
 						<div class="que">
