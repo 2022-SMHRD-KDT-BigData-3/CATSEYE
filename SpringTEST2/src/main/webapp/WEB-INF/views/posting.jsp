@@ -42,8 +42,7 @@ function resultHtml(data){
 	$.each(data, function(index, obj){
 		view+="<div class='que'>"
 		view+="<span>"+obj.indate
-		if("${ibj.situation}"==0) view+=" 서성이는사람 발견</span></div>"
-		else view+="</span></div>"
+		view+=" 위험 상황 감지</span></div>"
 		
 	view+="<div class='anw'>"
 	view+="<div class='form-group'>"
@@ -52,13 +51,15 @@ function resultHtml(data){
 	view+="</div>"
 	view+="<div class=\"form-group\">"
 	view+="<label for=\"content\">내용</label>"
-	view+="<textarea class='form-control' rows='5' id='content' "
-	view+="name='content' placeholder='내용 작성'></textarea>"
+	view+="<textarea class='form-control' rows='5' id='content"+obj.num+"' "
+	
+	view+="name='content' placeholder='내용 작성' readonly='readonly' >"+obj.content+"</textarea>"
 	view+="</div>"
-	view+="<button type='submit' class='btn btn-light' "
-	view+="style='margin-right: 5px;'>수정</button>"
-	view+="<button type='submit' class='btn btn-light' "
-	view+="style='margin-right: 5px;'>삭제</button>"
+	view+="<button type='submit' class='btn btn-default' "
+	view+="style='background: #fff;' onclick='goUpdate("+obj.num+")'>수정하기</button>"
+	view+="&nbsp"
+	view+="<button type='submit' class='btn btn-default' "
+	view+="style='background: #fff;' onclick='goDelete("+obj.num+")'>삭제</button>"
 	view+="</div>"
 	// view+=""
 	
@@ -182,7 +183,7 @@ function resultHtml(data){
 								</div>
 								<button type="submit" class='btn btn-light' style="margin-right: 5px;">수정</button>
 								<button type="submit" class='btn btn-light' style="margin-right: 5px;">삭제</button>
-							</form></span>
+							</span>
 					</div>
 				</div>
 
