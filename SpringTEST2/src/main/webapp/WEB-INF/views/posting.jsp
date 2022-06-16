@@ -91,7 +91,7 @@ function resultHtml(data){
 		<div class="header">
 			<div class="header-menu">
 				<a class="menu-link" href="Main.jsp">Home</a>
-				<a class="menu-link is-active" href="Analysis.do" >movementAnalysis</a> 
+				<a class="menu-link is-active" href="Analysis.do" >MovementAnalysis</a> 
 				<a class="menu-link" href="posting.do">Emergency Record</a>
 				<a class="menu-link" href="logout.jsp">SignOut</a>
 			</div>

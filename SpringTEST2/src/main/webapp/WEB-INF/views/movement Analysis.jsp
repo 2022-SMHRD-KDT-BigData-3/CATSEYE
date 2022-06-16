@@ -62,13 +62,13 @@ function goUpdate(idx){
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
    
- 	<div class="app">
+<div class="app">
 		<div class="header">
-			<div class="header-menu">
-				<a class="menu-link" href="Main.jsp"><img src="./resources/img/home.png" style="width: 20px; margin:2px;">Home</a>
-				<a class="menu-link is-active" href="Analysis.do" ><img src="./resources/img/Analysis.png" style="width: 20px; margin:2px;">movementAnalysis</a> 
-				<a class="menu-link" href="posting.do"><img src="./resources/img/posting.png" style="width: 20px; margin:2px;">Emergency Record</a>
-				<a class="menu-link" href="logout.jsp"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
+			<div class="header-menu" style="font-weight: 600;">
+				<a class="menu-link" href="Main.jsp"><!-- <img src="./resources/img/home.png" style="width: 20px; margin:2px;"> -->Home</a>
+				<a class="menu-link is-active" href="Analysis.do" >MovementAnalysis</a> 
+				<a class="menu-link" href="posting.do">Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">SignOut</a>
 			</div>
 
 		</div>

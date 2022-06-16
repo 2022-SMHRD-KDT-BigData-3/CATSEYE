@@ -40,13 +40,14 @@ video {
 
 
 #logo {
-	letter-spacing: 2px;
-	color: white;
-	font-size: 20px;
-	margin-left: 44px;
-	font-weight: 800;
-	z-index: 0;
-	text-align: end;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 10px steelblue;
+    color: white;
+    font-size: 20PX;
+    margin-left: 44px;
+    font-weight: 800;
+    z-index: 0;
+    text-align: end;
     margin-right: 30px;
 }
 
@@ -54,7 +55,7 @@ video {
     box-sizing: border-box;
     overflow-wrap: break-word;
     margin: 20px 0 0;
-    color: #007bff;
+    color: cornflowerblue;
     text-shadow: 1px 1px 0px white;
     font-size: 40px;
     text-transform: uppercase;
@@ -93,7 +94,7 @@ a.solid-gold-button {
     box-sizing: border-box;
     text-decoration: none;
     position: relative;
-    background-color: #007bff;
+    background-color: cornflowerblue;
     border: 2px solid aliceblue;
     color: #fff;
     margin-top: 5px;
@@ -103,12 +104,11 @@ a.solid-gold-button {
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
-    font-family: brandon-grotesque,sans-serif;
     text-align: center;
     float: left;
     display: block;
     transition: all .2s ease-in-out;
-    
+    font-family: 'Charis SIL', serif;
    }
    
    .am{    
