@@ -94,27 +94,21 @@ function gogo(){
 						<div style="text-align: center; align-items: center;">
 							<label for="date"
 								style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">날짜
-								설정</label> <input
+								설정</label> 
+								<input
 								style="width: 30%; text-align: center; position: relative; left: 36%;"
 								type="date" name="date" class="form-control" id="date"
 								name="date"> <label for="first_time"
 								style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">시간
-								설정</label> <input
+								설정</label> 
+								<form action="http://localhost:8082/heatmap" method="post">
+								<input
 								style="width: 25%; text-align: center; position: relative; left: 223px;"
 								type="time" name="first_time" class="form-control"
-								id="first_time"> <label for="last-time"></label> <input
+								id="first_time"> <label for="last-time"></label> 
+								<input
 								style="width: 25%; text-align: center; position: relative; left: 479px; bottom: 61px;"
 								type="time" name="last_time" class="form-control" id="last_time">
-
-							<div style="align-self: center; position: relative; bottom: 35px;" id="view">
-								<button class="btn btn-light An" id="viewresult"
-									style="width: fit-content;" onclick="loadheatmap()">결과 보기</button>
-									<button class="btn btn-light An" id="viewresult"
-									style="width: fit-content;" onclick="gogo()">리셋</button>
-								<img id="heatimg" src="./resources/img/01.png"
-									style="display: none; padding: 20px; position: relative; top: 20px;">
-							</div>
-						</div>
 
 					</div>
 				
