@@ -25,7 +25,7 @@ public class MemberController {
 
 	@RequestMapping("/main.do")
 	public String joinjsp() {
-		return "intro";
+		return "login";
 	}
 
 	@RequestMapping("/join.do")
@@ -38,7 +38,7 @@ public class MemberController {
 		session.setAttribute("joinsuccess", "joinsuccess");
 		MemberMapper.join(mvo); // 등록
 
-		return "join";
+		return "login";
 	}
 
 	@PostMapping("/login.do")
