@@ -41,8 +41,7 @@ function resultHtml(data){
 	$.each(data, function(index, obj){
 		view+="<div class='que'>"
 		view+="<span>"+obj.indate
-		if("${ibj.situation}"==0) view+=" 서성이는사람 발견</span></div>"
-		else view+="</span></div>"
+		view+=" 위험 상황 감지</span></div>"
 		
 	view+="<div class='anw'>"
 	view+="<div class='form-group'>"
@@ -51,23 +50,49 @@ function resultHtml(data){
 	view+="</div>"
 	view+="<div class=\"form-group\">"
 	view+="<label for=\"content\">내용</label>"
-	view+="<textarea class='form-control' rows='5' id='content' "
-	view+="name='content' placeholder='내용 작성'></textarea>"
+	view+="<textarea class='form-control' rows='5' id='content"+obj.num+"' "
+	
+	view+="name='content' placeholder='내용 작성' readonly='readonly' >"+obj.content+"</textarea>"
 	view+="</div>"
 	view+="<button type='submit' class='btn btn-default' "
-	view+="style='background: #fff;'>수정</button>"
+	view+="style='background: #fff;' onclick='goUpdate("+obj.num+")'>수정하기</button>"
+	view+="&nbsp"
 	view+="<button type='submit' class='btn btn-default' "
-	view+="style='background: #fff;'>삭제</button>"
+	view+="style='background: #fff;' onclick='goDelete("+obj.num+")'>삭제</button>"
 	view+="</div>"
 	// view+=""
 	
 	});
 	$("#Accordion_wrap").html(view)
 	$(".que").click(function() {
-		   $(this).next(".anw").stop().slideToggle(300);
+		  $(this).next(".anw").stop().slideToggle(300);
 		  $(this).toggleClass('on').siblings().removeClass('on');
 		  $(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
 		}); 
+}
+function goUpdate(num){
+	var content = $("#content"+num).val()
+	$.ajax({
+		url : "updateDetection.do",
+		type : "GET",
+		data : {"num":num, "content":content},
+		success : loadposting,
+		error : function(){alert("error")}
+	})
+}
+function goDelete(){
+	var result = confirm('이 기록을 삭제하시겠습니까?');
+	if(result==true){
+	$.ajax({
+		url : "deleteDetection.do",
+		type : "GET",
+		data : {"num":num},
+		success : loadposting,
+		error : function(){alert("error")}
+	})
+	}else{
+		return false;
+	}
 }
 
 </script>
@@ -176,8 +201,8 @@ function resultHtml(data){
 						<span>TITLE</span>
 					</div>
 					<div class="anw">
-						<span><form action="#" method="post">
-								<div class="form-group">
+						<span>
+						<div class="form-group">
 									<label for="datetime"
 										style="font-family: 'Poppins', sans-serif;">날짜</label> <input
 										type="datetime-local" name="datetime" class="form-control"
@@ -192,7 +217,7 @@ function resultHtml(data){
 									style="background: #fff;">수정</button>
 								<button type="submit" class="btn btn-default"
 									style="background: #fff;">삭제</button>
-							</form></span>
+							</span>
 					</div>
 				</div>
 

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.book.entity.Member;
 import kr.book.entity.detection;
+import kr.book.entity.heatmap;
 import kr.book.mapper.MemberMapper;
 
 @Controller
@@ -76,4 +77,20 @@ public class MemberController {
 		return list;
 	}
 
+	@RequestMapping("/updateDetection.do")
+	public @ResponseBody void updateDetection(detection vo) {
+		MemberMapper.updateDetection(vo);
+	}
+	
+	@RequestMapping("/deleteDetection.do")
+	public @ResponseBody void deleteDetection(int num) {
+		MemberMapper.deleteDetection(num);
+	}
+	
+	@RequestMapping("/loadheatmap.do")
+	public @ResponseBody void loadheatmap(heatmap vo) {
+		
+		// 1. list->JSON 변환(API)
+		// 2. JSON 포멧으로 응답
+	}
 }

@@ -12,33 +12,29 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <script type="text/javascript">
 
-function ff(){
-	  var f="<a href='javascript:cview(1)'>2022-06-05 21:00 ~ 21:01</a>"
-	  f+="<a href='javascript:cview(2)'>2022-06-05 21:01 ~ 21:02</a>"
-	  f+="<a href='javascript:cview(3)'>2022-06-05 21:02 ~ 21:03</a>"
-	  f+="<a href='javascript:cview(4)'>2022-06-05 21:03 ~ 21:04</a>"
-	  f+="<a href='javascript:cview(5)'>2022-06-05 21:04 ~ 21:05</a>"
-		  $("#f").html(f)
-}
-function cview(idx){
-	  var view='<video controls width="250">'
-		  view+='<source src="dance_practice.mp4" type="video/mp4"></video>'
-		$("#showvideo").html(view)
-		$("#f").css("display","none")
+function loadheatmap(){
+	var first_time = $("#first_time").val()
+	first_time = first_time.replace(":", "")+"00";	
+	var last_time = $("#last_time").val()
+	last_time = last_time.replace(":", "")+"00";	
+	console.log(first_time, last_time)
+		$.ajax({
+		url : "http://172.30.1.5:8082/heatmap",
+		type : "POST",
+		data : {"first_time":first_time, "last_time":last_time},
+		success : loadphoto,
+		error : loadphoto
+	})
 }
 
-function goUpdate(idx){
-	// title, content
-	var title = $("#nt"+idx).val()
-	var content = $("#ta"+idx).val()
-	$.ajax({
-		url : "bUpdate.do",
-		
-		type : "POST",
-		data : {"idx":idx, "title":title, "content":content},
-		success : loadList,
-		error : function(){alert("error")}
-	})
+function loadphoto(){
+	$('#heatimg').remove()
+	setTimeout($("#view").append("<img id='heatimg' src='http://172.30.1.5:8082/static/img/diff-overlay2.jpg' style='display: none; padding: 20px; position: relative; top: 20px;'>"), 7000);
+	    $("#result1").show();
+	    $("#heatimg").show();
+}
+function gogo(){
+	$('#heatimg').remove();
 }
 </script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
@@ -93,14 +89,6 @@ function goUpdate(idx){
 						<img src="./resources/img/Analysis.png"
 							style="width: 20px; margin-right: 11px;">Analysis
 					</div>
-					<!--           	<select class="normal name" name="MBR_SHOP">
-  	<option value='' selected>-- select time --</option>
-  	<option value='1' id="1">2022-06-05 21:00 ~ 21:01</option>
-  	<option value='2' id="2">2022-06-05 21:01 ~ 21:02</option>
-  	<option value='3' id="3">2022-06-05 21:02 ~ 21:03</option>
-  	<option value='4' id="1">2022-06-05 21:03 ~ 21:04</option>
-  	<option value='5' id="1">2022-06-05 21:04 ~ 21:05</option>
-  	</select> -->
 
 					<div class="form-group content-wrapper">
 						<div style="text-align: center; align-items: center;">
@@ -118,10 +106,12 @@ function goUpdate(idx){
 								style="width: 25%; text-align: center; position: relative; left: 479px; bottom: 61px;"
 								type="time" name="last_time" class="form-control" id="last_time">
 
-							<div style="align-self: center; position: relative; bottom: 35px;">
+							<div style="align-self: center; position: relative; bottom: 35px;" id="view">
 								<button class="btn btn-light An" id="viewresult"
-									style="width: fit-content;">결과 보기</button>
-								<img id="heatimg" src="./resources/img/heatmap.jpg"
+									style="width: fit-content;" onclick="loadheatmap()">결과 보기</button>
+									<button class="btn btn-light An" id="viewresult"
+									style="width: fit-content;" onclick="gogo()">리셋</button>
+								<img id="heatimg" src="./resources/img/01.png"
 									style="display: none; padding: 20px; position: relative; top: 20px;">
 							</div>
 						</div>
@@ -156,10 +146,6 @@ $('#visual').click(function() {
     $(".An").hide();
     $(".result").show();
     $("#heatimg").hide();
-})
-$('#viewresult').click(function() {
-    $("#result1").show();
-    $("#heatimg").show();
 })
 
 </script>
