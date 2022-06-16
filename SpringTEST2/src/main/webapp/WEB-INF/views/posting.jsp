@@ -72,6 +72,30 @@ function resultHtml(data){
 		}); 
 }
 
+function goUpdate(num){
+	   var content = $("#content"+num).val()
+	   $.ajax({
+	      url : "updateDetection.do",
+	      type : "GET",
+	      data : {"num":num, "content":content},
+	      success : loadposting,
+	      error : function(){alert("error")}
+	   })
+	}
+	function goDelete(){
+	   var result = confirm('이 기록을 삭제하시겠습니까?');
+	   if(result==true){
+	   $.ajax({
+	      url : "deleteDetection.do",
+	      type : "GET",
+	      data : {"num":num},
+	      success : loadposting,
+	      error : function(){alert("error")}
+	   })
+	   }else{
+	      return false;
+	   }
+	}
 </script>
 
 </head>
