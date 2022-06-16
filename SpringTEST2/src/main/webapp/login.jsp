@@ -18,8 +18,7 @@
     System.out.print("로그인 확인 성공");
 %>
 
-<script type="text/javascript">
-window.onload = function(){
+<script type="text/javascript">window.onload = function(){
 alert("회원가입 성공")
    
 document.getElementById('btn').onclick=change();

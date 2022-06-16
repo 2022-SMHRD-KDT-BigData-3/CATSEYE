@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>CSS</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=Joan&display=swap');
 
 body {
 	padding: 0px;
@@ -13,6 +13,7 @@ body {
     height: 100vh;
     overflow: hidden;
     line-height: 1.42857143;
+    font-family: 'Joan', serif;
 }
 
 .jb-box {
@@ -39,14 +40,14 @@ video {
 
 
 #logo {
-	font-family: brandon-grotesque,sans-serif;
-	letter-spacing: 2px;
-	color: white;
-	font-size: 20px;
-	margin-left: 44px;
-	font-weight: 800;
-	z-index: 0;
-	text-align: end;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 10px steelblue;
+    color: white;
+    font-size: 20PX;
+    margin-left: 44px;
+    font-weight: 800;
+    z-index: 0;
+    text-align: end;
     margin-right: 30px;
 }
 
@@ -54,11 +55,11 @@ video {
     box-sizing: border-box;
     overflow-wrap: break-word;
     margin: 20px 0 0;
-    color: #e0bc75;
-    font-family: brandon-grotesque,sans-serif;
+    color: cornflowerblue;
+    text-shadow: 1px 1px 0px white;
     font-size: 40px;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 600;
     letter-spacing: 2px!important;
     max-width: 650px;
     margin-bottom: 0!important;
@@ -68,7 +69,6 @@ video {
 #w2 {
     line-height: 1.42857143;
     box-sizing: border-box;
-    font-family: essonnes-display,sans-serif;
     color: #fff!important;
     font-size: 42px;
     display: block;
@@ -85,7 +85,6 @@ video {
     font-size: 20px!important;
     line-height: 25px;
     font-weight: 300;
-    font-family: brandon-grotesque,sans-serif;
     margin: 0 0 10px;
     color: #fff!important;
 }
@@ -95,8 +94,8 @@ a.solid-gold-button {
     box-sizing: border-box;
     text-decoration: none;
     position: relative;
-    background-color: #e0bc75;
-    border: 2px solid #e0bc75;
+    background-color: cornflowerblue;
+    border: 2px solid aliceblue;
     color: #fff;
     margin-top: 5px;
     padding: 9px 18px;
@@ -105,19 +104,16 @@ a.solid-gold-button {
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
-    font-family: brandon-grotesque,sans-serif;
     text-align: center;
     float: left;
     display: block;
     transition: all .2s ease-in-out;
-    
+    font-family: 'Charis SIL', serif;
    }
    
    .am{    
-    font-family: helvetica neue,Helvetica,Arial,sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #333;
     box-sizing: border-box;
     position: relative;
     min-height: 1px;
@@ -149,7 +145,7 @@ a.solid-gold-button {
 	<div class="am text" style="position: relative;top: 200px;left: 135px;">
 			<h1 id="w1">Digital Analytics Management</h1>
 			<span id="w2">With Proven Results</span>
-			<p id="w3">Introducing CatsEye.</p>
+			<p id="w3">Enables efficient operation and management of business establishments</p>
 			<a class="solid-gold-button">Signin and use the website</a>
 
 	</div>

@@ -19,6 +19,7 @@
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/posting.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/acordian.css' />
+<link rel='stylesheet' type="text/css" href='./resources/CSS/manual.css' />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <script type="text/javascript">
 $(document).ready(()=>{ /* 람다식 */
@@ -41,8 +42,7 @@ function resultHtml(data){
 	$.each(data, function(index, obj){
 		view+="<div class='que'>"
 		view+="<span>"+obj.indate
-		if("${ibj.situation}"==0) view+=" 서성이는사람 발견</span></div>"
-		else view+="</span></div>"
+		view+=" 위험 상황 감지</span></div>"
 		
 	view+="<div class='anw'>"
 	view+="<div class='form-group'>"
@@ -51,13 +51,15 @@ function resultHtml(data){
 	view+="</div>"
 	view+="<div class=\"form-group\">"
 	view+="<label for=\"content\">내용</label>"
-	view+="<textarea class='form-control' rows='5' id='content' "
-	view+="name='content' placeholder='내용 작성'></textarea>"
+	view+="<textarea class='form-control' rows='5' id='content"+obj.num+"' "
+	
+	view+="name='content' placeholder='내용 작성' readonly='readonly' >"+obj.content+"</textarea>"
 	view+="</div>"
 	view+="<button type='submit' class='btn btn-default' "
-	view+="style='background: #fff;'>수정</button>"
+	view+="style='background: #fff;' onclick='goUpdate("+obj.num+")'>수정하기</button>"
+	view+="&nbsp"
 	view+="<button type='submit' class='btn btn-default' "
-	view+="style='background: #fff;'>삭제</button>"
+	view+="style='background: #fff;' onclick='goDelete("+obj.num+")'>삭제</button>"
 	view+="</div>"
 	// view+=""
 	
@@ -70,6 +72,30 @@ function resultHtml(data){
 		}); 
 }
 
+function goUpdate(num){
+	   var content = $("#content"+num).val()
+	   $.ajax({
+	      url : "updateDetection.do",
+	      type : "GET",
+	      data : {"num":num, "content":content},
+	      success : loadposting,
+	      error : function(){alert("error")}
+	   })
+	}
+	function goDelete(num){
+	   var result = confirm('이 기록을 삭제하시겠습니까?');
+	   if(result==true){
+	   $.ajax({
+	      url : "deleteDetection.do",
+	      type : "GET",
+	      data : {"num":num},
+	      success : loadposting,
+	      error : function(){alert("error")}
+	   })
+	   }else{
+	      return false;
+	   }
+	}
 </script>
 
 </head>
@@ -87,21 +113,13 @@ function resultHtml(data){
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
 
-	<div class="app">
+		<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a href="Main.jsp" style="text-decoration-line: none;"><img
-					src="./resources/img/home.png" style="width: 20px; margin: 2px;">Home</a>
-				<a class="menu-link is-active" href="movement Analysis.jsp"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/Analysis.png"
-					style="width: 20px; margin: 2px;">movementAnalysis</a> <a
-					class="menu-link" href="posting.jsp" id="Record"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/posting.png" style="width: 20px; margin: 2px;">Emergency
-					Record</a> <a class="menu-link" href="intro.jsp"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/signout.png" style="width: 20px; margin: 2px;">SignOut</a>
+				<a class="menu-link" href="Main.jsp">Home</a>
+				<a class="menu-link is-active" href="Analysis.do" >MovementAnalysis</a> 
+				<a class="menu-link" href="posting.do">Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">SignOut</a>
 			</div>
 
 			<!-- 검색창 없앰 -->
@@ -151,8 +169,7 @@ function resultHtml(data){
 				
 				<!-- video -->
 				<div class="content-section Re">
-				<div class="content-section-title"><img src="./resources/img/posting.png"
-						style="width: 20px; margin-right: 15px;">History CCTV</div>
+				<div class="content-section-title"><img src="./resources/img/posting.png" style="width: 20px; margin-right: 15px;">History CCTV</div>
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
@@ -188,35 +205,27 @@ function resultHtml(data){
 									<textarea class="form-control" rows="5" id="content"
 										name="content" placeholder="내용 작성"></textarea>
 								</div>
-								<button type="submit" class="btn btn-default"
-									style="background: #fff;">수정</button>
-								<button type="submit" class="btn btn-default"
-									style="background: #fff;">삭제</button>
-							</form></span>
+								<button type="submit" class='btn btn-light' style="margin-right: 5px;">수정</button>
+								<button type="submit" class='btn btn-light' style="margin-right: 5px;">삭제</button>
+							</span>
 					</div>
 				</div>
 
 				<!-- 응급처치 메뉴얼 -->
-				<div class="content-section-title Em"
-					style="-delay: .3s; padding: inherit;">
-					<img src="./resources/img/posting.png"
-						style="width: 20px; margin-right: 15px;">Safety manual</div>
-				<div id="Em" style="background-color: var(- -theme-bg-color); magin: 2px;">
-					<div class="apps-card">
-						<div class="app-card Em">
-							<span> After Effects</span>
-							<div class="app-card__subtext">Industry Standart motion
-								graphics & visual effects</div>
-							<div class="app-card-buttons">
-								<button class="content-button status-button open">Open</button>
-							</div>
-						</div>
-					</div>
-				</div>
+
+				<div class="carousel">
+  <div class="jumbotron"></div>
+  <div class="gallery">
+    <figure><img src="https://picsum.photos/id/2/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/24/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/19/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/16/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/38/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/64/640/480" /></figure>
+  </div>
+</div>
 			</div>
 		</div>
-
-
 	</div>
 
 
@@ -225,6 +234,7 @@ function resultHtml(data){
 <script src="./resources/JS/posting.js"></script>
 <script src="./resources/JS/Main.js"></script>
 <script src="./resources/JS/acordian.js"></script>
+<script src="./resources/JS/manual.js"></script>
 <script type="text/javascript">
 
 $('#Record').click(function() {

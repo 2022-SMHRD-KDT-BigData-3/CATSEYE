@@ -48,11 +48,11 @@ function resultHtml(data){
 	    	view+="<textarea rows='7' class='form-control' readonly id='ta"+obj.idx+"'>"+obj.content+"</textarea>"
 	    	view+="<br>"
 	    	if("${mvo.userId}"==obj.userId){
-	    		view+="<span id='u"+obj.idx+"'><button class='btn btn-sm btn-info' onclick='goForm("+obj.idx+")'>수정</button></span>&nbsp"
-	    		view+="<button class='btn btn-sm btn-warning' onclick='goDel("+obj.idx+")'>삭제</button>"
+	    		view+="<span id='u"+obj.idx+"'><button class='btn btn-light' onclick='goForm("+obj.idx+")'>수정</button></span>&nbsp"
+	    		view+="<button class='btn btn-light' onclick='goDel("+obj.idx+")'>삭제</button>"
 	    	}else{
-	    		view+="<span id='u"+obj.idx+"'><button disabled class='btn btn-sm btn-info' onclick='goForm("+obj.idx+")'>수정</button></span>&nbsp"
-	    		view+="<button disabled class='btn btn-sm btn-warning' onclick='goDel("+obj.idx+")'>삭제</button>"
+	    		view+="<span id='u"+obj.idx+"'><button disabled class='btn btn-light' onclick='goForm("+obj.idx+")'>수정</button></span>&nbsp"
+	    		view+="<button disabled class='btn btn-light' onclick='goDel("+obj.idx+")'>삭제</button>"
 	    		
 	    	}
 	    	view+="</td>"
@@ -81,19 +81,13 @@ function resultHtml(data){
 	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a href="Main.jsp" style="text-decoration-line: none;"><img
-					src="./resources/img/home.png" style="width: 20px; margin: 2px;">Home</a>
-				<a class="menu-link is-active" href="movement Analysis.jsp"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/Analysis.png"
-					style="width: 20px; margin: 2px;">movementAnalysis</a> <a
-					class="menu-link" href="posting.jsp" id="Record"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/posting.png" style="width: 20px; margin: 2px;">Emergency
-					Record</a> <a class="menu-link" href="intro.jsp"
-					style="text-decoration-line: none;"><img
-					src="./resources/img/signout.png" style="width: 20px; margin: 2px;">SignOut</a>
+				<a class="menu-link" href="Main.jsp"><img src="./resources/img/home.png" style="width: 20px; margin:2px;">Home</a>
+				<a class="menu-link is-active" href="Analysis.do" ><img src="./resources/img/Analysis.png" style="width: 20px; margin:2px;">movementAnalysis</a> 
+				<a class="menu-link" href="posting.do"><img src="./resources/img/posting.png" style="width: 20px; margin:2px;">Emergency Record</a>
+				<a class="menu-link" href="logout.jsp"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
 			</div>
+
+		</div>
 
 			<!-- 검색창 없앰 -->
 			<div class="search-bar"></div>
@@ -174,10 +168,8 @@ function resultHtml(data){
 									<textarea class="form-control" rows="5" id="content" 
 									name="content" placeholder="내용 작성"></textarea>
 								</div>
-								<button type="submit" class="btn btn-default"
-									style="background: #fff;">수정</button>
-								<button type="submit" class="btn btn-default"
-									style="background: #fff;">삭제</button>
+								<button type="submit" class="btn btn-light">수정</button>
+								<button type="submit" class="btn btn-light">삭제</button>
 					</div>
 				</div>
 
