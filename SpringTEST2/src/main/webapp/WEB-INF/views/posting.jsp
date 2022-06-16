@@ -214,16 +214,7 @@ function goUpdate(num){
 				<!-- 응급처치 메뉴얼 -->
 
 				<div class="carousel">
-  <div class="jumbotron"></div>
-  <div class="gallery">
-    <figure><img src="https://picsum.photos/id/2/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/24/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/19/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/16/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/38/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/64/640/480" /></figure>
-  </div>
-</div>
+
 			</div>
 		</div>
 	</div>
