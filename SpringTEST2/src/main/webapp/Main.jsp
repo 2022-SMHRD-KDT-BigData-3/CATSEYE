@@ -27,14 +27,18 @@
 <body style="--theme-bg-color: rgb(255 255 255/ 31%); --theme-color: #3c3a3a; --inactive-color: #333333; --button-inactive: #3c3a3a; --search-bg: rgb(255 255 255/ 31%); --dropdown-bg: lightgray 56%; --overlay-bg: rgb(255 255 255/ 30%); --dropdown-hover: rgb(255 255 255/ 100%); --border-color: rgb(255 255 255/ 35%); --popup-bg: rgb(255, 255, 255); --hover-menu-bg: rgba(255 255 255/ 35%); --scrollbar-bg: rgb(255 253 253/ 57%); --content-title-color: --theme-color;">
 
 	<!-- <div><img src="./resources/img/02.png" onclick="location.href='login.jsp'" style="position: fixed; width: 2%; bottom: 96%; left: 79%;"></div> -->
+	<p id="logo">
+		<!-- <img src="./resources/img/arrows-to-eye-solid.svg"> -->
+		CATSEYE
+	<P>
 
 	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a href="Main.jsp" style="text-decoration-line: none;"><img src="./resources/img/home.png" style="width: 20px; margin:2px;">Home</a>
-				<a class="menu-link is-active" href="Analysis.do" style="text-decoration-line: none;"><img src="./resources/img/Analysis.png" style="width: 20px; margin:2px;">movementAnalysis</a> 
-				<a class="menu-link" href="posting.do" style="text-decoration-line: none;"><img src="./resources/img/posting.png" style="width: 20px; margin:2px;">Emergency Record</a>
-				<a class="menu-link" href="logout.jsp" style="text-decoration-line: none;"><img src="./resources/img/signout.png" style="width: 20px; margin:2px;">SignOut</a>
+				<a class="menu-link" href="Main.jsp"><!-- <img src="./resources/img/home.png" style="width: 20px; margin:2px;"> -->Home</a>
+				<a class="menu-link is-active" href="Analysis.do">MovementAnalysis</a> 
+				<a class="menu-link" href="posting.do">Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">SignOut</a>
 			</div>
 
 		</div>
@@ -45,12 +49,8 @@
 				<div class="side-wrapper"></div>
 				</div>
 			</div>
+			
 			<div class="main-container">
-				<div class="main-header">
-					<div class="header-menu"></div>
-				</div>
-
-
 				<!-- video -->
 				<div class="content-section">
 				<div class="content-section-title"><img src="./resources/img/home.png" style="width: 20px;margin: 15px;">Real-time Monitoring</div>
@@ -62,8 +62,8 @@
 					</video>
 					
 					<div style="align-self: center;">
-					<button class="btn btn-light" style="width: fit-content;margin: 20px 0 20px 0;"> 원본 영상 보기 </button>
-					<button class="btn btn-light" style="width: fit-content;margin: 20px 0 20px 15px;"> yolov5 적용 영상 보기</button>
+					<button type="button" class="btn btn-light"> 원본 영상 보기 </button>
+					<button type="button" class="btn btn-light"> yolov5 적용 영상 보기</button>
 					</div> 
 				</div>
 				</div>
@@ -88,10 +88,8 @@
 										<textarea class="form-control" rows="5" id="content"
 											name="content" placeholder="내용 작성"></textarea>
 									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
+									<button type="submit" class="btn btn-light">수정</button>
+									<button type="submit" class="btn btn-light">삭제</button>
 								</form></span>
 						</div>
 						<div class="que">
@@ -164,6 +162,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 			</div>
 			<div class="overlay-app"></div></body>
 <script src="./resources/JS/Main.js"></script>
