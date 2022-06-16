@@ -19,6 +19,7 @@
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/posting.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/acordian.css' />
+<link rel='stylesheet' type="text/css" href='./resources/CSS/manual.css' />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <script type="text/javascript">
 $(document).ready(()=>{ /* 람다식 */
@@ -186,26 +187,20 @@ function resultHtml(data){
 				</div>
 
 				<!-- 응급처치 메뉴얼 -->
-				<div class="content-section-title Em"
-					style="-delay: .3s; padding: inherit;">
-					<img src="./resources/img/posting.png"
-						style="width: 20px; margin-right: 15px;">Safety manual</div>
-				<div id="Em" style="background-color: var(- -theme-bg-color); magin: 2px;">
-					<div class="apps-card">
-						<div class="app-card Em">
-							<span> After Effects</span>
-							<div class="app-card__subtext">Industry Standart motion
-								graphics & visual effects</div>
-							<div class="app-card-buttons">
-								<button class="content-button status-button open">Open</button>
-							</div>
-						</div>
-					</div>
-				</div>
+
+				<div class="carousel">
+  <div class="jumbotron"></div>
+  <div class="gallery">
+    <figure><img src="https://picsum.photos/id/2/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/24/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/19/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/16/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/38/640/480" /></figure>
+    <figure><img src="https://picsum.photos/id/64/640/480" /></figure>
+  </div>
+</div>
 			</div>
 		</div>
-
-
 	</div>
 
 
@@ -214,6 +209,7 @@ function resultHtml(data){
 <script src="./resources/JS/posting.js"></script>
 <script src="./resources/JS/Main.js"></script>
 <script src="./resources/JS/acordian.js"></script>
+<script src="./resources/JS/manual.js"></script>
 <script type="text/javascript">
 
 $('#Record').click(function() {
