@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Main</title>
+<title>Posting</title>
 
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
@@ -19,8 +19,11 @@
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/posting.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/acordian.css' />
-<link rel='stylesheet' type="text/css" href='./resources/CSS/manual.css' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
+  <link rel='stylesheet' type="text/css" href='./resources/CSS/./manual.css' />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
 <script type="text/javascript">
 $(document).ready(()=>{ /* 람다식 */
 	loadposting()
@@ -113,18 +116,14 @@ function goUpdate(num){
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
 
-		<div class="app">
+	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a class="menu-link" href="Main.jsp">Home</a>
-				<a class="menu-link is-active" href="Analysis.do" >MovementAnalysis</a> 
+				<a class="menu-link" href="Main.jsp"><!-- <img src="./resources/img/home.png" style="width: 20px; margin:2px;"> -->Home</a>
+				<a class="menu-link is-active" href="Analysis.do">MovementAnalysis</a> 
 				<a class="menu-link" href="posting.do">Emergency Record</a>
 				<a class="menu-link" href="logout.jsp">SignOut</a>
 			</div>
-
-			<!-- 검색창 없앰 -->
-			<div class="search-bar"></div>
-			<div class="header-profile"></div>
 		</div>
 
 		<div class="wrapper">
@@ -212,30 +211,106 @@ function goUpdate(num){
 				</div>
 
 				<!-- 응급처치 메뉴얼 -->
+				<div class="content-section-title Em">
+					<div class="content-section">
+						<div class="content-section-title">
+							<img src="./resources/img/home.png"
+								style="width: 20px; margin: 15px;">Emergency Response Manual
+						</div>
+						<div class="apps-card">
+							<div class="app-card">
+								<span> After Effects</span>
+								<div class="app-card__subtext">Industry Standart motion graphics & visual effects</div>
+								<div class="app-card-buttons">
+									<button class="content-button status-button open">Open</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="content-section-title Em1">
+					<div class="content-section">
+						<div class="content-section-title Em1">
+							<img src="./resources/img/home.png"style="width: 20px; margin: 15px;">
+							Emergency Response Manual
+						</div>
 
-				<div class="carousel">
-
+<div class="carousel">
+	<div class="btn btn-back hidden">
+		<i class="fas fa-arrow-left"></i>
+		<i class="fas fa-chevron-left left-indicator"></i>
+	</div>
+	<div class="viewbox">
+		<div class="track">
+			<div class="slide active">
+				<img class="images" src="https://source.unsplash.com/random/800x800">
+			</div>
+			<div class="slide">
+				<img class="images" src="https://source.unsplash.com/aaIN3y2zcMQ/800x801">
+			</div>
+			<div class="slide">
+				<img class="images" src="https://source.unsplash.com/random/800x802">
+			</div>
+			<div class="slide">
+				<img class="images" src="https://source.unsplash.com/random/800x803">
+			</div>
+			<div class="slide active">
+				<img class="images" src="https://source.unsplash.com/random/800x804">
+			</div>
+			<div class="slide">
+				<img class="images" src="https://source.unsplash.com/eADQs40WywY/800x805">
+			</div>
+			<div class="slide">
+				<img class="images" src="https://source.unsplash.com/random/800x806">
+			</div>
+			<div class="slide">
+				<img class="images" src="https://source.unsplash.com/ArYjvKHVByg/800x807">
 			</div>
 		</div>
+	</div>
+	<div class="btn btn-next">
+		<i class="fas fa-arrow-right"></i>
+		<i class="fas fa-chevron-right right-indicator"></i>
+	</div>
+	<div class="nav-indicator">
+		<div class="dot active"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+
+
+</div>
+				</div>
+			</div>
 	</div>
 
 
 
 </body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+<script  src="./resources/JS/manual.js"></script>
 <script src="./resources/JS/posting.js"></script>
 <script src="./resources/JS/Main.js"></script>
 <script src="./resources/JS/acordian.js"></script>
-<script src="./resources/JS/manual.js"></script>
 <script type="text/javascript">
 
 $('#Record').click(function() {
     $(".Em").show();
+    $(".Em1").hide();
     $(".Re").show();
 })
 
 $('#before').click(function() {
 	$("#changetext").text("Before");
     $(".Em").hide();
+    $(".Em1").hide();
     $(".Re").show();
 })
 
@@ -243,11 +318,13 @@ $('#after').click(function() {
 	/* document.getElementById("#changetext").textContent="after"; */
 	$("#changetext").text("After");
     $(".Em").hide();
+    $(".Em1").hide();
     $(".Re").show();
 })
 
 $('#Safety').click(function() {
-    $(".Em").show();
+    $(".Em").hide();
+    $(".Em1").show();
     $(".Re").hide();
 })
 </script>

@@ -23,3 +23,4 @@ allVideos.forEach((v) => {
   $(".video-p-name").text(person);
   $(".video-detail .author-img").attr("src", img);
 });
+
