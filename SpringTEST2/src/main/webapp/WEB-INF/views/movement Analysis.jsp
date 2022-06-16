@@ -30,7 +30,8 @@ function loadheatmap(){
 function loadphoto(){
 	$('#heatimg').remove()
 	setTimeout($("#view").append("<img id='heatimg' src='http://172.30.1.5:8082/static/img/diff-overlay2.jpg' style='display: none; padding: 20px; position: relative; top: 20px;'>"), 7000);
-	    $("#result1").show();
+	$('#heatimg').load(location.href+' #heatimg');    
+	$("#result1").show();
 	    $("#heatimg").show();
 }
 function gogo(){
