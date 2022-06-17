@@ -228,31 +228,41 @@ function goUpdate(num){
 
   <div id="demo" class="carousel slide" data-ride="carousel">
 
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="position: relative; width: 68%; overflow: hidden;left: 159px;">
       <!-- 슬라이드 쇼 -->
       <div class="carousel-item active">
         <!--가로-->
         <img class="d-block w-100" 
-          src="https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          src="./resources/img/001.jpg"
           alt="First slide">
           <div class="carousel-caption d-none d-md-block">
-              <h5>쓰러진 사람 응급 대처법</h5>
-              <p>testtesttest</p>
+              <h5>응급 대처법</h5>
+              <p>2022.06.17</p>
         </div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100"
-          src="https://images.pexels.com/photos/2355519/pexels-photo-2355519.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+          src="./resources/img/002.jpg"
           alt="Second slide">
       </div>
       <div class="carousel-item">
         <img class="d-block w-100"
-          src="https://images.pexels.com/photos/2544554/pexels-photo-2544554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          src="./resources/img/003.jpg"
           alt="Third slide">
       </div>
       <div class="carousel-item">
         <img class="d-block w-100"
-          src="https://images.pexels.com/photos/2544554/pexels-photo-2544554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          src="./resources/img/004.jpg"
+          alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"
+          src="./resources/img/005.jpg"
+          alt="Third slide">
+      </div>
+       <div class="carousel-item">
+        <img class="d-block w-100"
+          src="./resources/img/006.jpg"
           alt="Third slide">
       </div>
     
@@ -269,14 +279,17 @@ function goUpdate(num){
     </a>
     <!-- / 화살표 버튼 끝 -->
     
-    <!-- 인디케이터 -->
-    <ul class="carousel-indicators">
-      <li data-target="#demo" data-slide-to="0" class="active"></li> <!--0번부터시작-->
-      <li data-target="#demo" data-slide-to="1"></li>
-      <li data-target="#demo" data-slide-to="2"></li>
-      <li data-target="#demo" data-slide-to="3"></li>
-    </ul>
-  </div>
+   							 <!-- 인디케이터 -->
+							<ul class="carousel-indicators">
+								<li data-target="#demo" data-slide-to="0" class="active"></li>
+								<!--0번부터시작-->
+								<li data-target="#demo" data-slide-to="1"></li>
+								<li data-target="#demo" data-slide-to="2"></li>
+								<li data-target="#demo" data-slide-to="3"></li>
+								<li data-target="#demo" data-slide-to="4"></li>
+								<li data-target="#demo" data-slide-to="5"></li>
+							</ul>
+						</div>
 	</div>
 					</div>
 				</div>
