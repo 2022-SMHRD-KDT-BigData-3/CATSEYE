@@ -13,6 +13,21 @@
 <script type="text/javascript">
 
 function loadheatmap(){
+
+	$("#heatimg").attr("src",'./resources/img/01.png');
+   var first_time = $("#first_time").val()
+   first_time = first_time.replace(":", "")+"00";   
+   var last_time = $("#last_time").val()
+   last_time = last_time.replace(":", "")+"00";   
+   console.log(first_time, last_time)
+      $.ajax({
+      url : "http://172.30.1.5:8082/heatmap",
+      type : "POST",
+      data : {"first_time":first_time, "last_time":last_time},
+      success:setTimeout(loadphoto,10000)
+   })
+}
+
    $("#heatimg").attr("src",'./resources/img/loding.gif');
 		var first_time = $("#first_time").val()
 		first_time = first_time.replace(":", "") + "00";
@@ -28,14 +43,14 @@ function loadheatmap(){
 			},
 			success : setTimeout(loadphoto, 10000)
 		})
-	}
+	
 
-	function loadphoto() {
-		$("#heatimg").attr(
-				"src",
-				'http://172.30.1.5:8082/static/img/diff-overlay2.jpg?'
-						+ Date.now());
-	}
+
+
+function loadphoto(){
+	$("#heatimg").attr("src",'http://172.30.1.5:8082/static/img/diff-overlay2.jpg?'+Date.now());
+}
+
 </script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
@@ -60,6 +75,9 @@ function loadheatmap(){
     --content-title-color: --theme-color;">
    
 <div class="app">
+<<<<<<< HEAD
+      <div class="header">
+=======
 		<div class="header">
 			<div class="header-menu">
 				<a class="menu-link" href="Main.jsp">
@@ -73,19 +91,34 @@ function loadheatmap(){
 				<a class="menu-link" href="logout.jsp">
 				<i class="bi bi-border"></i>  SignOut</a>
 			</div>  
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/CATSEYE.git
 
-		</div>
+         <div class="header-menu" style="font-weight: 600;">
+            <a class="menu-link" href="Main.jsp"><!-- <img src="./resources/img/home.png" style="width: 20px; margin:2px;"> -->Home</a>
+            <a class="menu-link is-active" href="Analysis.do" >MovementAnalysis</a> 
+            <a class="menu-link" href="posting.do">Emergency Record</a>
+            <a class="menu-link" href="logout.jsp">SignOut</a>
+         </div>
+
+      </div>
 
 
       <div class="wrapper">
          <div class="left-side">
             <div class="side-wrapper">
+<<<<<<< HEAD
+               <div class="side-title" id="Analysis">Analysis</div>
+            </div>
+            <div class="side-wrapper">
+               <div class="side-title" id="visual">visualization</div>
+=======
                <div class="side-title" id="Analysis">
 			  Analysis</div>
             </div>
             <div class="side-wrapper">
                <div class="side-title" id="visual">
               visualization</div>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/CATSEYE.git
             </div>
          </div>
 
@@ -94,8 +127,31 @@ function loadheatmap(){
             <!-- 분석 -->
             <div class="content-section An">
                <div class="content-section-title An">
+<<<<<<< HEAD
+                  <img src="./resources/img/Analysis.png"
+                     style="width: 20px; margin-right: 11px;">Analysis
+               </div>
+=======
 <i class="bi bi-border-right"></i>  Analysis</div>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/CATSEYE.git
 
+<<<<<<< HEAD
+               <div class="form-group content-wrapper">
+                  <div style="text-align: center; align-items: center;">
+                     <label for="date"
+                        style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">날짜
+                        설정</label> <input
+                        style="width: 30%; text-align: center; position: relative; left: 36%;"
+                        type="date" name="date" class="form-control" id="date"
+                        name="date"> <label for="first_time"
+                        style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">시간
+                        설정</label> <input
+                        style="width: 25%; text-align: center; position: relative; left: 223px;"
+                        type="time" name="first_time" class="form-control"
+                        id="first_time"> <label for="last-time"></label> <input
+                        style="width: 25%; text-align: center; position: relative; left: 479px; bottom: 61px;"
+                        type="time" name="last_time" class="form-control" id="last_time">
+=======
 					<div class="form-group content-wrapper">
 						<div style="text-align: center; align-items: center;">
 							<label for="date"
@@ -111,13 +167,39 @@ function loadheatmap(){
 								id="first_time"> <label for="last-time"></label> <input
 								style="width: 25%; text-align: center; position: relative; left: 479px; bottom: 61px;"
 								type="time" name="last_time" class="form-control" id="last_time">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/CATSEYE.git
 
+<<<<<<< HEAD
+                     <div style="align-self: center; position: relative; bottom: 35px;" id="view">
+                        <button class="btn btn-light An" id="viewresult"
+                           style="width: fit-content;" onclick="loadheatmap()">결과 보기</button>
+                        <img id="heatimg" src="./resources/img/01.png">
+                     </div>
+                  </div>
+
+               </div>
+            
+            </div>
+            
+               <!-- 결과 -->
+            <div class="content-section result">
+            <div class="content-section-title result"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">visualization</div>
+            <div class="content-wrapper result"></div>
+         <div class="content-wrapper result"></div>
+         </div>
+         </div>
+         </div>
+=======
 							<div
 								style="align-self: center; position: relative; bottom: 35px;"
 								id="view">
 								<button class="btn btn-light An" id="viewresult" style="width: fit-content;" onclick="loadheatmap()">결과 보기</button>
 								<img id="heatimg" src="./resources/img/01.png" style="display:none;">
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/CATSEYE.git
 
+<<<<<<< HEAD
+      </div>
+=======
 							</div>
 						</div>
 					</div>
@@ -130,6 +212,7 @@ function loadheatmap(){
          <div class="content-wrapper result"></div>
          </div>
 
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/CATSEYE.git
 
             
 
