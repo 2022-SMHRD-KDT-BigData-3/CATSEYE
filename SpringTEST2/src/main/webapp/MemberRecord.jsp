@@ -52,7 +52,7 @@
 			<div class="main-container">
 				<!-- video -->
 				<div class="content-section">
-				<div class="content-section-title"><i class="bi bi-border-outer"></i>   Real-time Monitoring</div>
+				<div class="content-section-title"><i class="bi bi-border-outer"></i> Real-time Monitoring</div>
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
@@ -70,7 +70,7 @@
 
 				<!-- 게시물 list -->
 				<div class="content-section">
-					<div class="content-section-title"><i class="bi bi-border-outer"></i>    Emergency Record</div>
+					<div class="content-section-title"><i class="bi bi-border-outer"></i> Emergency Record</div>
 					<div id="Accordion_wrap" style="background-color: var(--theme-bg-color); magin:2px;">
 						<div class="que">
 							<span>TITLE </span> <span class="badge badge-primary">New</span>
@@ -142,13 +142,13 @@
 					
                      
 					<div class="content-section">
-					<div class="content-section-title"><i class="bi bi-border-outer"></i>   additional information</div>
+					<div class="content-section-title"><i class="bi bi-border-outer"></i> additional information</div>
 					
 					</div>
 
 					<!-- 응급처치 메뉴얼 -->
 					<div class="content-section">
-						<div class="content-section-title"><i class="bi bi-border-outer"></i>   Emergency Response Manual</div>
+						<div class="content-section-title"><i class="bi bi-border-outer"></i> Emergency Response Manual</div>
 						<div class="apps-card" >
 							<div class="app-card">
 								<span> After Effects</span>

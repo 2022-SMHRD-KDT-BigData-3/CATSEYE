@@ -21,7 +21,8 @@
 <link rel='stylesheet' type="text/css" href='./resources/CSS/acordian.css' />
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<!-- 	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -31,7 +32,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 
 <script type="text/javascript">
 $(document).ready(()=>{ /* 람다식 */
@@ -125,59 +126,42 @@ function goUpdate(num){
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
 
-	<div class="app">
+<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a class="menu-link" href="Main.jsp"><!-- <img src="./resources/img/home.png" style="width: 20px; margin:2px;"> -->Home</a>
-				<a class="menu-link is-active" href="Analysis.do">MovementAnalysis</a> 
-				<a class="menu-link" href="posting.do">Emergency Record</a>
-				<a class="menu-link" href="logout.jsp">SignOut</a>
-			</div>
+				<a class="menu-link" href="Main.jsp">
+				<i class="bi bi-border-outer"></i>  Home</a>
+				<a class="menu-link is-active" href="#">
+				<i class="bi bi-border-left"></i>  Member Record</a> 
+				<a class="menu-link is-active" href="Analysis.do">
+				<i class="bi bi-border-right"></i>  Movement Record</a> 
+				<a class="menu-link" href="posting.do">
+				<i class="bi bi-border-inner"></i>  Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">
+				<i class="bi bi-border"></i>  SignOut</a>
+			</div>  
+
 		</div>
 
 		<div class="wrapper">
 			<div class="left-side">
 				<div class="side-wrapper">
-					<div class="side-title" id="before">Before</div>
+					<div class="side-title" id="before">  Before</div>
 				</div>
 				<div class="side-wrapper">
-					<div class="side-title" id="after">After</div>
+					<div class="side-title" id="after">  After</div>
 				</div>
 				<div class="side-wrapper">
-					<div class="side-title" id="Safety">Safety manual</div>
+					<div class="side-title" id="Safety">  Safety manual </div>
 				</div>
-
 			</div>
 
 			<div class="main-container">
-
-				<!-- 유튜브처럼 history  -->
-				<!-- <div class="small-header anim Re"
-					style="-delay: .3s; padding: inherit;">
-					<img src="./resources/img/posting.png"
-						style="width: 20px; margin-right: 15px;">History CCTV</div>
-				<div class="videos">
-					<div class="video anim Re" style="-delay: .4s">
-						<div class="video-time">8 min</div>
-						<div class="video-wrapper">
-							<video muted="">
-								<source src="./resources/video/RacingBike.mp4" type="video/mp4">
-							</video>
-							<div class="author-img__wrapper video-author"></div>
-						</div>
-						<section style="background-color: LIGHTGRAY;">
-							<div class="video-by">title</div>
-							<div class="video-name">Contents</div>
-							<div class="video-view">
-								Conetents2<span class="seperate video-seperate"></span>
-							</div>
-						</section>
-					</div>
-				</div> -->
 				
 				<!-- video -->
 				<div class="content-section Re">
-				<div class="content-section-title"><img src="./resources/img/posting.png" style="width: 20px; margin-right: 15px;">History CCTV</div>
+				<div class="content-section-title">
+				<i class="bi bi-border-inner"></i>  History CCTV</div>
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
@@ -188,11 +172,8 @@ function goUpdate(num){
 				</div>
 				
 				<!-- 게시물 list -->
-				<div class="content-section-title Re" id="changetext"
-					style="-delay: .3s; padding: inherit;">
-					<img src="./resources/img/posting.png"
-						style="width: 20px; margin-right: 15px;">Emergency Record
-				</div>
+				<div class="content-section-title Re" id="changetext" style="-delay: .3s; padding: inherit;">
+				<i class="bi bi-border-inner"></i>  Emergency Record</div>
 				<div id='test'></div>
 				<div id="Accordion_wrap" class="Re" style="background-color: var(- -theme-bg-color); magin: 2px;">
 				
@@ -222,10 +203,9 @@ function goUpdate(num){
 				<!-- 응급처치 메뉴얼 -->
 				<div class="content-section-title Em">
 					<div class="content-section">
-						<div class="content-section-title">
-							<img src="./resources/img/home.png"
-								style="width: 20px; margin: 15px;">Emergency Response Manual
-						</div>
+					<div class="content-section-title">
+					<i class="bi bi-border-inner"></i>  Emergency Response Manual
+					</div>
 						<div class="apps-card">
 							<div class="app-card">
 								<span> After Effects</span>
@@ -241,7 +221,7 @@ function goUpdate(num){
 				<div class="content-section-title Em1" style="display:none;">
 					<div class="content-section">
 						<div class="content-section-title Em1">
-							<img src="./resources/img/home.png" style="width: 20px; margin: 15px;">Emergency Response Manual
+					<i class="bi bi-border-inner"></i>  Emergency Response Manual
 						</div>
 					</div>
 
