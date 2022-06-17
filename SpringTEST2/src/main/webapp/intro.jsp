@@ -41,7 +41,6 @@ video {
 
 #logo {
     letter-spacing: 2px;
-    text-shadow: 2px 3px 10px steelblue;
     color: white;
     font-size: 20PX;
     margin-left: 44px;
@@ -142,7 +141,7 @@ a.solid-gold-button {
 		<!-- <img src="./resources/img/arrows-to-eye-solid.svg"> -->
 		CATSEYE
 	<P>
-	<div class="am text" style="position: relative;top: 200px;left: 135px;">
+	<div class="am text" style="position: relative;top: 311px;left: 135px;">
 			<h1 id="w1">Digital Analytics Management</h1>
 			<span id="w2">With Proven Results</span>
 			<p id="w3">Enables efficient operation and management of business establishments</p>

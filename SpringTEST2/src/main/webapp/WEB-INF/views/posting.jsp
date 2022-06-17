@@ -20,9 +20,18 @@
 <link rel='stylesheet' type="text/css" href='./resources/CSS/posting.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/acordian.css' />
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
-  <link rel='stylesheet' type="text/css" href='./resources/CSS/./manual.css' />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
 <script type="text/javascript">
 $(document).ready(()=>{ /* 람다식 */
@@ -228,64 +237,67 @@ function goUpdate(num){
 						</div>
 					</div>
 				</div>
-				
-				<div class="content-section-title Em1">
+
+				<div class="content-section-title Em1" style="display:none;">
 					<div class="content-section">
 						<div class="content-section-title Em1">
-							<img src="./resources/img/home.png"style="width: 20px; margin: 15px;">
-							Emergency Response Manual
+							<img src="./resources/img/home.png" style="width: 20px; margin: 15px;">Emergency Response Manual
 						</div>
+					</div>
 
-<div class="carousel">
-	<div class="btn btn-back hidden">
-		<i class="fas fa-arrow-left"></i>
-		<i class="fas fa-chevron-left left-indicator"></i>
-	</div>
-	<div class="viewbox">
-		<div class="track">
-			<div class="slide active">
-				<img class="images" src="https://source.unsplash.com/random/800x800">
-			</div>
-			<div class="slide">
-				<img class="images" src="https://source.unsplash.com/aaIN3y2zcMQ/800x801">
-			</div>
-			<div class="slide">
-				<img class="images" src="https://source.unsplash.com/random/800x802">
-			</div>
-			<div class="slide">
-				<img class="images" src="https://source.unsplash.com/random/800x803">
-			</div>
-			<div class="slide active">
-				<img class="images" src="https://source.unsplash.com/random/800x804">
-			</div>
-			<div class="slide">
-				<img class="images" src="https://source.unsplash.com/eADQs40WywY/800x805">
-			</div>
-			<div class="slide">
-				<img class="images" src="https://source.unsplash.com/random/800x806">
-			</div>
-			<div class="slide">
-				<img class="images" src="https://source.unsplash.com/ArYjvKHVByg/800x807">
-			</div>
-		</div>
-	</div>
-	<div class="btn btn-next">
-		<i class="fas fa-arrow-right"></i>
-		<i class="fas fa-chevron-right right-indicator"></i>
-	</div>
-	<div class="nav-indicator">
-		<div class="dot active"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-		<div class="dot"></div>
-	</div>
+  <div id="demo" class="carousel slide" data-ride="carousel">
 
+    <div class="carousel-inner">
+      <!-- 슬라이드 쇼 -->
+      <div class="carousel-item active">
+        <!--가로-->
+        <img class="d-block w-100" 
+          src="https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+              <h5>쓰러진 사람 응급 대처법</h5>
+              <p>testtesttest</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"
+          src="https://images.pexels.com/photos/2355519/pexels-photo-2355519.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+          alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"
+          src="https://images.pexels.com/photos/2544554/pexels-photo-2544554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"
+          src="https://images.pexels.com/photos/2544554/pexels-photo-2544554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          alt="Third slide">
+      </div>
+    
+    <!-- / 슬라이드 쇼 끝 -->
 
-</div>
+    <!-- 왼쪽 오른쪽 화살표 버튼 -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <!-- <span>Previous</span> -->
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <!-- <span>Next</span> -->
+    </a>
+    <!-- / 화살표 버튼 끝 -->
+    
+    <!-- 인디케이터 -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li> <!--0번부터시작-->
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
+    </ul>
+  </div>
+	</div>
+					</div>
 				</div>
 			</div>
 	</div>
@@ -295,7 +307,6 @@ function goUpdate(num){
 </body>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
-<script  src="./resources/JS/manual.js"></script>
 <script src="./resources/JS/posting.js"></script>
 <script src="./resources/JS/Main.js"></script>
 <script src="./resources/JS/acordian.js"></script>
