@@ -42,7 +42,7 @@ function loadheatmap(){
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel='stylesheet' href='https://vjs.zencdn.net/5-unsafe/video-js.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
-<link rel='stylesheet' type="text/css" href='./resources/CSS/movementAnalysis.css'/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
 <body style="--theme-bg-color: rgb(255 255 255 / 31%);
@@ -60,25 +60,32 @@ function loadheatmap(){
     --content-title-color: --theme-color;">
    
 <div class="app">
-      <div class="header">
+		<div class="header">
+			<div class="header-menu">
+				<a class="menu-link" href="Main.jsp">
+				<i class="bi bi-border-outer"></i>  Home</a>
+				<a class="menu-link is-active" href="#">
+				<i class="bi bi-border-left"></i>  Member Record</a> 
+				<a class="menu-link is-active" href="Analysis.do">
+				<i class="bi bi-border-right"></i>  Movement Record</a> 
+				<a class="menu-link" href="posting.do">
+				<i class="bi bi-border-inner"></i>  Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">
+				<i class="bi bi-border"></i>  SignOut</a>
+			</div>  
 
-         <div class="header-menu" style="font-weight: 600;">
-            <a class="menu-link" href="Main.jsp"><!-- <img src="./resources/img/home.png" style="width: 20px; margin:2px;"> -->Home</a>
-            <a class="menu-link is-active" href="Analysis.do" >MovementAnalysis</a> 
-            <a class="menu-link" href="posting.do">Emergency Record</a>
-            <a class="menu-link" href="logout.jsp">SignOut</a>
-         </div>
-
-      </div>
+		</div>
 
 
       <div class="wrapper">
          <div class="left-side">
             <div class="side-wrapper">
-               <div class="side-title" id="Analysis">Analysis</div>
+               <div class="side-title" id="Analysis">
+			  Analysis</div>
             </div>
             <div class="side-wrapper">
-               <div class="side-title" id="visual">visualization</div>
+               <div class="side-title" id="visual">
+              visualization</div>
             </div>
          </div>
 
@@ -87,9 +94,7 @@ function loadheatmap(){
             <!-- 분석 -->
             <div class="content-section An">
                <div class="content-section-title An">
-                  <img src="./resources/img/Analysis.png"
-                     style="width: 20px; margin-right: 11px;">Analysis
-               </div>
+<i class="bi bi-border-right"></i>  Analysis</div>
 
 					<div class="form-group content-wrapper">
 						<div style="text-align: center; align-items: center;">
@@ -119,7 +124,8 @@ function loadheatmap(){
          </div>
          					<!-- 결과 -->
             <div class="content-section result">
-            <div class="content-section-title result"><img src="./resources/img/Analysis.png" style="width: 20px; margin-right:11px;">visualization</div>
+            <div class="content-section-title result">
+            <i class="bi bi-border-right"></i>  visualization</div>
             <div class="content-wrapper result"></div>
          <div class="content-wrapper result"></div>
          </div>
