@@ -127,7 +127,7 @@ function goUpdate(num){
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
 
-<div class="app">
+	<div class="app">
 		<div class="header">
 			<div class="header-menu">
 				<a class="menu-link" href="Main.jsp">
@@ -173,7 +173,7 @@ function goUpdate(num){
 				</div>
 				
 				<!-- 게시물 list -->
-				<div class="content-section-title Re" id="changetext" style="-delay: .3s; padding: inherit;">
+				<div class="content-section-title Re" id="changetext" style="margin-top:30px;">
 				<i class="bi bi-border-inner"></i>  Emergency Record</div>
 				<div id='test'></div>
 				<div id="Accordion_wrap" class="Re content-wrapper">
@@ -201,16 +201,14 @@ function goUpdate(num){
 					</div>
 				</div>
 
-				<!-- 응급처치 메뉴얼 -->
-				<div class="content-section-title Em">
-					<div class="content-section">
-					<div class="content-section-title">
-					<i class="bi bi-border-inner"></i>  Emergency Response Manual
-					</div>
-						<div class="apps-card">
+
+					<!-- 응급처치 메뉴얼 -->
+					<div class="content-section Em">
+						<div class="content-section-title"><i class="bi bi-border-inner"></i>   safety Manual</div>
+						<div class="apps-card" >
 							<div class="app-card">
-								<span> After Effects</span>
-								<div class="app-card__subtext">Industry Standart motion graphics & visual effects</div>
+								<span>  Emergency Response Manual </span>
+								<div class="app-card__subtext">Follow the instructions</div>
 								<div class="app-card-buttons">
 									<button class="content-button status-button open">Open</button>
 								</div>
@@ -222,7 +220,7 @@ function goUpdate(num){
 				<div class="content-section-title Em1" style="display:none;">
 					<div class="content-section">
 						<div class="content-section-title Em1">
-					<i class="bi bi-border-inner"></i>  Emergency Response Manual
+					<i class="bi bi-border-inner"></i>  safety Manual
 						</div>
 					</div>
 

@@ -14,7 +14,6 @@
   font-size: 14px;
   border-bottom: 1px solid #dddddd;
   margin: 14px;
-  background-color: var(--theme-bg-color);
 }
   
 .que::before{
@@ -22,7 +21,6 @@
   font-size: 14px;
   color: black;
   margin-right: 5px;
-  background-color: var(--theme-bg-color);
 }
 
 .que.on>span{
@@ -36,7 +34,6 @@
   font-size: 14px;
   padding: 27px 0;
   margin: 24px;
-  background-color: var(--theme-bg-color);
 }
   
 .anw::before {
@@ -45,5 +42,4 @@
   font-weight: bold;
   color: #666;
   margin-right: 5px;
-  background-color: var(--theme-bg-color);
 }

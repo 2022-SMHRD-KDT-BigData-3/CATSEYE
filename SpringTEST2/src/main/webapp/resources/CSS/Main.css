@@ -501,8 +501,12 @@ button:hover {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+}
+
+.content-section:hover{
   text-shadow: 0 0 10px white;
 }
+
 .content-section-title {
   color: black;
   margin-bottom: 14px;

@@ -103,9 +103,4 @@ video {
 
 
 /* 이미지 슬라이드 */		
-.carousel-inner {
-    position: relative import!;
-    width: 68% import!;
-    overflow: hidden import!;
-    left: 159px import!;
-}
+

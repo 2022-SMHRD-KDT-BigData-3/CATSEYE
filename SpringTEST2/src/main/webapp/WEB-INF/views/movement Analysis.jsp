@@ -13,7 +13,7 @@
 <script type="text/javascript">
 
 function loadheatmap(){
-   $("#heatimg").attr("src",'./resources/img/01.png');
+   $("#heatimg").attr("src",'./resources/img/loading.gif');
    var first_time = $("#first_time").val()
    first_time = first_time.replace(":", "")+"00";   
    var last_time = $("#last_time").val()
@@ -107,15 +107,18 @@ function loadphoto(){
                      <div style="align-self: center; position: relative; bottom: 35px;" id="view">
                         <button class="btn btn-light An" id="viewresult"
                            style="width: fit-content;" onclick="loadheatmap()">결과 보기</button>
-                        <img id="heatimg" src="./resources/img/01.png">
+                           <div>
+                           <div class="loader">Loading...</div>
+                        <img id="heatimg" style="position: relative; top: 20px; " src="./resources/img/01.jpg">
+                     </div>
                      </div>
                   </div>
 
                </div>
             
-            </div>
             
-               <!-- 결과 -->
+            </div>
+      <!-- 결과 -->
             <div class="content-section result">
             <div class="content-section-title result"><i class="bi bi-border-right"></i> visualization</div>
             <div class="content-wrapper result"></div>
@@ -123,8 +126,8 @@ function loadphoto(){
          </div>
          </div>
          </div>
-
       </div>
+               
 
             
 

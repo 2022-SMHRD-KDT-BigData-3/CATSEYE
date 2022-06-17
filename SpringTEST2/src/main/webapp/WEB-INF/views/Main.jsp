@@ -140,20 +140,14 @@
 						</div>
 					</div>
 					
-                     
-					<div class="content-section">
-					<div class="content-section-title"><i class="bi bi-border-outer"></i>   additional information</div>
-					
-					</div>
 
 					<!-- 응급처치 메뉴얼 -->
 					<div class="content-section">
-						<div class="content-section-title"><i class="bi bi-border-outer"></i>   Emergency Response Manual</div>
+						<div class="content-section-title"><i class="bi bi-border-outer"></i>   safety Manual</div>
 						<div class="apps-card" >
 							<div class="app-card">
-								<span> After Effects</span>
-								<div class="app-card__subtext">Industry Standart motion
-									graphics & visual effects</div>
+								<span>  Emergency Response Manual </span>
+								<div class="app-card__subtext">Follow the instructions</div>
 								<div class="app-card-buttons">
 									<button class="content-button status-button open">Open</button>
 								</div>
