@@ -19,11 +19,6 @@
 </head>
 <body style="--theme-bg-color: rgb(255 255 255/ 31%); --theme-color: #3c3a3a; --inactive-color: #333333; --button-inactive: #3c3a3a; --search-bg: rgb(255 255 255/ 31%); --dropdown-bg: lightgray 56%; --overlay-bg: rgb(255 255 255/ 30%); --dropdown-hover: rgb(255 255 255/ 100%); --border-color: rgb(255 255 255/ 35%); --popup-bg: rgb(255, 255, 255); --hover-menu-bg: rgba(255 255 255/ 35%); --scrollbar-bg: rgb(255 253 253/ 57%); --content-title-color: --theme-color;">
 
-	<!-- <div><img src="./resources/img/02.png" onclick="location.href='login.jsp'" style="position: fixed; width: 2%; bottom: 96%; left: 79%;"></div> -->
-	<p id="logo">
-		<!-- <img src="./resources/img/arrows-to-eye-solid.svg"> -->
-		CATSEYE
-	<P>
 
 	<div class="app">
 		<div class="header">
@@ -52,7 +47,7 @@
 			<div class="main-container">
 				<!-- video -->
 				<div class="content-section">
-				<div class="content-section-title"><i class="bi bi-border-outer"></i> Real-time Monitoring</div>
+				<div class="content-section-title"><i class="bi bi-border-left"></i> Real-time Monitoring</div>
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
@@ -60,110 +55,37 @@
 						<source src="./resources/video/dance_practice.mp4" type="video/mp4">
 					</video>
 					
-					<div style="align-self: center;">
+					<!-- <div style="align-self: center;">
 					<button type="button" class="btn btn-light"> 원본 영상 보기 </button>
 					<button type="button" class="btn btn-light"> yolov5 적용 영상 보기</button>
-					</div> 
+					</div>  -->
 				</div>
 				</div>
 
 
-				<!-- 게시물 list -->
+				<!-- Member -->
 				<div class="content-section">
-					<div class="content-section-title"><i class="bi bi-border-outer"></i> Emergency Record</div>
-					<div id="Accordion_wrap" style="background-color: var(--theme-bg-color); magin:2px;">
-						<div class="que">
-							<span>TITLE </span> <span class="badge badge-primary">New</span>
-						</div>
-						<div class="anw">
-							<span><form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> 
-											<input type="datetime-local" name="datetime" class="form-control" id="datetime" name="datetime">
-									</div>
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-light">수정</button>
-									<button type="submit" class="btn btn-light">삭제</button>
-								</form></span>
-						</div>
-						<div class="que">
-							<span>TITLE </span><span class="badge badge-primary">New</span>
-						</div>
-						<div class="anw">
-							<form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
-											type="datetime-local" name="datetime" class="form-control"
-											id="datetime" name="datetime">
-									</div>
-
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
-								</form>
-						</div>
-						<div class="que">
-							<span>TITLE </span><span class="badge badge-primary">New</span>
-						</div>
-						<div class="anw">
-							<form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
-											type="datetime-local" name="datetime" class="form-control"
-											id="datetime" name="datetime">
-									</div>
-
-
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
-								</form> 
-						</div>
-					</div>
-					
-                     
-					<div class="content-section">
-					<div class="content-section-title"><i class="bi bi-border-outer"></i> additional information</div>
-					
+					<div class="content-section-title">
+						<i class="bi bi-border-left"></i> Member Record
+						<div class="content-wrapper">Record</div>
 					</div>
 
-					<!-- 응급처치 메뉴얼 -->
-					<div class="content-section">
-						<div class="content-section-title"><i class="bi bi-border-outer"></i> Emergency Response Manual</div>
-						<div class="apps-card" >
-							<div class="app-card">
-								<span> After Effects</span>
-								<div class="app-card__subtext">Industry Standart motion
-									graphics & visual effects</div>
-								<div class="app-card-buttons">
-									<button class="content-button status-button open">Open</button>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
+
+				<!-- Member -->
+				<div class="content-section">
+					<div class="content-section-title">
+						<i class="bi bi-border-left"></i> Member Record
+						<div class="content-wrapper">Record</div>
+					</div>
+
+				</div>
+
 			</div>
 			</div>
-			<div class="overlay-app"></div></body>
+			<div class="overlay-app"></div>
+			
+			</body>
 <script src="./resources/JS/Main.js"></script>
 <script src="./resources/JS/acordian.js"></script>
 </html>

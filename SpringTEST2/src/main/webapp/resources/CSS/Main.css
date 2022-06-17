@@ -501,6 +501,7 @@ button:hover {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+  text-shadow: 0 0 10px white;
 }
 .content-section-title {
   color: black;
@@ -509,7 +510,7 @@ button:hover {
 }
 
 .content-section-title:hover{
- text-shadow: 0 0 40px white;
+ text-shadow: 0 0 10px white;
 }
 .content-section ul {
   display: flex;
