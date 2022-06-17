@@ -10,23 +10,8 @@
   <link rel='stylesheet' type="text/css" href='./resources/CSS/Login.css'/>
 </head>
 <body>
+ 
 
- <% 
-    String joinsuccess = (String)session.getAttribute("joinsuccess");
- System.out.print("로그인?"+joinsuccess);
- if(joinsuccess!=null){
-    System.out.print("로그인 확인 성공");
-%>
-
-<script type="text/javascript">window.onload = function(){
-alert("회원가입 성공")
-   
-document.getElementById('btn').onclick=change();
-};
-
-</script> 
-
-<%} %>
 <div class="container">
   <div class="move">
     <div class="p-button normal signin animated pulse"  id='bnt'>SIGN IN</div>
