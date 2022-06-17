@@ -13,11 +13,7 @@
 <script type="text/javascript">
 
 function loadheatmap(){
-	$(document).ready(function() {
-			  /* $("#heatimg").attr("src",'./resources/img/heatmap.jpg'); */
-			  $("#heatimg").attr("src",'./resources/img/loading.gif');
-		  });
-		});
+   $("#heatimg").attr("src",'./resources/img/01.png');
    var first_time = $("#first_time").val()
    first_time = first_time.replace(":", "")+"00";   
    var last_time = $("#last_time").val()
@@ -40,8 +36,6 @@ function loadphoto(){
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel='stylesheet' href='https://vjs.zencdn.net/5-unsafe/video-js.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
-<link rel='stylesheet' type="text/css" href='./resources/CSS/movementAnalysis.css'/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
 <body style="--theme-bg-color: rgb(255 255 255 / 31%);
@@ -91,7 +85,7 @@ function loadphoto(){
             <!-- 분석 -->
             <div class="content-section An">
                <div class="content-section-title An">
-                <i class="bi bi-border-right"></i>   Analysis
+                  <i class="bi bi-border-right"></i> Analysis
                </div>
 
                <div class="form-group content-wrapper">
@@ -111,14 +105,9 @@ function loadphoto(){
                         type="time" name="last_time" class="form-control" id="last_time">
 
                      <div style="align-self: center; position: relative; bottom: 35px;" id="view">
-                     <div>
                         <button class="btn btn-light An" id="viewresult"
                            style="width: fit-content;" onclick="loadheatmap()">결과 보기</button>
-                           <div>
-                           <div class="loader" style="position: relative;top: 22px;"></div>
-                        <img id="heatimg" src="./resources/img/heatmap.jpg" style="display:none;">
-                     </div>
-                     </div>
+                        <img id="heatimg" src="./resources/img/01.png">
                      </div>
                   </div>
 
@@ -128,7 +117,7 @@ function loadphoto(){
             
                <!-- 결과 -->
             <div class="content-section result">
-            <div class="content-section-title result"><i class="bi bi-border-right"></i>  Visualization</div>
+            <div class="content-section-title result"><i class="bi bi-border-right"></i> visualization</div>
             <div class="content-wrapper result"></div>
          <div class="content-wrapper result"></div>
          </div>
