@@ -31,7 +31,7 @@
 			<div class="header-menu">
 				<a class="menu-link" href="Main.jsp">
 				<i class="bi bi-border-outer"></i>  Home</a>
-				<a class="menu-link is-active" href="#">
+				<a class="menu-link is-active" href="memberRecord.jsp">
 				<i class="bi bi-border-left"></i>  Member Record</a> 
 				<a class="menu-link is-active" href="Analysis.do">
 				<i class="bi bi-border-right"></i>  Movement Record</a> 

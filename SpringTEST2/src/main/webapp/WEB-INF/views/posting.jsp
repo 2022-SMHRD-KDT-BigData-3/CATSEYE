@@ -131,7 +131,7 @@ function goUpdate(num){
          <div class="header-menu">
             <a class="menu-link" href="Main.jsp">
             <i class="bi bi-border-outer"></i>  Home</a>
-            <a class="menu-link is-active" href="#">
+            <a class="menu-link is-active" href="memberRecord.jsp">
             <i class="bi bi-border-left"></i>  Member Record</a> 
             <a class="menu-link is-active" href="Analysis.do">
             <i class="bi bi-border-right"></i>  Movement Record</a> 
@@ -168,28 +168,31 @@ function goUpdate(num){
                <video class="video" controls muted poster="./resources/img/11.jpg">
                   <source src="./resources/video/dance_practice.mp4" type="video/mp4">
                </video>
+               
+					<div style="align-self: center;">
+					<button type="button" class="btn btn-light"> 영상 보기 </button>
+					<button type="button" class="btn btn-light"> 사진 보기 </button>
+					</div> 
             </div>
             </div>
             
             <!-- 게시물 list -->
             <div class="content-section-title Re" id="changetext" style="-delay: .3s; padding: inherit;">
-            <i class="bi bi-border-inner"></i>  Emergency Record</div>
+            <i class="bi bi-border-inner Em2"></i>  Emergency Record</div>
             <div id='test'></div>
-            <div id="Accordion_wrap" class="Re" style="background-color: var(- -theme-bg-color); magin: 2px;">
-            
-
+            <div id="Accordion_wrap" class="Re" style="background-color: var(--theme-bg-color); magin:2px;">
                <div class="que">
                   <span>TITLE</span>
                </div>
                <div class="anw">
                   <span><form action="#" method="post">
-                        <div class="form-group">
-                           <label for="datetime"
-                              style="font-family: 'Poppins', sans-serif;">날짜</label> <input
-                              type="datetime-local" name="datetime" class="form-control"
-                              id="datetime" name="datetime">
-                        </div>
-                        <div class="form-group">
+						<div class="form-group">
+							<label for="datetime"
+								style="font-family: 'Poppins', sans-serif;">날짜</label> <input
+								type="datetime-local" name="datetime" class="form-control"
+								id="datetime" name="datetime">
+						</div>
+						<div class="form-group">
                            <label for="content">내용</label>
                            <textarea class="form-control" rows="5" id="content"
                               name="content" placeholder="내용 작성"></textarea>
