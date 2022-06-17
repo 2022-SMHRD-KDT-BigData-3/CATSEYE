@@ -8,10 +8,15 @@
   <title>login</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'>
   <link rel='stylesheet' type="text/css" href='./resources/CSS/Login.css'/>
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
 </head>
 <body>
  
-
+<%response.setHeader("Cache-Control","no-cache");
+response.setHeader("Pragma","no-cache");
+response.setDateHeader("Expires",-1);%>
 <div class="container">
   <div class="move">
     <div class="p-button normal signin animated pulse"  id='bnt'>SIGN IN</div>
