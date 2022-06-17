@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Main</title>
+<title>Posting</title>
 
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
@@ -19,8 +19,21 @@
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/posting.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/acordian.css' />
-<link rel='stylesheet' type="text/css" href='./resources/CSS/manual.css' />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
 <script type="text/javascript">
 $(document).ready(()=>{ /* 람다식 */
 	loadposting()
@@ -82,7 +95,7 @@ function goUpdate(num){
 	      error : function(){alert("error")}
 	   })
 	}
-	function goDelete(num){
+	function goDelete(){
 	   var result = confirm('이 기록을 삭제하시겠습니까?');
 	   if(result==true){
 	   $.ajax({
@@ -96,6 +109,7 @@ function goUpdate(num){
 	      return false;
 	   }
 	}
+	
 </script>
 
 </head>
@@ -113,63 +127,42 @@ function goUpdate(num){
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
 
-		<div class="app">
+	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a class="menu-link" href="Main.jsp">Home</a>
-				<a class="menu-link is-active" href="Analysis.do" >MovementAnalysis</a> 
-				<a class="menu-link" href="posting.do">Emergency Record</a>
-				<a class="menu-link" href="logout.jsp">SignOut</a>
-			</div>
+				<a class="menu-link" href="Main.jsp">
+				<i class="bi bi-border-outer"></i>  Home</a>
+				<a class="menu-link is-active" href="#">
+				<i class="bi bi-border-left"></i>  Member Record</a> 
+				<a class="menu-link is-active" href="Analysis.do">
+				<i class="bi bi-border-right"></i>  Movement Record</a> 
+				<a class="menu-link" href="posting.do">
+				<i class="bi bi-border-inner"></i>  Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">
+				<i class="bi bi-border"></i>  SignOut</a>
+			</div>  
 
-			<!-- 검색창 없앰 -->
-			<div class="search-bar"></div>
-			<div class="header-profile"></div>
 		</div>
 
 		<div class="wrapper">
 			<div class="left-side">
 				<div class="side-wrapper">
-					<div class="side-title" id="before">Before</div>
+					<div class="side-title" id="before">  Before</div>
 				</div>
 				<div class="side-wrapper">
-					<div class="side-title" id="after">After</div>
+					<div class="side-title" id="after">  After</div>
 				</div>
 				<div class="side-wrapper">
-					<div class="side-title" id="Safety">Safety manual</div>
+					<div class="side-title" id="Safety">  Safety manual </div>
 				</div>
-
 			</div>
 
 			<div class="main-container">
-
-				<!-- 유튜브처럼 history  -->
-				<!-- <div class="small-header anim Re"
-					style="-delay: .3s; padding: inherit;">
-					<img src="./resources/img/posting.png"
-						style="width: 20px; margin-right: 15px;">History CCTV</div>
-				<div class="videos">
-					<div class="video anim Re" style="-delay: .4s">
-						<div class="video-time">8 min</div>
-						<div class="video-wrapper">
-							<video muted="">
-								<source src="./resources/video/RacingBike.mp4" type="video/mp4">
-							</video>
-							<div class="author-img__wrapper video-author"></div>
-						</div>
-						<section style="background-color: LIGHTGRAY;">
-							<div class="video-by">title</div>
-							<div class="video-name">Contents</div>
-							<div class="video-view">
-								Conetents2<span class="seperate video-seperate"></span>
-							</div>
-						</section>
-					</div>
-				</div> -->
 				
 				<!-- video -->
 				<div class="content-section Re">
-				<div class="content-section-title"><img src="./resources/img/posting.png" style="width: 20px; margin-right: 15px;">History CCTV</div>
+				<div class="content-section-title">
+				<i class="bi bi-border-inner"></i>  History CCTV</div>
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
@@ -180,13 +173,10 @@ function goUpdate(num){
 				</div>
 				
 				<!-- 게시물 list -->
-				<div class="content-section-title Re" id="changetext"
-					style="-delay: .3s; padding: inherit;">
-					<img src="./resources/img/posting.png"
-						style="width: 20px; margin-right: 15px;">Emergency Record
-				</div>
+				<div class="content-section-title Re" id="changetext" style="margin-top:30px;">
+				<i class="bi bi-border-inner"></i>  Emergency Record</div>
 				<div id='test'></div>
-				<div id="Accordion_wrap" class="Re" style="background-color: var(- -theme-bg-color); magin: 2px;">
+				<div id="Accordion_wrap" class="Re content-wrapper">
 				
 
 					<div class="que">
@@ -211,40 +201,119 @@ function goUpdate(num){
 					</div>
 				</div>
 
-				<!-- 응급처치 메뉴얼 -->
 
-				<div class="carousel">
-  <div class="jumbotron"></div>
-  <div class="gallery">
-    <figure><img src="https://picsum.photos/id/2/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/24/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/19/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/16/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/38/640/480" /></figure>
-    <figure><img src="https://picsum.photos/id/64/640/480" /></figure>
-  </div>
-</div>
+					<!-- 응급처치 메뉴얼 -->
+					<div class="content-section Em">
+						<div class="content-section-title"><i class="bi bi-border-inner"></i>   safety Manual</div>
+						<div class="apps-card" >
+							<div class="app-card">
+								<span>  Emergency Response Manual </span>
+								<div class="app-card__subtext">Follow the instructions</div>
+								<div class="app-card-buttons">
+									<button class="content-button status-button open">Open</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-section-title Em1" style="display:none;">
+					<div class="content-section">
+						<div class="content-section-title Em1">
+					<i class="bi bi-border-inner"></i>  safety Manual
+						</div>
+					</div>
+
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner" style="position: relative; width: 68%; overflow: hidden;left: 159px;">
+      <!-- 슬라이드 쇼 -->
+      <div class="carousel-item active">
+        <!--가로-->
+        <img class="d-block w-100" 
+          src="./resources/img/001.jpg"
+          alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+              <h5>응급 대처법</h5>
+              <p>2022.06.17</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"
+          src="./resources/img/002.jpg"
+          alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"
+          src="./resources/img/003.jpg"
+          alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"
+          src="./resources/img/004.jpg"
+          alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"
+          src="./resources/img/005.jpg"
+          alt="Third slide">
+      </div>
+       <div class="carousel-item">
+        <img class="d-block w-100"
+          src="./resources/img/006.jpg"
+          alt="Third slide">
+      </div>
+    
+    <!-- / 슬라이드 쇼 끝 -->
+
+    <!-- 왼쪽 오른쪽 화살표 버튼 -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <!-- <span>Previous</span> -->
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <!-- <span>Next</span> -->
+    </a>
+    <!-- / 화살표 버튼 끝 -->
+    
+   							 <!-- 인디케이터 -->
+							<ul class="carousel-indicators">
+								<li data-target="#demo" data-slide-to="0" class="active"></li>
+								<!--0번부터시작-->
+								<li data-target="#demo" data-slide-to="1"></li>
+								<li data-target="#demo" data-slide-to="2"></li>
+								<li data-target="#demo" data-slide-to="3"></li>
+								<li data-target="#demo" data-slide-to="4"></li>
+								<li data-target="#demo" data-slide-to="5"></li>
+							</ul>
+						</div>
+	</div>
+					</div>
+				</div>
 			</div>
-		</div>
 	</div>
 
 
 
 </body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
 <script src="./resources/JS/posting.js"></script>
 <script src="./resources/JS/Main.js"></script>
 <script src="./resources/JS/acordian.js"></script>
-<script src="./resources/JS/manual.js"></script>
 <script type="text/javascript">
 
 $('#Record').click(function() {
     $(".Em").show();
+    $(".Em1").hide();
     $(".Re").show();
 })
 
 $('#before').click(function() {
 	$("#changetext").text("Before");
     $(".Em").hide();
+    $(".Em1").hide();
     $(".Re").show();
 })
 
@@ -252,11 +321,13 @@ $('#after').click(function() {
 	/* document.getElementById("#changetext").textContent="after"; */
 	$("#changetext").text("After");
     $(".Em").hide();
+    $(".Em1").hide();
     $(".Re").show();
 })
 
 $('#Safety').click(function() {
-    $(".Em").show();
+    $(".Em").hide();
+    $(".Em1").show();
     $(".Re").hide();
 })
 </script>

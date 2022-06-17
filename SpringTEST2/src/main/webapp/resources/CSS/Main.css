@@ -6,7 +6,7 @@
 
 #logo {
     letter-spacing: 2px;
-    text-shadow: 2px 3px 25px steelblue;
+    text-shadow: 2px 3px 25px black;
     color: white;
     font-size: 38px;
     margin-left: 44px;
@@ -53,7 +53,7 @@ html {
 }
 
 body {
-  background-image: url(../img/06.jpg);
+  background-image: url(../img/11.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -81,7 +81,6 @@ body::before{
 }
 
 .app {
-  background-color: cornflowerblue;
   max-width: 1250px;
   max-height: 860px;
   height: 90vh;
@@ -118,7 +117,7 @@ body::before{
 .header-menu a {
   padding: 20px 30px;
   text-decoration: none;
-  color: white;
+  color: black;
   border-bottom: 2px solid transparent;
   transition: 0.3s;
 }
@@ -299,7 +298,7 @@ a:hover {
 }
 
 .side-title {
-  color: aliceblue;
+  color: black;
   margin-bottom: 14px;
   text-decoration: none;
   cursor: pointer;
@@ -374,6 +373,9 @@ a:hover {
   padding: 0 30px;
 }
 
+.menu-link{
+ font-size:20px;	
+}
 .menu-link:hover {
  color:white;	
 }
@@ -500,10 +502,19 @@ button:hover {
   display: flex;
   flex-direction: column;
 }
+
+.content-section:hover{
+  text-shadow: 0 0 10px white;
+}
+
 .content-section-title {
-  color: white;
+  color: black;
   margin-bottom: 14px;
   font-size: 19px;
+}
+
+.content-section-title:hover{
+ text-shadow: 0 0 10px white;
 }
 .content-section ul {
   display: flex;
