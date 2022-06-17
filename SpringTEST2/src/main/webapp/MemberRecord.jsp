@@ -29,10 +29,10 @@
 				<i class="bi bi-border-left"></i>  Member Record</a> 
 				<a class="menu-link is-active" href="Analysis.do">
 				<i class="bi bi-border-right"></i>  Movement Record</a> 
-				<a class="menu-link" href="posting.do">
+				<a class="menu-link" href="posting.do"> 
 				<i class="bi bi-border-inner"></i>  Emergency Record</a>
 				<a class="menu-link" href="logout.jsp">
-				<i class="bi bi-border"></i>  SignOut</a>
+				<i class="bi bi-border"></i>  SignOut</a> 
 			</div>  
 
 		</div>

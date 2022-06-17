@@ -16,7 +16,7 @@ function loadheatmap(){
    $("#heatimg").attr("src",'./resources/img/loading.gif');
    var first_time = $("#first_time").val()
    first_time = first_time.replace(":", "")+"00";   
-   var last_time = $("#last_time").val()
+   var last_time = $("#last_time").val() 
    last_time = last_time.replace(":", "")+"00";   
    console.log(first_time, last_time)
       $.ajax({
@@ -26,7 +26,7 @@ function loadheatmap(){
       success:setTimeout(loadphoto,10000)
    })
 }
-
+ 
 function loadphoto(){
    $("#heatimg").attr("src",'http://172.30.1.5:8082/static/img/diff-overlay2.jpg?'+Date.now());
 }
