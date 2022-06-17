@@ -153,7 +153,7 @@ function goUpdate(num){
 					<div class="side-title" id="after">  After</div>
 				</div>
 				<div class="side-wrapper">
-					<div class="side-title" id="Safety">  Safety manual </div>
+					<div class="side-title" id="Safety" onclick="goSafety()">  Safety manual </div>
 				</div>
 			</div>
 
@@ -210,7 +210,8 @@ function goUpdate(num){
 								<span>  Emergency Response Manual </span>
 								<div class="app-card__subtext">Follow the instructions</div>
 								<div class="app-card-buttons">
-									<button class="content-button status-button open">Open</button>
+									<button class="content-button status-button open" id="open">Open</button>
+									
 								</div>
 							</div>
 						</div>
@@ -233,10 +234,7 @@ function goUpdate(num){
         <img class="d-block w-100" 
           src="./resources/img/001.jpg"
           alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-              <h5>응급 대처법</h5>
-              <p>2022.06.17</p>
-        </div>
+          <div class="carousel-caption d-none d-md-block"></div>
       </div>
       <div class="carousel-item">
         <img class="d-block w-100"
@@ -325,10 +323,12 @@ $('#after').click(function() {
     $(".Re").show();
 })
 
-$('#Safety').click(function() {
-    $(".Em").hide();
-    $(".Em1").show();
-    $(".Re").hide();
-})
+function goSafety(){
+	$('#Safety','#open').click(function() {
+    	$(".Em").hide();
+    	$(".Em1").show();
+    	$(".Re").hide();
+	})
+	}
 </script>
 </html>
