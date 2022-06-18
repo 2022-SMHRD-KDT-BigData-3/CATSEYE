@@ -60,6 +60,7 @@ function resultHtml(data){
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link rel='stylesheet' href='https://vjs.zencdn.net/5-unsafe/video-js.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
 </head>
 <body style="--theme-bg-color: rgb(255 255 255 / 31%);
@@ -76,12 +77,12 @@ function resultHtml(data){
     --scrollbar-bg: rgb(255 253 253 / 57%);
     --content-title-color: --theme-color;">
    
-<div class="app">
+	<div class="app">
 		<div class="header">
 			<div class="header-menu">
 				<a class="menu-link" href="Main.jsp">
 				<i class="bi bi-border-outer"></i>  Home</a>
-				<a class="menu-link is-active" href="memberRecord.jsp">
+				<a class="menu-link is-active" href="#">
 				<i class="bi bi-border-left"></i>  Member Record</a> 
 				<a class="menu-link is-active" href="Analysis.do">
 				<i class="bi bi-border-right"></i>  Movement Record</a> 
@@ -107,42 +108,59 @@ function resultHtml(data){
          <div class="main-container">
 
             <!-- 분석 -->
-            <div class="content-section An">
-               <div class="content-section-title An">
-                  <i class="bi bi-border-right"></i> Analysis
-               </div>
+				<div class="content-section An">
+					<div class="content-section-title An">
+						<i class="bi bi-border-right"></i> Analysis
+					</div>
 
-               <div class="form-group content-wrapper">
-                  <div style="text-align: center; align-items: center;">
-                     <label for="date"
-                        style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">날짜
-                        설정</label> <input
-                        style="width: 30%; text-align: center; position: relative; left: 36%;"
-                        type="date" name="date" class="form-control" id="date"
-                        name="date"> <label for="first_time"
-                        style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">시간
-                        설정</label> <input
-                        style="width: 25%; text-align: center; position: relative; left: 223px;"
-                        type="time" name="first_time" class="form-control"
-                        id="first_time"> <label for="last-time"></label> <input
-                        style="width: 25%; text-align: center; position: relative; left: 479px; bottom: 61px;"
-                        type="time" name="last_time" class="form-control" id="last_time">
+					<div class="form-group">
+						<div class="content-wrapper">
 
-                     <div style="align-self: center; position: relative; bottom: 35px;" id="view">
-                        <button class="btn btn-light An" id="viewresult"
-                           style="width: fit-content;" onclick="loadheatmap()">결과 보기</button>
-                           <div>
-                           <div class="loader"></div>
-                        <img id="heatimg" style="position: relative; top: 20px; " src="./resources/img/01.jpg">
-                     </div>
-                     </div>
-                  </div>
+							<label style="font-family: 'Poppins', sans-serif;padding: 10px;font-weight: bold;"> 시간 선택</label> 
+							    <div class="input-group input-daterange">
+    <input type="time" class="form-control" value="YYYY-MM-DD">
+    <div class="input-group-addon">to</div>
+    <input type="time" class="form-control" value="YYYY-MM-DD">
+</div>
 
-               </div>
-            
-            
-            </div>
-      <!-- 결과 -->
+<script type="text/javascript">
+$("div.input-daterange").each(function(){
+    var $inputs = $(this).find('input');
+    $inputs.datepicker();
+    if ($inputs.length >= 2) {
+        var $from = $inputs.eq(0);
+        var $to   = $inputs.eq(1);
+        $from.on('changeDate', function (e) {
+            var d = new Date(e.date.valueOf());
+            $to.datepicker('setStartDate', d); // 종료일은 시작일보다 빠를 수 없다.
+        });
+        $to.on('changeDate', function (e) {
+            var d = new Date(e.date.valueOf());
+            $from.datepicker('setEndDate', d); // 시작일은 종료일보다 늦을 수 없다.
+        });
+    }
+})
+</script>
+							    <!-- <section >
+								<input type="time" name="first_time" class="form-control" id="first_time"> 
+								 시작시간
+								<input type="time" name="last_time" class="form-control" id="last_time">
+								종료시간
+								</section> -->
+							<div id="view">
+								<button class="btn btn-light An" id="viewresult" style="width: fit-content;" onclick="loadheatmap()">
+									조회</button>
+								<div>
+									<div class="loader"></div>
+									<img id="heatimg" style="position: relative; top: 20px;"src="#">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 결과 -->
             <div class="content-section result">
             <div class="content-section-title result"><i class="bi bi-border-right"></i> visualization</div>
             <div class="content-wrapper result">
