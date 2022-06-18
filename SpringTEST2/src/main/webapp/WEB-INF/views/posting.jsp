@@ -156,10 +156,7 @@ function goUpdate(num){
       <div class="wrapper">
          <div class="left-side">
             <div class="side-wrapper">
-               <div class="side-title" id="before">  Before</div>
-            </div>
-            <div class="side-wrapper">
-               <div class="side-title" id="after">  After</div>
+               <div class="side-title" id="posting">  Posting</div>
             </div>
             <div class="side-wrapper">
                <div class="side-title" id="Safety">  Safety manual </div>
@@ -213,23 +210,6 @@ function goUpdate(num){
             </div>
 
             <!-- 응급처치 메뉴얼 -->
-            <div class="content-section-title Em">
-               <div class="content-section">
-               <div class="content-section-title">
-               <i class="bi bi-border-inner"></i>  Emergency Response Manual
-               </div>
-                  <div class="apps-card">
-                     <div class="app-card">
-                        <span> After Effects</span>
-                        <div class="app-card__subtext">Industry Standart motion graphics & visual effects</div>
-                        <div class="app-card-buttons">
-                           <button class="content-button status-button open">Open</button>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-
 			<div class="content-section-title Em1" style="display: none;">
 				<div class="content-section">
 					<div class="content-section-title Em1">
@@ -313,16 +293,7 @@ $('#Record').click(function() {
     $(".Re").show();
 })
 
-$('#before').click(function() {
-   $("#changetext").text("Before");
-    $(".Em").hide();
-    $(".Em1").hide();
-    $(".Re").show();
-})
-
-$('#after').click(function() {
-   /* document.getElementById("#changetext").textContent="after"; */
-   $("#changetext").text("After");
+$('#posting').click(function() {
     $(".Em").hide();
     $(".Em1").hide();
     $(".Re").show();
