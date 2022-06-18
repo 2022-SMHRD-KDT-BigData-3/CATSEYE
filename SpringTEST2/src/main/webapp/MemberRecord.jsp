@@ -27,6 +27,11 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 <link rel="stylesheet" type="text/css"
 	href='./reources/CSS/MemberRecord.css' />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 </head>
 <body
 	style="-theme-bg-color: rgb(255 255 255/ 31%); - -theme-color: #3c3a3a; - -inactive-color: #333333; - -button-inactive: #3c3a3a; - -search-bg: rgb(255 255 255/ 31%); - -dropdown-bg: lightgray 56%; - -overlay-bg: rgb(255 255 255/ 30%); - -dropdown-hover: rgb(255 255 255/ 100%); - -border-color: rgb(255 255 255/ 35%); - -popup-bg: rgb(255, 255, 255); - -hover-menu-bg: rgba(255 255 255/ 35%); - -scrollbar-bg: rgb(255 253 253/ 57%); - -content-title-color: --theme-color;">
