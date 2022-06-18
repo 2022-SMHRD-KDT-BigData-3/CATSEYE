@@ -32,7 +32,8 @@ drop table DETECTION_BOARD
 
 insert into DETECTION_BOARD(num,CCTV,content,VIDEO_PATH,PHOTO_PATH)
 values(nbr_seq.nextval,1,' ','PATH','PATH');
-DELETE FROM DETECTION_BOARD WHERE NUM=1
+DELETE FROM DETECTION_BOARD WHERE photo_path='test2'
+DELETE FROM DETECTION_BOARD WHERE video_path='video'
 insert into USERS_NBR(MBR_SHOP,CCTV_NBR,USERS_NBR)
 values('test',1,15);
 nbr_seq.nextval

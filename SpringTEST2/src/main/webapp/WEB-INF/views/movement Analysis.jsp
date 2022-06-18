@@ -6,7 +6,6 @@
 <meta charset="UTF-8">
 <title>Main</title>
 
-
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -16,7 +15,7 @@ function loadheatmap(){
    $("#heatimg").attr("src",'./resources/img/loading.gif');
    var first_time = $("#first_time").val()
    first_time = first_time.replace(":", "")+"00";   
-   var last_time = $("#last_time").val() 
+   var last_time = $("#last_time").val()
    last_time = last_time.replace(":", "")+"00";   
    console.log(first_time, last_time)
       $.ajax({
@@ -26,9 +25,34 @@ function loadheatmap(){
       success:setTimeout(loadphoto,10000)
    })
 }
- 
+
 function loadphoto(){
    $("#heatimg").attr("src",'http://172.30.1.5:8082/static/img/diff-overlay2.jpg?'+Date.now());
+}
+
+function loaduser(){
+	
+	var userday = $("#userday").val()
+	console.log(userday)
+	
+	$.ajax({
+		url : "loaduser.do",
+		type : "POST",
+		data : {"userday":userday},
+		dataType : "json",
+		success : resultHtml,
+		error : function(){alert("error");  }
+	});
+	
+}
+
+function resultHtml(data){
+	var view=""
+	$.each(data, function(index, obj){
+		view+="<div class='que'>"
+		view+="<span>"+obj.indate+"</div>"
+	});
+	$("#viewuser").html(view)
 }
 </script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
@@ -121,7 +145,29 @@ function loadphoto(){
       <!-- 결과 -->
             <div class="content-section result">
             <div class="content-section-title result"><i class="bi bi-border-right"></i> visualization</div>
-            <div class="content-wrapper result"></div>
+            <div class="content-wrapper result">
+
+						<div style="text-align: center; align-items: center;">
+							<label for="date"
+								style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">날짜
+								설정</label> <input
+								style="width: 30%; text-align: center; position: relative; left: 36%;"
+								type="date" name="date" class="form-control"
+								name="date" id="userday">
+						</div>
+						<div style="text-align: center;">
+								<button class="btn btn-light An" id="viewresult"
+                           style="width: fit-content;" onclick="loaduser()">결과 보기</button>
+                           </div>
+						<div id="viewuser">
+						
+						
+						</div>
+
+
+
+
+					</div>
          <div class="content-wrapper result"></div>
          </div>
          </div>

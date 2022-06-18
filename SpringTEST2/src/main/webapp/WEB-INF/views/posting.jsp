@@ -52,8 +52,9 @@ function loadposting(){
 }
 function resultHtml(data){
    var view=""
+   var photopath=""
    $.each(data, function(index, obj){
-      view+="<div class='que'>"
+      view+="<div class='que' id="+obj.photo_path+" value="+obj.video_path+">"
       view+="<span>"+obj.indate
       view+=" 위험 상황 감지</span></div>"
       
@@ -73,18 +74,27 @@ function resultHtml(data){
    view+="&nbsp"
    view+="<button type='submit' class='btn btn-default' "
    view+="style='background: #fff;' onclick='goDelete("+obj.num+")'>삭제</button>"
+   view+="<input style='display:none' value="+obj.photo_path+">"
    view+="</div>"
    // view+=""
-   
    });
    $("#Accordion_wrap").html(view)
+   console.log(photopath)
    $(".que").click(function() {
          $(this).next(".anw").stop().slideToggle(300);
         $(this).toggleClass('on').siblings().removeClass('on');
         $(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
+        $("#postingphoto").attr("poster","/img/"+$(this).attr("id").replace("./",""))
+        $("#postingvideo").attr("src","/img/"+$(this).attr("value").replace("./",""))
+        $("#postingphoto")[0].load();
+        document.getElementById("postingphoto").play();
+        //$('#postingvideo').get(0).load();
+        //$('#'+videoID).attr('poster', newposter); //Change video poster
+       //$('#postingvideo').get(0).play();
       }); 
 }
-
+//"C:\Users\smhrd\Desktop\catseye"+obj.photo_path.replace(".","")
+//+$(this).attr("id").replace("./","").replace(":","").replace(":","")
 function goUpdate(num){
       var content = $("#content"+num).val()
       $.ajax({
@@ -164,15 +174,14 @@ function goUpdate(num){
             <i class="bi bi-border-inner"></i>  History CCTV</div>
             <div class="content-wrapper">
                <!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
-
-               <video class="video" controls muted poster="./resources/img/11.jpg">
-                  <source src="./resources/video/dance_practice.mp4" type="video/mp4">
+               <div id="showvideo">
+               
+               
+               </div>
+               <video class="video" controls muted poster="./resources/img/11.jpg" id="postingphoto">
+                  <source src="/img/emergency/fall.mp4" type="video/mp4" id="postingvideo">
                </video>
                
-					<div style="align-self: center;">
-					<button type="button" class="btn btn-light"> 영상 보기 </button>
-					<button type="button" class="btn btn-light"> 사진 보기 </button>
-					</div> 
             </div>
             </div>
             
