@@ -1,5 +1,6 @@
 package kr.book.bshop;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import kr.book.entity.Member;
 import kr.book.entity.detection;
 import kr.book.entity.heatmap;
+import kr.book.entity.user;
 import kr.book.mapper.MemberMapper;
 
 @Controller
@@ -93,4 +95,18 @@ public class MemberController {
 		// 1. list->JSON 변환(API)
 		// 2. JSON 포멧으로 응답
 	}
+	@SuppressWarnings("null")
+	@RequestMapping("/loaduser.do")
+	public @ResponseBody List<user> loaduser() {
+		List<user> list = MemberMapper.loaduser();
+		for(int i = 0 ; i<list.size();i++) {
+		String[] day = list.get(i).getIndate().split(" ");
+		String whatday = day[0];
+		String whattime = day[1];
+		System.out.println(whatday);
+		System.out.println(whattime);
+		}
+		return list;
+	}
+	
 }
