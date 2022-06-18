@@ -114,15 +114,16 @@ function resultHtml(data){
                         <div class="row">
                            <div class="col-md-6 mb-3" style="line-height: 50px;position: fixed;max-block-size: fit-content;left: 41%;bottom: 374px;padding: 10px;">
                               <div>
-                                 <label>이름</label> <input type="text" class="form-control" id="target" value="hi">
+                             <label>이름</label> 
+                                 <input type="text" class="form-control" id="target" value="hi">
                               </div>
                               <div>
-                                 <label>사용한 운동기구</label> <input type="text"
-                                    class="form-control" id="exr_eq">
+                                 <label>사용 운동기구</label> 
+                                 <input type="text" class="form-control" id="exr_eq">
                               </div>
                               <div>
-                                 <label>운동기구 사용시간</label> <input type="text"
-                                    class="form-control" id="exr_tm">
+                                 <label>사용시간</label> 
+                                 <input type="text"  class="form-control" id="exr_tm">
                               </div>
                            </div>
                         </div>

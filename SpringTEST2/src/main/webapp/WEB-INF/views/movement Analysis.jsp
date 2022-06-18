@@ -64,9 +64,6 @@ function loadphoto(){
             <div class="side-wrapper">
                <div class="side-title" id="Analysis">Analysis</div>
             </div>
-            <div class="side-wrapper">
-               <div class="side-title" id="visual">visualization</div>
-            </div>
          </div>
 
          <div class="main-container">
@@ -96,17 +93,7 @@ function loadphoto(){
                </div>
             </div>
 
-            <!-- 결과 -->
-            <div class="content-section result">
-               <div class="content-section-title result">
-                  <i class="bi bi-border-right"></i> visualization
-               </div>
-
-               <ul>
-                  <li style="border-radius: 13px;background: var(--content-bg);">
-               contents</li>
-               </ul>
-            </div>
+           
 
          </div>
       </div>

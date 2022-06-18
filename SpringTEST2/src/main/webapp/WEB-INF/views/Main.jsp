@@ -72,7 +72,7 @@ function change(){
 					<img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 25%);" src="http://172.30.1.5:8082/video_feed">
 					
 					<div style="align-self: center;">
-					<input type="submit" value="바꾸기" name='change' onclick='change()'>
+					<input type="submit" value="Change" name='change' onclick='change()' class="btn btn-light" style="font-weight: 500;">
 					</div> 
 				</div>
 				</div>
