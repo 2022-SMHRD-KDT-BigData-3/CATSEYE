@@ -28,7 +28,17 @@ public class MemberController {
 
 	@RequestMapping("/main.do")
 	public String joinjsp() {
+		return "intro";
+	}
+	
+	@RequestMapping("/gologin.do")
+	public String gologin() {
 		return "login";
+	}
+	
+	@RequestMapping("/gomain.do")
+	public String gomain() {
+		return "Main";
 	}
 
 	@RequestMapping("/join.do")
@@ -56,10 +66,10 @@ public class MemberController {
 		return "Main";
 	}
 
-	@PostMapping("/logout.do")
+	@RequestMapping("/logout.do")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "intro";
+		return "login";
 	}
 
 	@RequestMapping("/Analysis.do")

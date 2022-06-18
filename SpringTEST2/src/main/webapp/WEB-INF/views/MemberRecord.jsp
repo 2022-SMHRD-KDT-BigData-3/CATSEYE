@@ -60,9 +60,10 @@ function resultHtml(data){
 		target_path = obj.target_path;
 	});
 	$("#target").attr("value",target);
-	$("#exr_eq").attr("value",exr_eq);
+	$("#exr_eq").attr("value","T-bar row");
 	$("#exr_tm").attr("value",exr_tm);
-	$("#target_path").attr("scr","/img"+target_path.replace(".",""));
+	$("#image").html("<img style='width: 21%;height: 34%;border-radius: 5px;margin: 20px;position: relative;left: 78px;' src='/img"+target_path.replace(".","")+"' id='target_path'>");
+			
 	
 }
 
@@ -75,15 +76,15 @@ function resultHtml(data){
 	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a class="menu-link" href="Main.jsp">
+				<a class="menu-link" href="gomain.do">
 				<i class="bi bi-border-outer"></i>  Home</a>
-				<a class="menu-link is-active" href="#">
+				<a class="menu-link is-active" href="MemberRecord.do">
 				<i class="bi bi-border-left"></i>  Member Record</a> 
 				<a class="menu-link is-active" href="Analysis.do">
 				<i class="bi bi-border-right"></i>  Movement Record</a> 
 				<a class="menu-link" href="posting.do">
 				<i class="bi bi-border-inner"></i>  Emergency Record</a>
-				<a class="menu-link" href="logout.jsp">
+				<a class="menu-link" href="logout.do">
 				<i class="bi bi-border"></i>  SignOut</a>
 			</div>  
 
@@ -104,12 +105,14 @@ function resultHtml(data){
 					</div>
 				</div>			
 	<div>
-						<img
-							style="width: 43%;height: 69%;border-radius: 5px;margin: 20px;"
-							src="./resources/img/11.jpg" id="target_path">
+	<div id="image">
+	<img style="width: 43%;height: 69%;border-radius: 5px;margin: 20px;" src="./resources/img/11.jpg" id="target_path">
+	
+	</div>
+						
 					<div class="container" style="color: white;">
 								<div class="row">
-									<div class="col-md-6 mb-3" style="line-height: 50px;position: relative;max-block-size: fit-content;left: 50%;bottom: 392px;padding: 10px;">
+									<div class="col-md-6 mb-3" style="line-height: 50px;position: relative;max-block-size: fit-content;left: 41%;bottom: 392px;padding: 10px;">
 										<div>
 											<label>이름</label> <input type="text" class="form-control" id="target" value="hi">
 										</div>

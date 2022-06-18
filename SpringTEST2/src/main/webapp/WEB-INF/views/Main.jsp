@@ -17,6 +17,17 @@
 <link rel='stylesheet' type="text/css" href='./resources/CSS/acordian.css' />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
+<script type="text/javascript">
+function change(){
+	$.ajax({
+		url : "http://172.30.1.5:8082/change",
+		type : "POST",
+		data : {"change":"바꾸기"},
+	})
+	
+}
+</script>
+
 </head>
 <body style="--theme-bg-color: rgb(255 255 255/ 31%); --theme-color: #3c3a3a; --inactive-color: #333333; --button-inactive: #3c3a3a; --search-bg: rgb(255 255 255/ 31%); --dropdown-bg: lightgray 56%; --overlay-bg: rgb(255 255 255/ 30%); --dropdown-hover: rgb(255 255 255/ 100%); --border-color: rgb(255 255 255/ 35%); --popup-bg: rgb(255, 255, 255); --hover-menu-bg: rgba(255 255 255/ 35%); --scrollbar-bg: rgb(255 253 253/ 57%); --content-title-color: --theme-color;">
 
@@ -29,15 +40,15 @@
 	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a class="menu-link" href="Main.jsp">
+				<a class="menu-link" href="gomain.do">
 				<i class="bi bi-border-outer"></i>  Home</a>
-				<a class="menu-link is-active" href="#">
+				<a class="menu-link is-active" href="MemberRecord.do">
 				<i class="bi bi-border-left"></i>  Member Record</a> 
 				<a class="menu-link is-active" href="Analysis.do">
 				<i class="bi bi-border-right"></i>  Movement Record</a> 
 				<a class="menu-link" href="posting.do">
 				<i class="bi bi-border-inner"></i>  Emergency Record</a>
-				<a class="menu-link" href="logout.jsp">
+				<a class="menu-link" href="logout.do">
 				<i class="bi bi-border"></i>  SignOut</a>
 			</div>  
 
@@ -57,21 +68,11 @@
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
-					<video class="video" controls muted poster="./resources/img/11.jpg">
-						<source src="./resources/video/dance_practice.mp4" type="video/mp4">
-					</video>
+					<img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 25%);" src="http://172.30.1.5:8082/video_feed">
 					
 					<div style="align-self: center;">
-					<input type="submit" class="btn btn-light" value="변경" name='change' onclick='change()'>
+					<input type="submit" value="바꾸기" name='change' onclick='change()'>
 					</div> 
-							<!-- 	<button type="button" class="btn btn-light"
-								style="position: relative; right: 29px; margin: 15px;font-weight: 500;">
-								Original</button>
-					</div> 
-							<button type="button" class="btn btn-light"
-								style="position: relative; right: 29px; margin: 15px;font-weight: 500;">Original</button>
-							<button type="button" class="btn btn-light" style="position: relative; right: 26px;font-weight: 500;">Yolov5</button>
-						</div>  -->
 				</div>
 				</div>
 
