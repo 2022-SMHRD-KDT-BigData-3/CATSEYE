@@ -23,6 +23,10 @@
 	<p id="logo">
 		<!-- <img src="./resources/img/arrows-to-eye-solid.svg"> -->
 		CATSEYE
+		<!-- <img  src="/img/cat4.jpg"> -->
+		<!-- <video >
+			<source src="/img/mosaic.mp4" type="video/mp4">
+		</video> -->
 	<P>
 
 	<div class="app">
@@ -56,8 +60,9 @@
 				<div class="content-wrapper">
 					<!-- autoplay : 자동재생, loop : 자동재생, preload: 무엇을 로드 (auto, metadata, none)  -->
 
-					<video class="video" controls muted poster="./resources/img/11.jpg">
-						<source src="./resources/video/dance_practice.mp4" type="video/mp4">
+					<video class="video" controls>
+						<source src="/img/fall.mp4" type="video/mp4">
+						비디오 안됨
 					</video>
 					
 					<div style="align-self: center;">
