@@ -11,12 +11,16 @@ select * from DETECTION_BOARD
 	INDATE DATE DEFAULT SYSDATE
 )
 
-select * from USERS_NBR
-
 select * from USERS_NBR 
 WHERE indate  BETWEEN TO_DATE('2022061609', 'YYYYMMDDHH') AND  TO_DATE('2022061610', 'YYYYMMDDHH')
 
 select count(*) from USERS_NBR
+
+select * from USERS_NBR where indate like TO_DATE('20220616', 'YYYYMMDD') order by indate
+select * from USERS_NBR where indate like TO_DATE('2022-06-16', 'YYYY-MM-DD') order by indate
+
+select * from USERS_NBR 
+WHERE indate  BETWEEN TO_DATE('2022061609', 'YYYYMMDDHH') AND  TO_DATE('2022061610', 'YYYYMMDDHH')
 
 CREATE TABLE USERS_NBR (
 	MBR_SHOP VARCHAR(20) NOT NULL,

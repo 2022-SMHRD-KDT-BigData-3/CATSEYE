@@ -1,5 +1,6 @@
 package kr.book.bshop;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import kr.book.entity.Member;
 import kr.book.entity.detection;
 import kr.book.entity.heatmap;
+import kr.book.entity.tracking;
+import kr.book.entity.user;
 import kr.book.mapper.MemberMapper;
 
 @Controller
@@ -25,7 +28,17 @@ public class MemberController {
 
 	@RequestMapping("/main.do")
 	public String joinjsp() {
+		return "intro";
+	}
+	
+	@RequestMapping("/gologin.do")
+	public String gologin() {
 		return "login";
+	}
+	
+	@RequestMapping("/gomain.do")
+	public String gomain() {
+		return "Main";
 	}
 
 	@RequestMapping("/join.do")
@@ -53,10 +66,10 @@ public class MemberController {
 		return "Main";
 	}
 
-	@PostMapping("/logout.do")
+	@RequestMapping("/logout.do")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "intro";
+		return "login";
 	}
 
 	@RequestMapping("/Analysis.do")
@@ -67,6 +80,11 @@ public class MemberController {
 	@RequestMapping("/posting.do") // posting.do 여는 메소드
 	public String posting() {
 		return "posting";
+	}
+	
+	@RequestMapping("/MemberRecord.do") // posting.do 여는 메소드
+	public String MemberRecord() {
+		return "MemberRecord";
 	}
 
 	@RequestMapping("/loadposting.do")
@@ -93,4 +111,26 @@ public class MemberController {
 		// 1. list->JSON 변환(API)
 		// 2. JSON 포멧으로 응답
 	}
+	@SuppressWarnings("null")
+	@RequestMapping("/loaduser.do")
+	public @ResponseBody List<user> loaduser() {
+		List<user> list = MemberMapper.loaduser();
+		for(int i = 0 ; i<list.size();i++) {
+		String[] day = list.get(i).getIndate().split(" ");
+		String whatday = day[0];
+		String whattime = day[1];
+		System.out.println(whatday);
+		System.out.println(whattime);
+		}
+		return list;
+	}
+	
+	@RequestMapping("/loadtracking.do")
+	public @ResponseBody List<tracking> loadtracking() {
+		List<tracking> list = MemberMapper.loadtracking();
+		System.out.println("야~~~~~~~~~"+list.get(0).getExr_tm());
+		return list;
+	}
+	
+	
 }

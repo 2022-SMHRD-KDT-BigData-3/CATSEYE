@@ -23,3 +23,8 @@ allVideos.forEach((v) => {
   $(".video-p-name").text(person);
   $(".video-detail .author-img").attr("src", img);
 });
+ $('.carousel').carousel({
+      interval: 2000 //기본 5초
+    })
+    
+    

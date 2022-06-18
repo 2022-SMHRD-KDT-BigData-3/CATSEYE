@@ -16,7 +16,12 @@
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping="/assets/**" location="/resources/assets/" /> 
 	<resources mapping="/ad_assets/**" location="/resources/ad_assets/" />
+<<<<<<< HEAD
 	<resources mapping="/img/**" location="C:\Users\smhrd\Desktop\cat" />
+=======
+	<resources mapping="/img/**" location="C:\Users\smhrd\Desktop\catseye" />
+
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/CATSEYE.git
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />

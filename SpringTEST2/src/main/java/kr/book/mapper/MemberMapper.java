@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.book.entity.Member;
 import kr.book.entity.detection;
+import kr.book.entity.tracking;
+import kr.book.entity.user;
 
 @Mapper
 public interface MemberMapper {
@@ -30,4 +32,10 @@ public interface MemberMapper {
 	
 	@Delete("delete from DETECTION_BOARD where num=#{num}")
 	public @ResponseBody void deleteDetection(int num);
+	
+	@Select("select * from USERS_NBR where indate like TO_DATE(#{userday}, 'YYYY-MM-DD') order by indate")
+	public List<user> loaduser();
+	
+	@Select("select * from tracking where exr_tm = (select max(exr_tm) from tracking)")
+	public List<tracking> loadtracking();
 }
