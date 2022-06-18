@@ -62,82 +62,17 @@
 					</video>
 					
 					<div style="align-self: center;">
-					<button type="button" class="btn btn-light"> Original</button>
-					<button type="button" class="btn btn-light"> Yolov5</button>
-					</div> 
+							<button type="button" class="btn btn-light"
+								style="position: relative; right: 29px; margin: 15px;font-weight: 500;">
+								Original</button>
+							<button type="button" class="btn btn-light"
+								style="position: relative; right: 26px;font-weight: 500;">Yolov5</button>
+						</div> 
 				</div>
 				</div>
 
 
-				<!-- 게시물 list -->
-				<div class="content-section">
-					<div class="content-section-title"><i class="bi bi-border-outer"></i>    Emergency Record</div>
-					<div id="Accordion_wrap" style="background-color: var(--theme-bg-color); magin:2px;">
-						<div class="que">
-							<span>TITLE </span> <span class="badge badge-primary">New</span>
-						</div>
-						<div class="anw">
-							<span><form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> 
-											<input type="datetime-local" name="datetime" class="form-control" id="datetime" name="datetime">
-									</div>
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-light">수정</button>
-									<button type="submit" class="btn btn-light">삭제</button>
-								</form></span>
-						</div>
-						<div class="que">
-							<span>TITLE </span><span class="badge badge-primary">New</span>
-						</div>
-						<div class="anw">
-							<form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
-											type="datetime-local" name="datetime" class="form-control"
-											id="datetime" name="datetime">
-									</div>
-
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
-								</form>
-						</div>
-						<div class="que">
-							<span>TITLE </span><span class="badge badge-primary">New</span>
-						</div>
-						<div class="anw">
-							<form action="#" method="post">
-									<div class="form-group">
-										<label for="datetime"
-											style="font-family: 'Poppins', sans-serif;">날짜</label> <input
-											type="datetime-local" name="datetime" class="form-control"
-											id="datetime" name="datetime">
-									</div>
-
-
-									<div class="form-group">
-										<label for="content">내용</label>
-										<textarea class="form-control" rows="5" id="content"
-											name="content" placeholder="내용 작성"></textarea>
-									</div>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">수정</button>
-									<button type="submit" class="btn btn-default"
-										style="background: #fff;">삭제</button>
-								</form> 
+			
 						</div>
 					</div>
 					

@@ -178,7 +178,7 @@ function goUpdate(num){
                <video class="video" controls muted poster="./resources/img/11.jpg" id="postingphoto">
                   <source src="/img/emergency/fall.mp4" type="video/mp4" id="postingvideo">
                </video>
-               
+
             </div>
             </div>
             
