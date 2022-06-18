@@ -145,12 +145,12 @@ a.solid-gold-button {
 			<h1 id="w1">Digital Analytics Management</h1>
 			<span id="w2">With Proven Results</span>
 			<p id="w3">Enables efficient operation and management of business establishments</p>
-			<a class="solid-gold-button">Signin and use the website</a>
+			<a class="solid-gold-button" href="gologin.do">Signin and use the website</a>
 
 	</div>
 
 
-	<div class="jb-box">
+	<div class="jb-box" onclick="location.href='gologin.do'">
 		<video muted autoplay loop>
 			<source src="./resources/video/mosaic_put.mp4" type="video/mp4">
 		</video>

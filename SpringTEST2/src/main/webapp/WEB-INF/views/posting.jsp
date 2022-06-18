@@ -137,16 +137,16 @@ function goUpdate(num){
 <div class="app">
       <div class="header">
          <div class="header-menu">
-            <a class="menu-link" href="Main.jsp">
-            <i class="bi bi-border-outer"></i>  Home</a>
-            <a class="menu-link is-active" href="memberRecord.jsp">
-            <i class="bi bi-border-left"></i>  Member Record</a> 
-            <a class="menu-link is-active" href="Analysis.do">
-            <i class="bi bi-border-right"></i>  Movement Record</a> 
-            <a class="menu-link" href="posting.do">
-            <i class="bi bi-border-inner"></i>  Emergency Record</a>
-            <a class="menu-link" href="logout.jsp">
-            <i class="bi bi-border"></i>  SignOut</a>
+            <a class="menu-link" href="gomain.do">
+				<i class="bi bi-border-outer"></i>  Home</a>
+				<a class="menu-link is-active" href="MemberRecord.do">
+				<i class="bi bi-border-left"></i>  Member Record</a> 
+				<a class="menu-link is-active" href="Analysis.do">
+				<i class="bi bi-border-right"></i>  Movement Record</a> 
+				<a class="menu-link" href="posting.do">
+				<i class="bi bi-border-inner"></i>  Emergency Record</a>
+				<a class="menu-link" href="logout.do">
+				<i class="bi bi-border"></i>  SignOut</a>
          </div>  
 
       </div>
