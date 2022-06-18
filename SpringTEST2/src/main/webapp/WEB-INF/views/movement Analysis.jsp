@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Main</title>
 
+
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -15,7 +16,7 @@ function loadheatmap(){
    $("#heatimg").attr("src",'./resources/img/loading.gif');
    var first_time = $("#first_time").val()
    first_time = first_time.replace(":", "")+"00";   
-   var last_time = $("#last_time").val()
+   var last_time = $("#last_time").val() 
    last_time = last_time.replace(":", "")+"00";   
    console.log(first_time, last_time)
       $.ajax({
@@ -25,34 +26,9 @@ function loadheatmap(){
       success:setTimeout(loadphoto,10000)
    })
 }
-
+ 
 function loadphoto(){
    $("#heatimg").attr("src",'http://172.30.1.5:8082/static/img/diff-overlay2.jpg?'+Date.now());
-}
-
-function loaduser(){
-	
-	var userday = $("#userday").val()
-	console.log(userday)
-	
-	$.ajax({
-		url : "loaduser.do",
-		type : "POST",
-		data : {"userday":userday},
-		dataType : "json",
-		success : resultHtml,
-		error : function(){alert("error");  }
-	});
-	
-}
-
-function resultHtml(data){
-	var view=""
-	$.each(data, function(index, obj){
-		view+="<div class='que'>"
-		view+="<span>"+obj.indate+"</div>"
-	});
-	$("#viewuser").html(view)
 }
 </script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
@@ -61,154 +37,98 @@ function resultHtml(data){
 <link rel='stylesheet' href='https://vjs.zencdn.net/5-unsafe/video-js.css'/>
 <link rel='stylesheet' type="text/css" href='./resources/CSS/Main.css'/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-
 </head>
-<body style="--theme-bg-color: rgb(255 255 255 / 31%);
-    --theme-color: #3c3a3a;
-    --inactive-color: #333333;
-    --button-inactive: #3c3a3a;
-    --search-bg: rgb(255 255 255 / 31%);
-    --dropdown-bg: lightgray 56%;
-    --overlay-bg: rgb(255 255 255 / 30%);
-    --dropdown-hover: rgb(255 255 255 / 100%);
-    --border-color: rgb(255 255 255 / 35%);
-    --popup-bg: rgb(255 255 255);
-    --hover-menu-bg: rgba(255 255 255 / 35%);
-    --scrollbar-bg: rgb(255 253 253 / 57%);
-    --content-title-color: --theme-color;">
-   
+<body
+	style="-theme-bg-color: rgb(255 255 255/ 31%); - -theme-color: #3c3a3a; - -inactive-color: #333333; - -button-inactive: #3c3a3a; - -search-bg: rgb(255 255 255/ 31%); - -dropdown-bg: lightgray 56%; - -overlay-bg: rgb(255 255 255/ 30%); - -dropdown-hover: rgb(255 255 255/ 100%); - -border-color: rgb(255 255 255/ 35%); - -popup-bg: rgb(255, 255, 255); - -hover-menu-bg: rgba(255 255 255/ 35%); - -scrollbar-bg: rgb(255 253 253/ 57%); - -content-title-color: --theme-color;">
+
 	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a class="menu-link" href="Main.jsp">
-				<i class="bi bi-border-outer"></i>  Home</a>
-				<a class="menu-link is-active" href="#">
-				<i class="bi bi-border-left"></i>  Member Record</a> 
-				<a class="menu-link is-active" href="Analysis.do">
-				<i class="bi bi-border-right"></i>  Movement Record</a> 
-				<a class="menu-link" href="posting.do">
-				<i class="bi bi-border-inner"></i>  Emergency Record</a>
-				<a class="menu-link" href="logout.jsp">
-				<i class="bi bi-border"></i>  SignOut</a>
-			</div>  
+				<a class="menu-link" href="Main.jsp"> <i
+					class="bi bi-border-outer"></i> Home
+				</a> <a class="menu-link is-active" href="#"> <i
+					class="bi bi-border-left"></i> Member Record
+				</a> <a class="menu-link is-active" href="Analysis.do"> <i
+					class="bi bi-border-right"></i> Movement Record
+				</a> <a class="menu-link" href="posting.do"> <i
+					class="bi bi-border-inner"></i> Emergency Record
+				</a> <a class="menu-link" href="logout.jsp"> <i class="bi bi-border"></i>
+					SignOut
+				</a>
+			</div>
 
 		</div>
 
 
-      <div class="wrapper">
-         <div class="left-side">
-            <div class="side-wrapper">
-               <div class="side-title" id="Analysis">Analysis</div>
-            </div>
-            <div class="side-wrapper">
-               <div class="side-title" id="visual">visualization</div>
-            </div>
-         </div>
+		<div class="wrapper">
+			<div class="left-side">
+				<div class="side-wrapper">
+					<div class="side-title" id="Analysis">Analysis</div>
+				</div>
+				<div class="side-wrapper">
+					<div class="side-title" id="visual">visualization</div>
+				</div>
+			</div>
 
-         <div class="main-container">
+			<div class="main-container">
 
-            <!-- 분석 -->
+				<!-- 분석 -->
 				<div class="content-section An">
 					<div class="content-section-title An">
 						<i class="bi bi-border-right"></i> Analysis
 					</div>
 
 					<div class="form-group">
-						<div class="content-wrapper">
-
-							<label style="font-family: 'Poppins', sans-serif;padding: 10px;font-weight: bold;"> 시간 선택</label> 
-							    <div class="input-group input-daterange">
-    <input type="time" class="form-control" value="YYYY-MM-DD">
-    <div class="input-group-addon">to</div>
-    <input type="time" class="form-control" value="YYYY-MM-DD">
-</div>
-
-<script type="text/javascript">
-$("div.input-daterange").each(function(){
-    var $inputs = $(this).find('input');
-    $inputs.datepicker();
-    if ($inputs.length >= 2) {
-        var $from = $inputs.eq(0);
-        var $to   = $inputs.eq(1);
-        $from.on('changeDate', function (e) {
-            var d = new Date(e.date.valueOf());
-            $to.datepicker('setStartDate', d); // 종료일은 시작일보다 빠를 수 없다.
-        });
-        $to.on('changeDate', function (e) {
-            var d = new Date(e.date.valueOf());
-            $from.datepicker('setEndDate', d); // 시작일은 종료일보다 늦을 수 없다.
-        });
-    }
-})
-</script>
-							    <!-- <section >
-								<input type="time" name="first_time" class="form-control" id="first_time"> 
-								 시작시간
-								<input type="time" name="last_time" class="form-control" id="last_time">
-								종료시간
-								</section> -->
-							<div id="view">
-								<button class="btn btn-light An" id="viewresult" style="width: fit-content;" onclick="loadheatmap()">
+						<label style="font-family: 'Poppins', sans-serif; padding: 10px; font-weight: 700; font-size: 18px;">
+							Time setting</label>
+						<ul style="color: currentColor; font-weight: 500; height: 70px;">
+							<li style=" border-radius: 13px;background: var(--content-bg);">
+							&nbsp;&nbsp; start
+								time&nbsp;<input type="time" name="first_time"
+								class="form-control" id="first_time"> &nbsp;&nbsp; end
+								time&nbsp;<input type="time" name="last_time"
+								class="form-control" id="last_time"> &nbsp;&nbsp;
+								<button class="btn btn-light An" id="viewresult"style="width: fit-content;" onclick="loadheatmap()">
 									조회</button>
-								<div>
-									<div class="loader"></div>
-									<img id="heatimg" style="position: relative; top: 20px;"src="#">
-								</div>
-							</div>
-						</div>
+							</li>
+						</ul>
+						<div class="loader"></div>
+						<img id="heatimg" class="An" style="position:relative; left:0px;  margin-top: 30px;" src="#">
 					</div>
 				</div>
 
-
 				<!-- 결과 -->
-            <div class="content-section result">
-            <div class="content-section-title result"><i class="bi bi-border-right"></i> visualization</div>
-            <div class="content-wrapper result">
-
-						<div style="text-align: center; align-items: center;">
-							<label for="date"
-								style="font-family: 'Poppins', sans-serif; margin: 15px 0 15px 0; font-weight: bold;">날짜
-								설정</label> <input
-								style="width: 30%; text-align: center; position: relative; left: 36%;"
-								type="date" name="date" class="form-control"
-								name="date" id="userday">
-						</div>
-						<div style="text-align: center;">
-								<button class="btn btn-light An" id="viewresult"
-                           style="width: fit-content;" onclick="loaduser()">결과 보기</button>
-                           </div>
-						<div id="viewuser">
-						
-						
-						</div>
-
-
-
-
+				<div class="content-section result">
+					<div class="content-section-title result">
+						<i class="bi bi-border-right"></i> visualization
 					</div>
-         <div class="content-wrapper result"></div>
-         </div>
-         </div>
-         </div>
-      </div>
-               
 
-            
+					<ul>
+						<li style="border-radius: 13px;background: var(--content-bg);">
+					contents</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+
+
+	</div>
 
 </body>
 <script src="./resources/JS/Main.js"></script>
 <script type="text/javascript">
 $('#Analysis').click(function() {
-   $(".An").show();
-    $(".result").hide();
-    $("#heatimg").hide();
-})
+		$(".An").show();
+		$(".result").hide();
+		$("#heatimg").hide();
+	})
 
-$('#visual').click(function() {
-    $(".An").hide();
-    $(".result").show();
-    $("#heatimg").hide();
-})
-
+	$('#visual').click(function() {
+		$(".An").hide();
+		$(".result").show();
+		$("#heatimg").hide();
+	})
 </script>
 </html>
