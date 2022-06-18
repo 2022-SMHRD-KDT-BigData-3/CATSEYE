@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import kr.book.entity.Member;
 import kr.book.entity.detection;
 import kr.book.entity.heatmap;
+import kr.book.entity.tracking;
 import kr.book.entity.user;
 import kr.book.mapper.MemberMapper;
 
@@ -70,6 +71,11 @@ public class MemberController {
 	public String posting() {
 		return "posting";
 	}
+	
+	@RequestMapping("/MemberRecord.do") // posting.do 여는 메소드
+	public String MemberRecord() {
+		return "MemberRecord";
+	}
 
 	@RequestMapping("/loadposting.do")
 	public @ResponseBody List<detection> loadposting() {
@@ -108,5 +114,13 @@ public class MemberController {
 		}
 		return list;
 	}
+	
+	@RequestMapping("/loadtracking.do")
+	public @ResponseBody List<tracking> loadtracking() {
+		List<tracking> list = MemberMapper.loadtracking();
+		System.out.println("야~~~~~~~~~"+list.get(0).getExr_tm());
+		return list;
+	}
+	
 	
 }

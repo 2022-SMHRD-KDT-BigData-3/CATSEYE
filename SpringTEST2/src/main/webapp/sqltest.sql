@@ -28,6 +28,14 @@ CREATE TABLE USERS_NBR (
 
 select * from DETECTION_BOARD
 
+select * from tracking
+DELETE FROM tracking WHERE exr_eq='7.0'
+
+select * from tracking where exr_tm = (select max(exr_tm) from tracking)
+
+insert into TRACKING values('1.0', '7.0', '30', './exercise_photo/photo.jpg')
+
+
 drop table DETECTION_BOARD
 
 insert into DETECTION_BOARD(num,CCTV,content,VIDEO_PATH,PHOTO_PATH)

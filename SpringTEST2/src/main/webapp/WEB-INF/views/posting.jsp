@@ -52,7 +52,6 @@ function loadposting(){
 }
 function resultHtml(data){
    var view=""
-   var photopath=""
    $.each(data, function(index, obj){
       view+="<div class='que' id="+obj.photo_path+" value="+obj.video_path+">"
       view+="<span>"+obj.indate
@@ -79,7 +78,6 @@ function resultHtml(data){
    // view+=""
    });
    $("#Accordion_wrap").html(view)
-   console.log(photopath)
    $(".que").click(function() {
          $(this).next(".anw").stop().slideToggle(300);
         $(this).toggleClass('on').siblings().removeClass('on');

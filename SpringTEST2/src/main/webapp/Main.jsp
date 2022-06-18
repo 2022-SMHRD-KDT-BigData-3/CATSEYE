@@ -62,6 +62,20 @@
 					</video>
 					
 					<div style="align-self: center;">
+					<input type="submit" value="변경" name='change' onclick='change()'>
+					</div> 
+							<button type="button" class="btn btn-light"
+								style="position: relative; right: 29px; margin: 15px;font-weight: 500;">
+								Original</button>
+							<button type="button" class="btn btn-light"
+								style="position: relative; right: 26px;font-weight: 500;">Yolov5</button>
+						</div> 
+							<button type="button" class="btn btn-light"
+								style="position: relative; right: 29px; margin: 15px;font-weight: 500;">
+								Original</button>
+							<button type="button" class="btn btn-light"
+								style="position: relative; right: 26px;font-weight: 500;">Yolov5</button>
+						</div> 
 							<button type="button" class="btn btn-light"
 								style="position: relative; right: 29px; margin: 15px;font-weight: 500;">Original</button>
 							<button type="button" class="btn btn-light" style="position: relative; right: 26px;font-weight: 500;">Yolov5</button>
