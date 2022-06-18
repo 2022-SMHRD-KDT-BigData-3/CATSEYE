@@ -14,7 +14,6 @@
 
 function loadheatmap(){
    $("#heatimg").attr("src",'./resources/img/loading.gif');
-
    var first_time = $("#first_time").val()
    first_time = first_time.replace(":", "")+"00";   
    var last_time = $("#last_time").val() 
@@ -40,94 +39,95 @@ function loadphoto(){
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 <body
-	style="-theme-bg-color: rgb(255 255 255/ 31%); - -theme-color: #3c3a3a; - -inactive-color: #333333; - -button-inactive: #3c3a3a; - -search-bg: rgb(255 255 255/ 31%); - -dropdown-bg: lightgray 56%; - -overlay-bg: rgb(255 255 255/ 30%); - -dropdown-hover: rgb(255 255 255/ 100%); - -border-color: rgb(255 255 255/ 35%); - -popup-bg: rgb(255, 255, 255); - -hover-menu-bg: rgba(255 255 255/ 35%); - -scrollbar-bg: rgb(255 253 253/ 57%); - -content-title-color: --theme-color;">
+   style="-theme-bg-color: rgb(255 255 255/ 31%); - -theme-color: #3c3a3a; - -inactive-color: #333333; - -button-inactive: #3c3a3a; - -search-bg: rgb(255 255 255/ 31%); - -dropdown-bg: lightgray 56%; - -overlay-bg: rgb(255 255 255/ 30%); - -dropdown-hover: rgb(255 255 255/ 100%); - -border-color: rgb(255 255 255/ 35%); - -popup-bg: rgb(255, 255, 255); - -hover-menu-bg: rgba(255 255 255/ 35%); - -scrollbar-bg: rgb(255 253 253/ 57%); - -content-title-color: --theme-color;">
 
-	<div class="app">
-		<div class="header">
-			<div class="header-menu">
-				<a class="menu-link" href="gomain.do">
-				<i class="bi bi-border-outer"></i>  Home</a>
-				<a class="menu-link is-active" href="MemberRecord.do">
-				<i class="bi bi-border-left"></i>  Member Record</a> 
-				<a class="menu-link is-active" href="Analysis.do">
-				<i class="bi bi-border-right"></i>  Movement Record</a> 
-				<a class="menu-link" href="posting.do">
-				<i class="bi bi-border-inner"></i>  Emergency Record</a>
-				<a class="menu-link" href="logout.do">
-				<i class="bi bi-border"></i>  SignOut</a>
-		</div>
+   <div class="app">
+      <div class="header">
+         <div class="header-menu">
+            <a class="menu-link" href="gomain.do">
+            <i class="bi bi-border-outer"></i>  Home</a>
+            <a class="menu-link is-active" href="MemberRecord.do">
+            <i class="bi bi-border-left"></i>  Member Record</a> 
+            <a class="menu-link is-active" href="Analysis.do">
+            <i class="bi bi-border-right"></i>  Movement Record</a> 
+            <a class="menu-link" href="posting.do">
+            <i class="bi bi-border-inner"></i>  Emergency Record</a>
+            <a class="menu-link" href="logout.do">
+            <i class="bi bi-border"></i>  SignOut</a>
+         </div>
 
-
-		<div class="wrapper">
-			<div class="left-side">
-				<div class="side-wrapper">
-					<div class="side-title" id="Analysis">Analysis</div>
-				</div>
-				<div class="side-wrapper">
-					<div class="side-title" id="visual">visualization</div>
-				</div>
-			</div>
-			<div class="main-container">
+      </div>
 
 
-				<!-- 분석 -->
-				<div class="content-section An">
-					<div class="content-section-title An">
-						<i class="bi bi-border-right"></i> Analysis
-					</div>
+      <div class="wrapper">
+         <div class="left-side">
+            <div class="side-wrapper">
+               <div class="side-title" id="Analysis">Analysis</div>
+            </div>
+            <div class="side-wrapper">
+               <div class="side-title" id="visual">visualization</div>
+            </div>
+         </div>
+
+         <div class="main-container">
+
+            <!-- 분석 -->
+            <div class="content-section An">
+               <div class="content-section-title An">
+                  <i class="bi bi-border-right"></i> Analysis
+               </div>
+
+               <div class="form-group">
+                  <label style="font-family: 'Poppins', sans-serif; padding: 10px; font-weight: 700; font-size: 18px;">
+                     Time setting</label>
+                  <ul style="color: currentColor; font-weight: 500; height: 70px;">
+                     <li style=" border-radius: 13px;background: var(--content-bg);">
+                     &nbsp;&nbsp; start
+                        time&nbsp;<input type="time" name="first_time"
+                        class="form-control" id="first_time"> &nbsp;&nbsp; end
+                        time&nbsp;<input type="time" name="last_time"
+                        class="form-control" id="last_time"> &nbsp;&nbsp;
+                        <button class="btn btn-light An" id="viewresult"style="width: fit-content;" onclick="loadheatmap()">
+                           조회</button>
+                     </li>
+                  </ul>
+                  <div class="loader"></div>
+                  <img id="heatimg" class="An" style="position:relative; left:0px;  margin-top: 30px;" src="">
+               </div>
+            </div>
+
+            <!-- 결과 -->
+            <div class="content-section result">
+               <div class="content-section-title result">
+                  <i class="bi bi-border-right"></i> visualization
+               </div>
+
+               <ul>
+                  <li style="border-radius: 13px;background: var(--content-bg);">
+               contents</li>
+               </ul>
+            </div>
+
+         </div>
+      </div>
 
 
-					<div class="form-group">
-						<label style="font-family: 'Poppins', sans-serif; padding: 10px; font-weight: 700; font-size: 18px;">
-							Time setting</label>
-						<ul style="color: currentColor; font-weight: 500; height: 70px;">
-							<li style=" border-radius: 13px;background: var(--content-bg);">
-							&nbsp;&nbsp; start
-								time&nbsp;<input type="time" name="first_time"
-								class="form-control" id="first_time"> &nbsp;&nbsp; end
-								time&nbsp;<input type="time" name="last_time"
-								class="form-control" id="last_time"> &nbsp;&nbsp;
-								<button class="btn btn-light An" id="viewresult"style="width: fit-content;" onclick="loadheatmap()">
-									조회</button>
-							</li>
-						</ul>
-						<div class="loader"></div>
-						<img id="heatimg" class="An" style="position:relative; left:0px;  margin-top: 30px;" src="#">
-					</div>
-				</div>
 
-				<!-- 결과 -->
-				<div class="content-section result">
-					<div class="content-section-title result">
-						<i class="bi bi-border-right"></i> visualization
-					</div>
-
-					<ul>
-						<li style="border-radius: 13px;background: var(--content-bg);">
-					contents</li>
-					</ul>
-				</div>
-
-			</div>
-		</div>
-
-
-
-	</div>
+   </div>
 
 </body>
 <script src="./resources/JS/Main.js"></script>
 <script type="text/javascript">
 $('#Analysis').click(function() {
-		$(".An").show();
-		$(".result").hide();
-		$("#heatimg").hide();
-	})
+      $(".An").show();
+      $(".result").hide();
+      $("#heatimg").hide();
+   })
 
-	$('#visual').click(function() {
-		$(".An").hide();
-		$(".result").show();
-		$("#heatimg").hide();
-	})
+   $('#visual').click(function() {
+      $(".An").hide();
+      $(".result").show();
+      $("#heatimg").hide();
+   })
 </script>
 </html>
