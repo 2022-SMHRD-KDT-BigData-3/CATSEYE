@@ -9,8 +9,12 @@ select * from DETECTION_BOARD
 	KIND NUMBER NOT NULL,
 	USERS_NBR NUMBER NOT NULL,
 	INDATE DATE DEFAULT SYSDATE
- )
- 
+)
+
+select * from USERS_NBR 
+WHERE indate  BETWEEN TO_DATE('2022061609', 'YYYYMMDDHH') AND  TO_DATE('2022061610', 'YYYYMMDDHH')
+
+select count(*) from USERS_NBR
 
 select * from USERS_NBR where indate like TO_DATE('20220616', 'YYYYMMDD') order by indate
 select * from USERS_NBR where indate like TO_DATE('2022-06-16', 'YYYY-MM-DD') order by indate
@@ -25,26 +29,31 @@ CREATE TABLE USERS_NBR (
 	INDATE DATE DEFAULT SYSDATE
  )
 
+ drop table TRACKING
+ 
+ CREATE TABLE TRACKING (
+	TARGET VARCHAR(20) NOT NULL,	
+	EXR_EQ VARCHAR(50) NOT NULL,
+	EXR_TM VARCHAR(20) NOT NULL,
+	TARGET_PATH VARCHAR(50) NOT NULL
+ )
+select * from TRACKING
+
+insert into TRACKING(TARGET,EXR_EQ,EXR_TM,TARGET_PATH)
+values('1.1','BENCH','404040','PATH');
 
 select * from DETECTION_BOARD
-
-select * from tracking
-DELETE FROM tracking WHERE exr_eq='7.0'
-
-select * from tracking where exr_tm = (select max(exr_tm) from tracking)
-
-insert into TRACKING values('1.0', '7.0', '30', './exercise_photo/photo.jpg')
-
 
 drop table DETECTION_BOARD
 
 insert into DETECTION_BOARD(num,CCTV,content,VIDEO_PATH,PHOTO_PATH)
 values(nbr_seq.nextval,1,' ','PATH','PATH');
-DELETE FROM DETECTION_BOARD WHERE photo_path='test2'
-DELETE FROM DETECTION_BOARD WHERE video_path='video'
+
+DELETE FROM DETECTION_BOARD WHERE NUM=1
+
 insert into USERS_NBR(MBR_SHOP,CCTV_NBR,USERS_NBR)
 values('test',1,15);
-nbr_seq.nextval
+
 CREATE SEQUENCE NBR_SEQ INCREMENT BY 1 START WITH 1;
 
 drop sequence nbr_seq;
@@ -56,9 +65,9 @@ CREATE TABLE DETECTION_BOARD (
 	VIDEO_PATH VARCHAR2(100) NOT NULL,
 	PHOTO_PATH VARCHAR2(100) NOT NULL,
 	INDATE DATE DEFAULT SYSDATE NOT NULL,
-	
  CONSTRAINT DETECTION_BOARD_NUM_PK PRIMARY KEY(NUM)
  )
+ 
 SELECT MAX(NUM) FROM DETECTION_BOARD  
  RANK() OVER (ORDER BY SAL DESC) 
  update DETECTION_BOARD set VIDEO_PATH=:video WHERE EXISTS(SELECT * FROM DETECTION_BOARD  WHERE ROWNUM=1 ORDER BY NUM DESC)

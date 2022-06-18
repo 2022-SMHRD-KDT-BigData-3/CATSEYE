@@ -14,6 +14,7 @@
 
 function loadheatmap(){
    $("#heatimg").attr("src",'./resources/img/loading.gif');
+
    var first_time = $("#first_time").val()
    first_time = first_time.replace(":", "")+"00";   
    var last_time = $("#last_time").val() 
@@ -54,8 +55,6 @@ function loadphoto(){
 				<i class="bi bi-border-inner"></i>  Emergency Record</a>
 				<a class="menu-link" href="logout.do">
 				<i class="bi bi-border"></i>  SignOut</a>
-			</div>
-
 		</div>
 
 
@@ -68,14 +67,15 @@ function loadphoto(){
 					<div class="side-title" id="visual">visualization</div>
 				</div>
 			</div>
-
 			<div class="main-container">
+
 
 				<!-- 분석 -->
 				<div class="content-section An">
 					<div class="content-section-title An">
 						<i class="bi bi-border-right"></i> Analysis
 					</div>
+
 
 					<div class="form-group">
 						<label style="font-family: 'Poppins', sans-serif; padding: 10px; font-weight: 700; font-size: 18px;">
