@@ -40,18 +40,17 @@
 	<div class="app">
 		<div class="header">
 			<div class="header-menu">
-				<a class="menu-link" href="Main.jsp"> <i
-					class="bi bi-border-outer"></i> Home
-				</a> <a class="menu-link is-active" href="#"> <i
-					class="bi bi-border-left"></i> Member Record
-				</a> <a class="menu-link is-active" href="Analysis.do"> <i
-					class="bi bi-border-right"></i> Movement Record
-				</a> <a class="menu-link" href="posting.do"> <i
-					class="bi bi-border-inner"></i> Emergency Record
-				</a> <a class="menu-link" href="logout.jsp"> <i class="bi bi-border"></i>
-					SignOut
-				</a>
-			</div>
+				<a class="menu-link" href="Main.jsp">
+				<i class="bi bi-border-outer"></i>  Home</a>
+				<a class="menu-link is-active" href="#">
+				<i class="bi bi-border-left"></i>  Member Record</a> 
+				<a class="menu-link is-active" href="Analysis.do">
+				<i class="bi bi-border-right"></i>  Movement Record</a> 
+				<a class="menu-link" href="posting.do">
+				<i class="bi bi-border-inner"></i>  Emergency Record</a>
+				<a class="menu-link" href="logout.jsp">
+				<i class="bi bi-border"></i>  SignOut</a>
+			</div>  
 
 		</div>
 
@@ -71,7 +70,7 @@
 				</div>			
 	<div>
 						<img
-							style="width: 43%;height: 69%;margin: 20px;"
+							style="width: 43%;height: 69%;border-radius: 5px;margin: 20px;"
 							src="./resources/img/11.jpg">
 					<div class="container" style="color: white;">
 								<div class="row">
