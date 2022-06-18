@@ -62,8 +62,8 @@
 					</video>
 					
 					<div style="align-self: center;">
-					<button type="button" class="btn btn-light"> 원본 영상 보기 </button>
-					<button type="button" class="btn btn-light"> yolov5 적용 영상 보기</button>
+					<button type="button" class="btn btn-light"> Original</button>
+					<button type="button" class="btn btn-light"> Yolov5</button>
 					</div> 
 				</div>
 				</div>

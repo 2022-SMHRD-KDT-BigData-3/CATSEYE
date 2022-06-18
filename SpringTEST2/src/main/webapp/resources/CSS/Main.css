@@ -540,8 +540,12 @@ button:hover {
   white-space: nowrap;
   transition: 0.3s;
 }
+
+ul li: hovr{
+	background-color: var(--content-bg)
+}
 .content-section ul li:hover {
-  background-color: var(--theme-bg-color);
+  background-color: rgb(255 255 255 / 31%);
 }
 .content-section ul li:hover:first-child {
   border-radius: 13px 13px 0 0;
@@ -666,7 +670,7 @@ button:hover {
   transform: translatey(25px);
 }
 .dropdown.is-active ul li:hover {
-  background-color: var(--dropdown-hover);
+  background-color: rgb(255 255 255 / 31%);
 }
 
 .button-wrapper {
